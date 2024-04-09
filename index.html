@@ -1,9 +1,40 @@
 <!doctype html>
 <html lang="en-US">
+  <head> <title>The Ramblings of a Movie Lover</title> </head>
   <head>
-   <meta charset="utf-8" /> 
-   <title>The Ramblings of a Movie Lover</title>
-  </head>
+    <meta charset="utf-8" /> 
+    <style>
+     button {
+       background-color: #555555; 
+       border: none;
+       color: white;
+       border: 2px solid #C8C8C8;
+       padding: 16px;
+       text-align: center;
+       text-decoration: none;
+       display: inline-block;
+       font-size: 10px;
+       border-radius: 12px;
+     }
+
+     button.changed {
+         background-color: #C8C8C8; 
+         color: white;
+         border: 2px solid #555555;
+    }
+
+    body {
+     padding: 25px;
+     background-color: white;
+     color: black;
+    }
+
+body.dark-mode {
+  background-color: black;
+  color: white;
+}
+    </style>
+       </head>
   <body>
  <h2><header>A Bunch of Movies</header></h2>    
     <button type="button">Dark Mode!</button>
@@ -39,12 +70,61 @@ One movie that I have recently watched and enjoyed is <a href=https://en.wikiped
 Another movie that I have watched and enjoyed is the dystopian action-adventure movie <a href=https://en.wikipedia.org/wiki/The_Hunger_Games:_The_Ballad_of_Songbirds_%26_Snakes>The Ballad of Songbirds and Snakes</a>, which is the prequel to the Hunger Games.
 </p>
 <img src= "https://m.media-amazon.com/images/M/MV5BOTZmMmY2MzctMjU2Yy00YjJlLTk1NjAtY2U4MmMxOWZkZWY4XkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_FMjpg_UX1000_.jpg" width = "400" height = "600"
- </article>
+<form>
+  <div>
+    <label style="color:Tomato;" for="mySearch">Search for user</label>
+    <input
+      type="search"
+      id="mySearch"
+      name="q"
+      placeholder="User IDs are 4–8 characters in length"
+      required
+      size="30"
+      minlength="4"
+      maxlength="8" />
+    <button>Search</button>
+    <span class="validity"></span>
+  </div>
+</form>
+  </article>
 </main>
 <footer> <p>©Copyright 2023 by me. All rights to me.</p> </footer>
   </body>
   <script>
-    function saveColorScheme() {
-      
+     function toggleLabel() {
+            const btn = 
+                document.querySelector('button');
+            if (btn.innerText === 'Dark Mode!') {
+                btn.innerText = 'Light Mode!';
+            } else {
+                btn.innerText = 'Dark Mode!';
+            }
+        }
+
+        document.getElementById('stybut').addEventListener('click', function() {
+        this.classList.toggle('changed');
+        });
+
+       (function() {
+           let onpageLoad = localStorage.getItem("theme") || "";
+           let element = document.body;
+           element.classList.add(onpageLoad);
+           document.getElementById("theme").textContent =
+           localStorage.getItem("theme") || "light";
+        })();
+
+        function themeToggle() {
+           let element = document.body;
+           element.classList.toggle("dark-mode");
+
+           let theme = localStorage.getItem("theme");
+           if (theme && theme === "dark-mode") {
+           localStorage.setItem("theme", "");
+           } else {
+           localStorage.setItem("theme", "dark-mode");
+           }
+
+          document.getElementById("theme").textContent = localStorage.getItem("theme");
+      }      
   </script>
 </html>
