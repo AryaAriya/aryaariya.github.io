@@ -1,109 +1,117 @@
 <!doctype html>
 <html lang="en-US">
-<head> <title>The Ramblings of a Movie Lover</title> </head>
+<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Pure CSS Page Transition Effect</title>
   <head>
-   <meta charset="utf-8" /> 
+  
     <style>
-
-    .banner {   
-      background-size: cover; 
-      background-position: center;
-      background-repeat: no-repeat;   
-      width: 100%;
-      min-height: 59vh;  
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family:'Helvetica', serif;
-      color: #FFFFFF;
-      text-align: center;
-    }
-
-     .logo {
-      width: 25%;
-    }
-
-     .logo img {
-      height: 90px;   
-      width: 100%;
-    }
-
-     .navbar {
-      display: flex;
-      align-items: center;   
-      justify-content: space-between; 
-      background-color: #333333;
-      padding: 0 1rem;
-      height: 120px;
-     } 
- 
-     ul.tipnav {
-       list-style-type: none;
-       margin: 0;
-       padding: 0;
-       overflow: visible;
-       display: flex;
-       justify-content: center;
-       flex-wrap: wrap;
-       background-color: #7df9ff
-     }
-
-     ul.tipnav li a {
-       display: block;
-       color: #FFFFFF;
-       padding: 12px 20px;
-       text-decoration: none;
-       width: 100%;
-       font-family: sans-serif;
-       font-size: 1rem;
-       padding: 10px 20px;
-      }
-
-      body {
-        background: #f9d594; 
-        display: flex;
-        flex-direction: column;
-        min-height: 150vh;
-      }
-
-     footer {
-       display: flex;
-       justify-content: space-between;
-       background-color: #333333;
-       text-align: center; 
-       height: 100px;    
-       line-height: 75px;
-       width: 100%;
-       padding: 1rem;
-       color: #FFFFFF;
-     }
-
-     footer p {
-        margin: 0;
-     } 
-      
+      * {
+  margin: 0;
+  padding: 0;
+}
+body,
+html {
+  text-align: center;
+  height: 100%;
+  overflow: hidden;
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background: #000;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  color: #fff;
+  font-size: 18px;
+  display: block;
+  text-decoration: none;
+  padding: 15px;
+  font-family: poppins;
+}
+section{
+  height:100%;
+  width:100%;
+  display:table;
+  pointer-events:none;
+  z-index:0;
+  transition: transform 0.45s cubic-bezier(0,0,0.21,1);
+}
+section h1{
+  display:table-cell;
+  vertical-align:middle;
+  text-align:center;
+  color:#fff;
+  font-weight:100;
+    font-size:90px;
+  font-family:poppins;
+}
+#one{
+  background:#493323;
+}
+#two{
+  background:#91684a;
+}
+#three{
+ background:#eaac7f;
+}
+#four{
+  background:#99bbad;
+}
+a[id="one"]:target ~ #one{
+  transform:translate3d(0,0,0);
+}
+a[id="two"]:target ~ #two{
+  transform:translate3d(0,-100%,0);
+}
+a[id="three"]:target ~ #three{
+  transform:translate3d(0,-200%,0);
+}
+a[id="four"]:target ~ #four{
+  transform:translate3d(0,-300%,0);
+}
     </style>
     </head>
     <body>
       <header class ="banner">
       </header>
-
-      <nav class = "navbar">
-       <div class = "logo"></div>
-          <ul class = "tipnav">
-            <li> <a href ="#">Home</a>
-            <li> <a href ="#">Work</a>
-            <li> <a href ="#">About</a>
-            <li> <a href ="#">Contact</a>
-          </ul>
-      </nav>
-
-      <main>
-      </main>
-      
-      <footer>
-         <p>&copy; 2025</p>
-      </footer>
-    </body>
+<body>
+  <a id="one">HOME</a>
+  <a id="two">ABOUT</a>
+  <a id="three">SERVICES</a>
+  <a id="four">PORTFOLIO</a>
+  <a id="five">CONTACT</a>
+  <nav>
+    <div class="box">
+      <ul>
+        <li><a href="#one">HOME</a></li>
+        <li><a href="#two">ABOOUT</a></li>
+        <li><a href="#three">SERVICES</a></li>
+        <li><a href="#four">PORTFOLIO</a></li>
+        <li><a href="#five">CONTACT</a></li>
+      </ul>
+    </div>
+  </nav>
+  <section id="one" class="bg-1">
+    <h1>HOME</h1>
+  </section>
+  <section id="two" class="bg-2">
+    <h1>WORK</h1>
+  </section>
+  <section id="three" class="bg-3">
+    <h1>ABOUT</h1>
+  </section>
+  <section id="four" class="bg-4">
+    <h1>CONTACT</h1>
+  </section>
+</body>
 </html>
+
 
