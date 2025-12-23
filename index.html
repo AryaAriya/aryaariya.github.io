@@ -33,12 +33,28 @@ nav ul li {
 }
       
 nav ul li a {
-  color: #edddd4;
+  color: #283d3b;
   font-size: 18px;
   display: block;
   text-decoration: none;
   padding: 15px;
   font-family: poppins;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  height: 2px;
+  width: 0%;
+  background: #edddd4;
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
 }
   
 section{
@@ -97,10 +113,9 @@ a[id="four"]:target ~ #four{
    <body>
      
       <a id="one">HOME</a>
-      <a id="two">ABOUT</a>
-      <a id="three">SERVICES</a>
-      <a id="four">PORTFOLIO</a>
-      <a id="five">CONTACT</a>
+      <a id="two">WORK</a>
+      <a id="three">ABOUT</a>
+      <a id="four">CONTACT</a>
      
       <nav>
       <div class="box">
@@ -141,6 +156,7 @@ Forest Hues = Deep pine, blue spruce, birch, brick red, and mahogany evoke adven
 30 (secondary)= #197278
 10 (accent) = #C44536 and #772E25
 -->
+
 
 
 
