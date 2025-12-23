@@ -145,18 +145,32 @@ a[id="four"]:target ~ #four {
       </nav>
      
         <section id="one" class="bg-1">
-          <h1>HOME</h1>
+          <div class="content"></div>
         </section>
         <section id="two" class="bg-2">
-          <h1>WORK</h1>
+          <div class="content"></div>
         </section>
         <section id="three" class="bg-3">
-          <h1>ABOUT</h1>
+          <div class="content"></div>
         </section>
          <section id="four" class="bg-4">
-          <h1>CONTACT</h1>
+          <div class="content"></div>
          </section>
-  </body>
+     <script>
+       function loadPage(sectionId, page) {
+        fetch(page)
+         .then(res => res.text())
+         .then(html => {
+           document.querySelector(sectionId + " .content").innerHTML = html;
+         });
+       }
+
+      loadPage("#one", "pages/home.html");
+      loadPage("#two", "pages/work.html");
+      loadPage("#three", "pages/about.html");
+      loadPage("#four", "pages/contact.html");
+     </script>
+   </body>
 </html>
 
 <!--Color Palette 
@@ -167,6 +181,7 @@ a[id="four"]:target ~ #four {
 - #772e25
 Forest Hues = Deep pine, blue spruce, birch, brick red, and mahogany evoke adventure in calming woods.
 -->
+
 
 
 
