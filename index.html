@@ -27,6 +27,21 @@ nav {
   z-index: 10;
   background: #000;
 }
+
+nav .box {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding-right: 20px;
+}
+
+.logo-box img {
+  height: 40px;
+  width: auto;
+  display: block;
+  padding: 10px 20px;
+  border-radius: 4px;
+}
       
 nav ul li {
   display: inline-block;
@@ -67,45 +82,45 @@ section{
   background: #edddd4;
 }
   
-section h1{
+section h1 {
   display:table-cell;
   vertical-align:middle;
   text-align:center;
   color:#fff;
   font-weight:100;
-    font-size:90px;
+  font-size:90px;
   font-family:poppins;
 }
   
-#one{
+#one {
   background:#edddd4;
 }
   
-#two{
+#two {
   background:#edddd4;
 }
   
-#three{
+#three {
  background:#edddd4;
 }
   
-#four{
+#four {
   background:#edddd4;
 }
   
-a[id="one"]:target ~ #one{
+a[id="one"]:target ~ #one {
   transform:translate3d(0,0,0);
 }
   
-a[id="two"]:target ~ #two{
+a[id="two"]:target ~ #two {
   transform:translate3d(0,-100%,0);
 }
   
-a[id="three"]:target ~ #three{
+a[id="three"]:target ~ #three {
   transform:translate3d(0,-200%,0);
 }
   
-a[id="four"]:target ~ #four{
+a[id="four"]:target ~ #four {
   transform:translate3d(0,-300%,0);
 }
 </style>
@@ -119,6 +134,9 @@ a[id="four"]:target ~ #four{
      
       <nav>
       <div class="box">
+        <div class="logo-box">
+          <img src="your-logo.png" alt="Logo">
+        </div>
         <ul>
           <li><a href="#one">HOME</a></li>
           <li><a href="#two">WORK</a></li>
@@ -156,6 +174,7 @@ Forest Hues = Deep pine, blue spruce, birch, brick red, and mahogany evoke adven
 30 (secondary)= #197278
 10 (accent) = #C44536 and #772E25
 -->
+
 
 
 
