@@ -84,10 +84,11 @@ nav ul li a:hover::after {
 section {
   height: 100vh;
   width: 100%;
-  display: flex;
+  display: table;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  transition: transform 0.45s cubic-bezier(0,0,0.21,1);
 }
   
 section h1 {
@@ -127,19 +128,19 @@ section h1 {
 }
   
 a#nav-one:target ~ .sections {
-  transform: translateY(0);
+  transform: translate3d(0, 0, 0);
 }
 
 a#nav-two:target ~ .sections {
-  transform: translateY(-100vh);
+  transform: translate3d(0, -100vh, 0);
 }
 
 a#nav-three:target ~ .sections {
-  transform: translateY(-200vh);
+  transform: translate3d(0, -200vh, 0);
 }
 
 a#nav-four:target ~ .sections {
-  transform: translateY(-300vh);
+  transform: translate3d(0, -300vh, 0);
 }
 </style>
  </head>
@@ -163,8 +164,7 @@ a#nav-four:target ~ .sections {
         </ul>
       </div>
       </nav>
-    
-      <div class="sections">
+       
         <section id="one" class="bg-1">
           <div class="content"></div>
         </section>
@@ -174,10 +174,9 @@ a#nav-four:target ~ .sections {
         <section id="three" class="bg-3">
           <div class="content"></div>
         </section>
-         <section id="four" class="bg-4">
+        <section id="four" class="bg-4">
           <div class="content"></div>
-         </section>
-       </div>
+        </section>
      <script>
      function loadPage(sectionId, page, cssFile) {
        fetch(page)
@@ -215,6 +214,7 @@ a#nav-four:target ~ .sections {
 - #772e25
 Forest Hues = Deep pine, blue spruce, birch, brick red, and mahogany evoke adventure in calming woods.
 -->
+
 
 
 
