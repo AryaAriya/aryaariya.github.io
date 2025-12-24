@@ -122,25 +122,6 @@
   letter-spacing: 0.5px;
 }
 
-.old-card::before, .old-card::after {
-	content: ""; 
-	position: absolute; 
-	width: 40px;
-	height: 40px; 
-	border: 2px solid #bfa98a;
-	border-radius: 4px;
-} 
-
-.old-card::before {
-	top: -12px; 
-	left: -12px; 
-	border-right: none; border-bottom: none; 
-} 
-
-.old-card::after {
-	bottom: -12px;
-}
-
 .old-card .chapter-num {
 	font-family: "Garamond", serif;
 	font-size: 70px;
