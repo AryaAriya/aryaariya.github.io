@@ -32,3 +32,37 @@
 .stamp:active {
 	transform: rotate(12deg) scale(0.95);
 }
+
+.old-card { 
+	background: #f8f3e6; 
+	padding: 45px; 
+	border: 2px solid #bfa98a; 
+	max-width: 700px; 
+	margin: 60px auto; 
+	font-family: "Baskerville", serif; 
+	color: #4a3b2a; 
+	position: relative; 
+	box-shadow: 0 0 0 8px #e8dcc4, 0 12px 30px rgba(0,0,0,0.15); 
+} 
+
+.old-card::before, .old-card::after {
+	content: ""; 
+	position: absolute; 
+	width: 40px;
+	height: 40px; 
+	border: 2px solid #bfa98a;
+	border-radius: 4px;
+} 
+
+.old-card::before {
+	top: -12px; 
+	left: -12px; 
+	border-right: none; border-bottom: none; 
+} 
+
+.old-card::after {
+	bottom: -12px;
+	right: -12px; 
+	border-left: none; 
+	border-top: none; 
+}
