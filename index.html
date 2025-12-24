@@ -72,20 +72,15 @@ nav ul li a::after {
 nav ul li a:hover::after {
   width: 100%;
 }
-
-sections {
-  position: relative;
-  height: 400%;
-  display: table;
-  pointer-events: auto;
+  
+section {
+  height:100%;
+  width:100%;
+  display:table;
+  pointer-events:auto;
   z-index:0;
   transition: transform 0.45s cubic-bezier(0,0,0.21,1);
   background: #edddd4;
-} 
-  
-section {
-  height: 100vh;
-  width: 100%;
 }
   
 section h1 {
@@ -116,33 +111,26 @@ section h1 {
 #four {
   background:#edddd4;
 }
-
- a[id^="nav-"] {
-  position: absolute;
-  top: 0;
-  left: 0;
-  visibility: hidden;
+  
+a[id="nav-one"]:target ~ #one {
+  transform:translate3d(0,0,0);
 }
   
-a#nav-one:target ~ .sections {
-  transform: translateY(0);
+a[id="nav-two"]:target ~ #two {
+  transform:translate3d(0,-100%,0);
 }
-
-a#nav-two:target ~ .sections {
-  transform: translateY(-100vh);
+  
+a[id="nav-three"]:target ~ #three {
+  transform:translate3d(0,-200%,0);
 }
-
-a#nav-three:target ~ .sections {
-  transform: translateY(-200vh);
-}
-
-a#nav-four:target ~ .sections {
-  transform: translateY(-300vh);
+  
+a[id="nav-four"]:target ~ #four {
+  transform:translate3d(0,-300%,0);
 }
 </style>
  </head>
    <body>
-
+     
       <a id="nav-one">HOME</a>
       <a id="nav-two">WORK</a>
       <a id="nav-three">ABOUT</a>
@@ -161,8 +149,7 @@ a#nav-four:target ~ .sections {
         </ul>
       </div>
       </nav>
-    
-      <div class="sections">
+     
         <section id="one" class="bg-1">
           <div class="content"></div>
         </section>
@@ -175,10 +162,9 @@ a#nav-four:target ~ .sections {
          <section id="four" class="bg-4">
           <div class="content"></div>
          </section>
-       </div>
      <script>
-     function loadPage(sectionId, page, cssFile) {
-       fetch(page)
+       function loadPage(sectionId, page, cssFile) {
+    fetch(page)
       .then(res => res.text())
       .then(html => {
         const container = document.querySelector(sectionId + " .content");
@@ -186,22 +172,24 @@ a#nav-four:target ~ .sections {
 
         container.innerHTML = html;
 
-        if (cssFile && !document.querySelector(`link[href="${cssFile}"]`)) {
-           const link = document.createElement('link');
-           link.rel = 'stylesheet';
-           link.href = cssFile;
-           document.head.appendChild(link);
-        }
+        let oldLink = document.querySelector('link[data-page-style]');
+        if (oldLink) oldLink.remove();
 
+        if (cssFile) {
+          const link = document.createElement('link');
+          link.rel = 'stylesheet';
+          link.href = cssFile;
+          link.dataset.pageStyle = "true";
+          document.head.appendChild(link);
+        }
       });
   }
 
   window.addEventListener("DOMContentLoaded", () => {
-   loadPage("#one", "./Pages/home.html", "./Pages/home.css");
-   loadPage("#two", "./Pages/work.html", "./Pages/work.css");
-   loadPage("#three", "./Pages/about.html", "./Pages/about.css");
-   loadPage("#four", "./Pages/contact.html", "./Pages/contact.css");
-  }); 
+  loadPage("#one", "./Pages/home.html", "./Pages/home.css"); 
+  loadPage("#two", "./Pages/work.html", "./Pages/work.css");
+  loadPage("#three", "./Pages/about.html", "./Pages/about.css"); 
+  loadPage("#four", "./Pages/contact.html", "./Pages/contact.css");
+  });
      </script>
    </body>
-</html>
