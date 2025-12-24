@@ -11,16 +11,11 @@
   margin: 0;
   padding: 0;
 }
-
-body { 
- overflow-y: auto; 
- margin: 0;
- font-family: garamond;
-}
       
 body,html {
   text-align: center;
   height: 100%;
+  overflow: hidden;
   background: #edddd4;
 }
       
@@ -77,12 +72,20 @@ nav ul li a::after {
 nav ul li a:hover::after {
   width: 100%;
 }
+
+sections {
+  position: relative;
+  height: 400%;
+  display: table;
+  pointer-events: auto;
+  z-index:0;
+  transition: transform 0.45s cubic-bezier(0,0,0.21,1);
+  background: #edddd4;
+} 
   
 section {
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
-  position: relative;
-  background: #edddd4;
 }
   
 section h1 {
@@ -97,25 +100,53 @@ section h1 {
   font-size:90px;
   font-family: garamond;
 }
-
-.slide-content { 
- transform: translateY(100vh); 
- transition: transform 0.8s ease; 
+  
+#one {
+  background:#edddd4;
+}
+  
+#two {
+  background:#edddd4;
+}
+  
+#three {
+ background:#edddd4;
+}
+  
+#four {
+  background:#edddd4;
 }
 
- #one:target .slide-content,
- #two:target .slide-content, 
- #three:target .slide-content,
- #four:target .slide-content { 
-  transform: translateY(0); 
- } 
+ a[id^="nav-"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+}
+  
+a#nav-one:target ~ .sections {
+  transform: translateY(0);
+}
 
- #one .slide-content { 
-  transform: translateY(0); 
- }
+a#nav-two:target ~ .sections {
+  transform: translateY(-100vh);
+}
+
+a#nav-three:target ~ .sections {
+  transform: translateY(-200vh);
+}
+
+a#nav-four:target ~ .sections {
+  transform: translateY(-300vh);
+}
 </style>
  </head>
    <body>
+
+      <a id="nav-one">HOME</a>
+      <a id="nav-two">WORK</a>
+      <a id="nav-three">ABOUT</a>
+      <a id="nav-four">CONTACT</a>
      
       <nav>
       <div class="box">
@@ -123,53 +154,53 @@ section h1 {
           <img src="Images/key-logo.jpg" alt="Logo">
         </div>
         <ul>
-          <li><a href="#one">HOME</a></li>
-          <li><a href="#two">WORK</a></li>
-          <li><a href="#three">ABOUT</a></li>
-          <li><a href="#four">CONTACT</a></li>
+          <li><a href="#nav-one">HOME</a></li>
+          <li><a href="#nav-two">WORK</a></li>
+          <li><a href="#nav-three">ABOUT</a></li>
+          <li><a href="#nav-four">CONTACT</a></li>
         </ul>
       </div>
       </nav>
     
-        <section id="one">
-          <div class="slide-content" id="home-container"></div>
+      <div class="sections">
+        <section id="one" class="bg-1">
+          <div class="content"></div>
         </section>
-        <section id="two">
-          <div class="slide-content" id="work-container"></div>
+        <section id="two" class="bg-2">
+          <div class="content"></div>
         </section>
-        <section id="three">
-          <div class="slide-content" id="about-container"></div>
+        <section id="three" class="bg-3">
+          <div class="content"></div>
         </section>
-         <section id="four">
-          <div class="slide-content" id="contact-container"></div>
+         <section id="four" class="bg-4">
+          <div class="content"></div>
          </section>
        </div>
      <script>
-      function loadPage(containerId, htmlFile, cssFile) {
-  // Load the HTML content
-  fetch(htmlFile)
-    .then(response => response.text())
-    .then(html => {
-      document.getElementById(containerId).innerHTML = html;
+     function loadPage(sectionId, page, cssFile) {
+       fetch(page)
+      .then(res => res.text())
+      .then(html => {
+        const container = document.querySelector(sectionId + " .content");
+        if (!container) return; // safety check
 
-      // Load the CSS file (only once per file)
-      if (!document.querySelector(`link[href="${cssFile}"]`)) {
-        const link = document.createElement("link");
-        link.rel = "stylesheet";
-        link.href = cssFile;
-        document.head.appendChild(link);
-      }
-    })
-    .catch(err => console.error("Error loading page:", err));
-}
+        container.innerHTML = html;
 
-// Load all pages once the DOM is ready
-window.addEventListener("DOMContentLoaded", () => {
-  loadPage("home-container", "./Pages/home.html", "./Pages/home.css");
-  loadPage("work-container", "./Pages/work.html", "./Pages/work.css");
-  loadPage("about-container", "./Pages/about.html", "./Pages/about.css");
-  loadPage("contact-container", "./Pages/contact.html", "./Pages/contact.css");
-});
+        if (cssFile && !document.querySelector(`link[href="${cssFile}"]`)) {
+           const link = document.createElement('link');
+           link.rel = 'stylesheet';
+           link.href = cssFile;
+           document.head.appendChild(link);
+        }
+      });
+  }
+
+  window.addEventListener("DOMContentLoaded", () => {
+   loadPage("#one", "./Pages/home.html", "./Pages/home.css");
+   loadPage("#two", "./Pages/work.html", "./Pages/work.css");
+   loadPage("#three", "./Pages/about.html", "./Pages/about.css");
+   loadPage("#four", "./Pages/contact.html", "./Pages/contact.css");
+  }); 
      </script>
    </body>
 </html>
@@ -182,38 +213,3 @@ window.addEventListener("DOMContentLoaded", () => {
 - #772e25
 Forest Hues = Deep pine, blue spruce, birch, brick red, and mahogany evoke adventure in calming woods.
 -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
