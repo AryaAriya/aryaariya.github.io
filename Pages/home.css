@@ -8,7 +8,8 @@
 	  font-size: 3rem;
 	  font-weight: 700;
 	  position: relative; 
-	  top: 140px; /* down */
+	  cursor: pointer;
+	  top: 140px;
 	  left: -400px;
 	  border: 0.25rem solid #c44536;
 	  display: inline-block;
@@ -19,4 +20,15 @@
 	  -webkit-mask-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/8399/grunge.png');
       -webkit-mask-size: 944px 604px;
       mix-blend-mode: normal;
+	  transition: transform .2s ease, background-color .2s ease, color .2s ease;
+}
+
+.stamp:hover {
+	transform: rotate(12deg) translate (5px, -5px);
+	color: #222;
+	border-color: #222;
+}
+
+.stamp:active {
+	transform: rotate(12deg) scale(0.95);
 }
