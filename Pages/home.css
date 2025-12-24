@@ -43,6 +43,9 @@
 	color: #4a3b2a; 
 	position: relative; 
 	box-shadow: 0 0 0 8px #e8dcc4, 0 12px 30px rgba(0,0,0,0.15); 
+	margin-bottom: 40px; /* space between cards */ 	
+	right: -12px; 
+	border-left: none; 
 } 
 
 .old-card::before, .old-card::after {
@@ -62,7 +65,8 @@
 
 .old-card::after {
 	bottom: -12px;
-	right: -12px; 
-	border-left: none; 
-	border-top: none; 
+}
+
+.list { 
+	padding: 40px 0; 
 }
