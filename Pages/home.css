@@ -34,7 +34,7 @@
 }
 
 .old-card { 
-	background: edddd4;
+	background: #edddd4;
 	border: 3px solid #772e25;
 	padding: 40px;
 	margin: 0;
@@ -47,7 +47,7 @@
 } 
 
 .old-card-heading {
-	font-family: "Garamond", serif {
+	font-family: "Garamond", serif;
 	font-size: 22 px;
 	color: #772e25;
 	letter-spacing: 3px;
@@ -57,7 +57,8 @@
 
 .old-card h2 {
 	font-family: "Garamond", serif;
-	font-size: #772e25;
+	font-size: 26px;
+	color: #772e25;
 	margin-bottom: 15px;
 	letter-spacing: 1px;
 	text-transform: uppercase;
