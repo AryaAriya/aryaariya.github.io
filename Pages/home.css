@@ -48,6 +48,15 @@
 	filter: sepia(0.15) contrast (1.05);
 } 
 
+.old-card-heading {
+	font-family: "Garamond", serif {
+	font-size: 22 px;
+	color: #772e25;
+	letter-spacing: 3px;
+	text-transform: uppercase:
+	margin-bottom: 10px;
+}
+
 .old-card h2 {
 	font-family: "Garamond", serif;
 	font-size: #772e25;
@@ -57,6 +66,17 @@
 	border-bottom: 3px solid #c44536;
 	display: inline-block;
 	padding-bottom: 6px;
+}
+
+.old-card p:first-letter {
+  float: left;
+  font-family: Garamond, serif;
+  font-size: 3.8rem;
+  line-height: 0.8;
+  padding-right: 12px;
+  padding-top: 6px;
+  color: #772e25;
+  text-shadow: 1px 1px 0 #c44536;
 }
 
 .antique-entry p {
@@ -76,6 +96,31 @@
 	top: -25px;
 	right: 25px;
 	pointer-events: none;
+}
+
+.plate-image {
+  width: 100%;
+  max-width: 300px;
+  margin: 25px auto;
+  display: block;
+  border: 3px solid #772e25;
+  padding: 6px;
+  background: #edddd4;
+  box-shadow:
+    0 0 0 4px #edddd4,
+    0 0 0 6px #772e25,
+    0 8px 18px rgba(0,0,0,0.25);
+  filter: sepia(0.1) contrast(1.05);
+}
+
+.caption {
+  font-family: Garamond, serif;
+  font-size: 16px;
+  color: #772e25;
+  margin-top: 8px;
+  opacity: 0.8;
+  text-align: center;
+  letter-spacing: 0.5px;
 }
 
 .list { 
