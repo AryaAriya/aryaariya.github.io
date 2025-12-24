@@ -1,59 +1,60 @@
 <!doctype html>
 <html lang="en-US">
 <head>  
-  <meta charset="UTF-8">
+ <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <title>My Portfolio</title>
-
 <style>
-/* RESET */
+  
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
-
-html, body {
+      
+body,html {
+  text-align: center;
   height: 100%;
   overflow: hidden;
   background: #edddd4;
-  font-family: garamond;
-  text-align: center;
 }
-
-/* NAVIGATION */
+      
 nav {
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 10;
   background: #772e25;
 }
 
 nav .box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 60px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ gap: 60px;
+ padding-right: 0;
 }
 
 .logo-box img {
   height: 40px;
+  width: auto;
+  display: block;
+  padding: 10px 20px;
+  margin-right: auto;
 }
-
-nav ul {
-  list-style: none;
-}
-
+      
 nav ul li {
   display: inline-block;
 }
-
+      
 nav ul li a {
   color: #edddd4;
   font-size: 18px;
+  display: block;
   text-decoration: none;
   padding: 15px;
+  font-family: garamond;
   position: relative;
 }
 
@@ -72,118 +73,135 @@ nav ul li a:hover::after {
   width: 100%;
 }
 
-/* INVISIBLE TARGET ANCHORS */
-a[id^="nav-"] {
+sections {
+  position: relative;
+  height: 400%;
+  display: table;
+  pointer-events: auto;
+  z-index:0;
+  transition: transform 0.45s cubic-bezier(0,0,0.21,1);
+  background: #edddd4;
+} 
+  
+section {
+  height: 100vh;
+  width: 100%;
+}
+  
+section h1 {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  padding-top: 120px;
+  text-align:center;
+  color:#772e25;
+  font-weight:100;
+  font-size:90px;
+  font-family: garamond;
+}
+  
+#one {
+  background:#edddd4;
+}
+  
+#two {
+  background:#edddd4;
+}
+  
+#three {
+ background:#edddd4;
+}
+  
+#four {
+  background:#edddd4;
+}
+
+ a[id^="nav-"] {
   position: absolute;
   top: 0;
   left: 0;
   visibility: hidden;
 }
-
-/* TYPE B FULL-SCREEN SECTIONS */
-section {
-  position: absolute;
-  left: 0;
-  height: 100vh;
-  width: 100%;
-  display: table;
-  transition: transform 0.45s cubic-bezier(0,0,0.21,1);
-  background: #edddd4;
-}
-
-section .content {
-  height: 100%;
-  padding-top: 80px; /* nav spacing */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#one   { top:   0; }
-#two   { top: 100vh; }
-#three { top: 200vh; }
-#four  { top: 300vh; }  
-
-/* ===================== SLIDE STATES ===================== */
-a#nav-one:target ~ section   { transform: translateY(0); }
-a#nav-two:target ~ section   { transform: translateY(-100vh); }
-a#nav-three:target ~ section { transform: translateY(-200vh); }
-a#nav-four:target ~ section  { transform: translateY(-300vh); }
-
-body:not(:target) section {
+  
+a#nav-one:target ~ .sections {
   transform: translateY(0);
 }
-</style>
-</head>
 
-<body>
-
-<!-- INVISIBLE TARGETS (MUST COME FIRST) -->
-<a id="nav-one"></a>
-<a id="nav-two"></a>
-<a id="nav-three"></a>
-<a id="nav-four"></a>
-
-<!-- SECTIONS (MUST COME IMMEDIATELY AFTER ANCHORS) -->
-<section id="one">
-  <div class="content" id="home-container"></div>
-</section>
-
-<section id="two">
-  <div class="content" id="work-container"></div>
-</section>
-
-<section id="three">
-  <div class="content" id="about-container"></div>
-</section>
-
-<section id="four">
-  <div class="content" id="contact-container"></div>
-</section>
-
-<!-- NAVIGATION (MUST COME AFTER SECTIONS) -->
-<nav>
-  <div class="box">
-    <div class="logo-box">
-      <img src="./Images/key-logo.jpg" alt="Logo">
-    </div>
-    <ul>
-      <li><a href="#nav-one">HOME</a></li>
-      <li><a href="#nav-two">WORK</a></li>
-      <li><a href="#nav-three">ABOUT</a></li>
-      <li><a href="#nav-four">CONTACT</a></li>
-    </ul>
-  </div>
-</nav>
-
-<!-- PAGE LOADER -->
-<script>
-function loadPage(containerId, htmlFile, cssFile) {
-  fetch(htmlFile)
-    .then(res => res.text())
-    .then(html => {
-      const container = document.getElementById(containerId);
-      if (!container) return;
-      container.innerHTML = html;
-
-      if (cssFile && !document.querySelector(`link[href="${cssFile}"]`)) {
-        const link = document.createElement("link");
-        link.rel = "stylesheet";
-        link.href = cssFile;
-        document.head.appendChild(link);
-      }
-    });
+a#nav-two:target ~ .sections {
+  transform: translateY(-100vh);
 }
 
-window.addEventListener("DOMContentLoaded", () => {
-  loadPage("home-container", "./Pages/home.html", "./Pages/home.css");
-  loadPage("work-container", "./Pages/work.html", "./Pages/work.css");
-  loadPage("about-container", "./Pages/about.html", "./Pages/about.css");
-  loadPage("contact-container", "./Pages/contact.html", "./Pages/contact.css");
-});
-</script>
+a#nav-three:target ~ .sections {
+  transform: translateY(-200vh);
+}
 
-</body>
+a#nav-four:target ~ .sections {
+  transform: translateY(-300vh);
+}
+</style>
+ </head>
+   <body>
+
+      <a id="nav-one">HOME</a>
+      <a id="nav-two">WORK</a>
+      <a id="nav-three">ABOUT</a>
+      <a id="nav-four">CONTACT</a>
+     
+      <nav>
+      <div class="box">
+        <div class="logo-box">
+          <img src="Images/key-logo.jpg" alt="Logo">
+        </div>
+        <ul>
+          <li><a href="#nav-one">HOME</a></li>
+          <li><a href="#nav-two">WORK</a></li>
+          <li><a href="#nav-three">ABOUT</a></li>
+          <li><a href="#nav-four">CONTACT</a></li>
+        </ul>
+      </div>
+      </nav>
+    
+      <div class="sections">
+        <section id="one" class="bg-1">
+          <div class="content"></div>
+        </section>
+        <section id="two" class="bg-2">
+          <div class="content"></div>
+        </section>
+        <section id="three" class="bg-3">
+          <div class="content"></div>
+        </section>
+         <section id="four" class="bg-4">
+          <div class="content"></div>
+         </section>
+       </div>
+     <script>
+     function loadPage(sectionId, page, cssFile) {
+       fetch(page)
+      .then(res => res.text())
+      .then(html => {
+        const container = document.querySelector(sectionId + " .content");
+        if (!container) return; // safety check
+
+        container.innerHTML = html;
+
+        if (cssFile && !document.querySelector(`link[href="${cssFile}"]`)) {
+           const link = document.createElement('link');
+           link.rel = 'stylesheet';
+           link.href = cssFile;
+           document.head.appendChild(link);
+        }
+
+      });
+  }
+
+  window.addEventListener("DOMContentLoaded", () => {
+   loadPage("#one", "./Pages/home.html", "./Pages/home.css");
+   loadPage("#two", "./Pages/work.html", "./Pages/work.css");
+   loadPage("#three", "./Pages/about.html", "./Pages/about.css");
+   loadPage("#four", "./Pages/contact.html", "./Pages/contact.css");
+  }); 
+     </script>
+   </body>
 </html>
-
-
