@@ -41,6 +41,9 @@
 	width: 320px;
 	height: 320px;
 	position: relative; 
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
 	right: 0px; 
 	border-left: none; 
 	box-shadow: 0 0 0 6px #edddd4, 0 0 0 10px #772e25, 0 12px 30px rgba(0, 0, 0, 0.25);
@@ -85,6 +88,8 @@
 	line-height: 1.7;
 	color: #772e25;
 	margin-top: 20px;
+	flex-grow: 1;
+	overflow-y: auto;
 }
 
 .old-card .chapter-num {
@@ -100,8 +105,9 @@
 
 .plate-image {
   width: 100%;
-  max-width: 300px;
-  margin: 25px auto;
+  height: 140px;
+  object-fit: cover;
+  margin: 15px auto;
   display: block;
   border: 3px solid #772e25;
   padding: 6px;
@@ -115,9 +121,10 @@
 
 .caption {
   font-family: Garamond, serif;
-  font-size: 16px;
+  font-size: 14px;
   color: #772e25;
-  margin-top: 8px;
+  margin-top:4px;
+  margin-bottom: 8px;
   opacity: 0.8;
   text-align: center;
   letter-spacing: 0.5px;
