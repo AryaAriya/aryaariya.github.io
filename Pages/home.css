@@ -37,12 +37,10 @@
 	background: edddd4;
 	border: 3px solid #772e25;
 	padding: 40px;
-	margin: 50px auto;
-	width: 85%;
-	max-width: 750px;
+	margin: 0;
+	width: 320px;
 	position: relative; 
-	margin-bottom: 40px; /* space between cards */ 	
-	right: -12px; 
+	right: 0px; 
 	border-left: none; 
 	box-shadow: 0 0 0 6px #edddd4, 0 0 0 10px #772e25, 0 12px 30px rgba(0, 0, 0, 0.25);
 	filter: sepia(0.15) contrast (1.05);
@@ -155,4 +153,12 @@
 
 .list { 
 	padding: 40px 0; 
+}
+
+.card-row {
+	display: flex; 
+	justify-content: center; 
+	gap: 40px; 
+	margin-bottom: 40px; 
+	flex-wrap: wrap; 
 }
