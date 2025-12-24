@@ -132,10 +132,10 @@ section h1 {
  </head>
    <body>
 
-      <a id="nav-one">HOME</a>
-      <a id="nav-two">WORK</a>
-      <a id="nav-three">ABOUT</a>
-      <a id="nav-four">CONTACT</a>
+      <a id="one">HOME</a>
+      <a id="two">WORK</a>
+      <a id="three">ABOUT</a>
+      <a id="four">CONTACT</a>
      
       <nav>
       <div class="box">
@@ -166,18 +166,24 @@ section h1 {
        </div>
      <script>
       function loadPage(containerId, htmlFile, cssFile) {
+  // Load the HTML content
   fetch(htmlFile)
-    .then(res => res.text())
+    .then(response => response.text())
     .then(html => {
       document.getElementById(containerId).innerHTML = html;
 
-      const link = document.createElement("link");
-      link.rel = "stylesheet";
-      link.href = cssFile;
-      document.head.appendChild(link);
-    });
+      // Load the CSS file (only once per file)
+      if (!document.querySelector(`link[href="${cssFile}"]`)) {
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = cssFile;
+        document.head.appendChild(link);
+      }
+    })
+    .catch(err => console.error("Error loading page:", err));
 }
 
+// Load all pages once the DOM is ready
 window.addEventListener("DOMContentLoaded", () => {
   loadPage("home-container", "./Pages/home.html", "./Pages/home.css");
   loadPage("work-container", "./Pages/work.html", "./Pages/work.css");
@@ -196,6 +202,7 @@ window.addEventListener("DOMContentLoaded", () => {
 - #772e25
 Forest Hues = Deep pine, blue spruce, birch, brick red, and mahogany evoke adventure in calming woods.
 -->
+
 
 
 
