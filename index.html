@@ -163,18 +163,18 @@ a[id="four"]:target ~ #four {
           <div class="content"></div>
          </section>
      <script>
-       function loadPage(sectionId, page, cssFile) {
-    fetch(page)
+     function loadPage(sectionId, page, cssFile) {
+       fetch(page)
       .then(res => res.text())
       .then(html => {
         const container = document.querySelector(sectionId + " .content");
+        if (!container) return; // safety check
+
         container.innerHTML = html;
 
-        // Remove old page-specific CSS
         let oldLink = document.querySelector('link[data-page-style]');
         if (oldLink) oldLink.remove();
 
-        // Add new page-specific CSS
         if (cssFile) {
           const link = document.createElement('link');
           link.rel = 'stylesheet';
@@ -185,11 +185,12 @@ a[id="four"]:target ~ #four {
       });
   }
 
-  loadPage("#one", "./Pages/home.html", "./Pages/home.css");
-  loadPage("#two", "./Pages/work.html", "./Pages/work.css");
-  loadPage("#three", "./Pages/about.html", "./Pages/about.css");
-  loadPage("#four", "./Pages/contact.html", "./Pages/contact.css");
-
+  window.addEventListener("DOMContentLoaded", () => {
+    loadPage("#one", "./Pages/home.html", "./Pages/home.css");
+    loadPage("#two", "./Pages/work.html", "./Pages/work.css");
+    loadPage("#three", "./Pages/about.html", "./Pages/about.css");
+    loadPage("#four", "./Pages/contact.html", "./Pages/contact.css");
+  }); 
      </script>
    </body>
 </html>
@@ -202,6 +203,7 @@ a[id="four"]:target ~ #four {
 - #772e25
 Forest Hues = Deep pine, blue spruce, birch, brick red, and mahogany evoke adventure in calming woods.
 -->
+
 
 
 
