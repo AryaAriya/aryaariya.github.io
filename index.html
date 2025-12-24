@@ -11,6 +11,11 @@
   margin: 0;
   padding: 0;
 }
+
+body { 
+ overflow-y: auto; 
+ margin: 0;
+}
       
 body,html {
   text-align: center;
@@ -74,7 +79,6 @@ nav ul li a:hover::after {
 }
 
 sections {
-  position: relative;
   height: 400%;
   display: table;
   pointer-events: auto;
@@ -84,8 +88,9 @@ sections {
 } 
   
 section {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
+  position: relative;
 }
   
 section h1 {
@@ -100,21 +105,10 @@ section h1 {
   font-size:90px;
   font-family: garamond;
 }
-  
-#one {
-  background:#edddd4;
-}
-  
-#two {
-  background:#edddd4;
-}
-  
-#three {
- background:#edddd4;
-}
-  
-#four {
-  background:#edddd4;
+
+.slide-content { 
+ transform: translateY(100vh); 
+ transition: transform 0.8s ease; 
 }
 
  a[id^="nav-"] {
@@ -123,22 +117,17 @@ section h1 {
   left: 0;
   visibility: hidden;
 }
-  
-a#nav-one:target ~ .sections {
-  transform: translateY(0);
-}
 
-a#nav-two:target ~ .sections {
-  transform: translateY(-100vh);
-}
+ #one:target .slide-content,
+ #two:target .slide-content, 
+ #three:target .slide-content,
+ #four:target .slide-content { 
+  transform: translateY(0); 
+ } 
 
-a#nav-three:target ~ .sections {
-  transform: translateY(-200vh);
-}
-
-a#nav-four:target ~ .sections {
-  transform: translateY(-300vh);
-}
+ #one .slide-content { 
+  transform: translateY(0); 
+ }
 </style>
  </head>
    <body>
@@ -162,18 +151,17 @@ a#nav-four:target ~ .sections {
       </div>
       </nav>
     
-      <div class="sections">
-        <section id="one" class="bg-1">
-          <div class="content"></div>
+        <section id="one"">
+          <div class="slide-content"></div>
         </section>
-        <section id="two" class="bg-2">
-          <div class="content"></div>
+        <section id="two">
+          <div class="slide-content"></div>
         </section>
-        <section id="three" class="bg-3">
-          <div class="content"></div>
+        <section id="three">
+          <div class="slide-content"></div>
         </section>
-         <section id="four" class="bg-4">
-          <div class="content"></div>
+         <section id="four">
+          <div class="slide-content"></div>
          </section>
        </div>
      <script>
@@ -214,6 +202,7 @@ a#nav-four:target ~ .sections {
 - #772e25
 Forest Hues = Deep pine, blue spruce, birch, brick red, and mahogany evoke adventure in calming woods.
 -->
+
 
 
 
