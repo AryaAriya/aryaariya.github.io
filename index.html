@@ -23,7 +23,6 @@ html, body {
 
 /* NAVIGATION */
 nav {
-  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -40,8 +39,10 @@ nav .box {
 
 .logo-box img {
   height: 40px;
-  padding: 10px 20px;
-  margin-right: auto;
+}
+
+nav ul {
+  list-style: none;
 }
 
 nav ul li {
@@ -82,7 +83,6 @@ a[id^="nav-"] {
 /* TYPE B FULL-SCREEN SECTIONS */
 section {
   position: absolute;
-  top: 0;
   left: 0;
   height: 100vh;
   width: 100%;
@@ -92,20 +92,26 @@ section {
 }
 
 section .content {
-  display: table-cell;
-  vertical-align: middle;
-  padding-top: 60px; /* space for nav */
+  height: 100%;
+  padding-top: 80px; /* nav spacing */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* SLIDE MOVEMENT — EACH SECTION MOVES ITSELF */
-a#nav-one:target ~ #one { transform: translate3d(0, 0, 0); }
-a#nav-two:target ~ #two { transform: translate3d(0, -100vh, 0); }
-a#nav-three:target ~ #three { transform: translate3d(0, -200vh, 0); }
-a#nav-four:target ~ #four { transform: translate3d(0, -300vh, 0); }
+#one   { top:   0; }
+#two   { top: 100vh; }
+#three { top: 200vh; }
+#four  { top: 300vh; }  
 
-/* DEFAULT POSITION */
-body:not(:target) #one {
-  transform: translate3d(0, 0, 0);
+/* ===================== SLIDE STATES ===================== */
+a#nav-one:target ~ section   { transform: translateY(0); }
+a#nav-two:target ~ section   { transform: translateY(-100vh); }
+a#nav-three:target ~ section { transform: translateY(-200vh); }
+a#nav-four:target ~ section  { transform: translateY(-300vh); }
+
+body:not(:target) section {
+  transform: translateY(0);
 }
 </style>
 </head>
@@ -139,7 +145,7 @@ body:not(:target) #one {
 <nav>
   <div class="box">
     <div class="logo-box">
-      <img src="Images/key-logo.jpg" alt="Logo">
+      <img src="./Images/key-logo.jpg" alt="Logo">
     </div>
     <ul>
       <li><a href="#nav-one">HOME</a></li>
@@ -179,4 +185,5 @@ window.addEventListener("DOMContentLoaded", () => {
 
 </body>
 </html>
+
 
