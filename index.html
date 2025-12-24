@@ -172,9 +172,6 @@ a[id="nav-four"]:target ~ #four {
 
         container.innerHTML = html;
 
-        let oldLink = document.querySelector('link[data-page-style]');
-        if (oldLink) oldLink.remove();
-
         if (cssFile) {
           const link = document.createElement('link');
           link.rel = 'stylesheet';
@@ -193,5 +190,6 @@ window.addEventListener("DOMContentLoaded", () => {
 }); 
      </script>
    </body>
+
 
 
