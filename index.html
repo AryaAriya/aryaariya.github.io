@@ -15,12 +15,12 @@
 body { 
  overflow-y: auto; 
  margin: 0;
+ font-family: garamond;
 }
       
 body,html {
   text-align: center;
   height: 100%;
-  overflow: hidden;
   background: #edddd4;
 }
       
@@ -152,44 +152,38 @@ section h1 {
       </nav>
     
         <section id="one"">
-          <div class="slide-content"></div>
+          <div class="slide-content" id="home-container"></div>
         </section>
         <section id="two">
-          <div class="slide-content"></div>
+          <div class="slide-content" id="work-container"></div>
         </section>
         <section id="three">
-          <div class="slide-content"></div>
+          <div class="slide-content" id="about-container"></div>
         </section>
          <section id="four">
-          <div class="slide-content"></div>
+          <div class="slide-content" id="contact-container"></div>
          </section>
        </div>
      <script>
-     function loadPage(sectionId, page, cssFile) {
-       fetch(page)
-      .then(res => res.text())
-      .then(html => {
-        const container = document.querySelector(sectionId + " .content");
-        if (!container) return; // safety check
+      function loadPage(containerId, htmlFile, cssFile) {
+  fetch(htmlFile)
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById(containerId).innerHTML = html;
 
-        container.innerHTML = html;
+      const link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.href = cssFile;
+      document.head.appendChild(link);
+    });
+}
 
-        if (cssFile && !document.querySelector(`link[href="${cssFile}"]`)) {
-           const link = document.createElement('link');
-           link.rel = 'stylesheet';
-           link.href = cssFile;
-           document.head.appendChild(link);
-        }
-
-      });
-  }
-
-  window.addEventListener("DOMContentLoaded", () => {
-   loadPage("#one", "./Pages/home.html", "./Pages/home.css");
-   loadPage("#two", "./Pages/work.html", "./Pages/work.css");
-   loadPage("#three", "./Pages/about.html", "./Pages/about.css");
-   loadPage("#four", "./Pages/contact.html", "./Pages/contact.css");
-  }); 
+window.addEventListener("DOMContentLoaded", () => {
+  loadPage("home-container", "./Pages/home.html", "./Pages/home.css");
+  loadPage("work-container", "./Pages/work.html", "./Pages/work.css");
+  loadPage("about-container", "./Pages/about.html", "./Pages/about.css");
+  loadPage("contact-container", "./Pages/contact.html", "./Pages/contact.css");
+});
      </script>
    </body>
 </html>
@@ -202,6 +196,7 @@ section h1 {
 - #772e25
 Forest Hues = Deep pine, blue spruce, birch, brick red, and mahogany evoke adventure in calming woods.
 -->
+
 
 
 
