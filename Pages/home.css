@@ -88,7 +88,7 @@ html {
 	font-size: 22 px;
 	color: #772e25;
 	letter-spacing: 3px;
-	text-transform: uppercase:
+	text-transform: uppercase;
 	margin-bottom: 0px; 
 }
 
@@ -121,8 +121,6 @@ html {
 	line-height: 1.7;
 	color: #772e25;
 	margin-top: 20px;
-	flex-grow: 1;
-	overflow-y: auto;
 }
 
 .old-card .chapter-num {
