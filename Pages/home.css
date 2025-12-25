@@ -193,20 +193,14 @@ html {
 }
 
 .site-footer {
-  background: #edddd4;         
-  color: #772e25;               
-  font-family: "Garamond", serif;
-  text-align: center;
-  padding: 40px 0;
-  margin-top: 120px;            
-  border-top: 3px solid #772e25;
-  opacity: 0.9;
-}
-
-.site-footer p {
-  margin: 0;
-  font-size: 18px;
-  letter-spacing: 1px;
+    background: #edddd4;         
+    color: #772e25;               
+    font-family: "Garamond", serif;
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 120px;            
+    border-top: 3px solid #772e25;
+    opacity: 0.9;
 }
 
 .site-footer p {
