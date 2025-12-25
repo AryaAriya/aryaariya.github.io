@@ -192,6 +192,12 @@ html {
 	flex-wrap: wrap; 
 }
 
+.card-link { 
+	text-decoration: none; 
+	color: inherit; 
+	display: inline-block; 
+}
+
 .site-footer {
     background: #edddd4;         
     color: #772e25;               
