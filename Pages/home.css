@@ -60,7 +60,7 @@
 }
 
 .divider-line::after {
-	right: 10;
+	right: 0;
 }
 
 .old-card { 
