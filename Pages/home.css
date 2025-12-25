@@ -2,9 +2,12 @@
 	font-size: 22px; 
 }
 
+html { 
+	scroll-behavior: smooth; 
+}
+
 .stamp {
     transform: rotate(12deg);
-	  color: #c44536;
 	  font-size: 3rem;
 	  font-weight: 700;
 	  position: relative; 
