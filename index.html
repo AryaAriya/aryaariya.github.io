@@ -122,10 +122,6 @@ section .content {
   background:#edddd4;
 }
   
-#two {
-  background:#edddd4;
-}
-  
 #three {
  background:#edddd4;
 }
@@ -138,23 +134,18 @@ a[id="nav-one"]:target ~ #one {
   transform:translate3d(0,0,0);
 }
   
-a[id="nav-two"]:target ~ #two {
+a[id="nav-three"]:target ~ #three {
   transform:translate3d(0,-100%,0);
 }
   
-a[id="nav-three"]:target ~ #three {
-  transform:translate3d(0,-200%,0);
-}
-  
 a[id="nav-four"]:target ~ #four {
-  transform:translate3d(0,-300%,0);
+  transform:translate3d(0,-200%,0);
 }
 </style>
  </head>
    <body>
      
       <a id="nav-one">HOME</a>
-      <a id="nav-two">WORK</a>
       <a id="nav-three">ABOUT</a>
       <a id="nav-four">CONTACT</a>
      
@@ -165,7 +156,6 @@ a[id="nav-four"]:target ~ #four {
         </div>
         <ul>
           <li><a href="#nav-one">HOME</a></li>
-          <li><a href="#nav-two">WORK</a></li>
           <li><a href="#nav-three">ABOUT</a></li>
           <li><a href="#nav-four">CONTACT</a></li>
         </ul>
@@ -173,9 +163,6 @@ a[id="nav-four"]:target ~ #four {
       </nav>
      
         <section id="one" class="bg-1">
-          <div class="content"></div>
-        </section>
-        <section id="two" class="bg-2">
           <div class="content"></div>
         </section>
         <section id="three" class="bg-3">
@@ -210,12 +197,12 @@ a[id="nav-four"]:target ~ #four {
 
 window.addEventListener("DOMContentLoaded", () => {
   loadPage("#one", "./Pages/home.html", "./Pages/home.css"); 
-  loadPage("#two", "./Pages/work.html", "./Pages/work.css"); 
   loadPage("#three", "./Pages/about.html", "./Pages/about.css"); 
   loadPage("#four", "./Pages/contact.html", "./Pages/contact.css");
 }); 
      </script>
    </body>
+
 
 
 
