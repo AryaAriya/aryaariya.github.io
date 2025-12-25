@@ -34,12 +34,33 @@
 }
 
 .divider-line {
-    width: 100%;
+	font-family: "Garamond", serif;
+	font-size: 28px;
 	border: none;
-    border-top: 3px solid #772e25;
+	color: #772e25;
     margin-top: 200px;
 	margin-bottom: 0px;
-    opacity: 0.6;
+	position: relative;
+	text-align: center;
+}
+
+.divider-line::before,
+.divider-line::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	width: 40%;
+	border-top: 3px solid #772e25;
+	opacity: 0.6;
+}
+
+.divider-line::before {
+	left: 0;
+}
+
+.divider-line::after {
+	right: 10;
 }
 
 .old-card { 
