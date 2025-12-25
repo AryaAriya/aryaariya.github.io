@@ -56,11 +56,11 @@
 }
 
 .divider-line::before {
-	left: 5;
+	left: 0;
 }
 
 .divider-line::after {
-	right: 5;
+	right: 0;
 }
 
 .old-card { 
