@@ -33,12 +33,12 @@
 	transform: rotate(12deg) scale(0.95);
 }
 
-hr {
-    width: 80%;
+.divider-line {
+    width: 100%;
 	border: none;
     border-top: 3px solid #772e25;
     margin-top: 120px;
-	margin-bottom: 80px;
+	margin-bottom: 0px;
     opacity: 0.6;
 }
 
