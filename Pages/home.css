@@ -7,24 +7,24 @@ html {
 }
 
 .stamp {
-      transform: rotate(12deg);
-	  color: #c44536;
-	  font-size: 3rem;
-	  font-weight: 700;
-	  position: relative; 
-	  cursor: pointer;
-	  top: 90px;
-	  left: -400px;
-	  border: 0.25rem solid #c44536;
-	  display: inline-block;
-	  padding: 0.25rem 1rem;
-  	  text-transform: uppercase;
-	  border-radius: 1rem;
-	  font-family: 'Garamond';
-	  -webkit-mask-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/8399/grunge.png');
-      -webkit-mask-size: 944px 604px;
-      mix-blend-mode: normal;
-	  transition: transform .2s ease, background-color .2s ease, color .2s ease;
+    transform: rotate(12deg);
+	color: #c44536;
+	font-size: 3rem;
+	font-weight: 700;
+	position: relative; 
+	cursor: pointer;
+	top: 90px;
+	left: -400px;
+	border: 0.25rem solid #c44536;
+	display: inline-block;
+	padding: 0.25rem 1rem;
+  	text-transform: uppercase;
+	border-radius: 1rem;
+	font-family: 'Garamond';
+	-webkit-mask-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/8399/grunge.png');
+    -webkit-mask-size: 944px 604px;
+    mix-blend-mode: normal;
+	transition: transform .2s ease, background-color .2s ease, color .2s ease;
 }
 
 .stamp:hover {
@@ -54,7 +54,7 @@ html {
 	position: absolute;
 	width: 100%;
 	top: 50%;
-	width: 50%;
+	width: 45%;
 	border-top: 3px solid #772e25;
 	opacity: 0.6;
 }
@@ -105,14 +105,14 @@ html {
 }
 
 .old-card p:first-letter {
-  float: left;
-  font-family: Garamond, serif;
-  font-size: 3.8rem;
-  line-height: 0.8;
-  padding-right: 0px;
-  padding-top: 0px;
-  color: #772e25;
-  text-shadow: 1px 1px 0 #c44536;
+    float: left;
+    font-family: Garamond, serif;
+    font-size: 3.8rem;
+    line-height: 0.8;
+    padding-right: 0px;
+    padding-top: 0px;
+    color: #772e25;
+    text-shadow: 1px 1px 0 #c44536;
 }
 
 .old-card p {
@@ -137,31 +137,31 @@ html {
 }
 
 .plate-image {
-  width: 100%;
-  height: 160px;
-  object-fit: contain;
-  object-position: center;
-  margin: 15px auto;
-  display: block;
-  border: 3px solid #772e25;
-  padding: 6px;
-  background: #edddd4;
-  box-shadow:
+    width: 100%;
+    height: 160px;
+    object-fit: contain;
+    object-position: center;
+    margin: 15px auto;
+    display: block;
+    border: 3px solid #772e25;
+    padding: 6px;
+    background: #edddd4;
+    box-shadow:
     0 0 0 4px #edddd4,
     0 0 0 6px #772e25,
     0 8px 18px rgba(0,0,0,0.25);
-  filter: sepia(0.1) contrast(1.05);
+    filter: sepia(0.1) contrast(1.05);
 }
 
 .caption {
-  font-family: Garamond, serif;
-  font-size: 14px;
-  color: #772e25;
-  margin-top:4px;
-  margin-bottom: 8px;
-  opacity: 0.8;
-  text-align: center;
-  letter-spacing: 0.5px;
+    font-family: Garamond, serif;
+    font-size: 14px;
+    color: #772e25;
+    margin-top:4px;
+    margin-bottom: 8px;
+    opacity: 0.8;
+    text-align: center;
+    letter-spacing: 0.5px;
 }
 
 .old-card .chapter-num {
