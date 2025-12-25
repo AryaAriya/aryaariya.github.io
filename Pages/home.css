@@ -33,6 +33,15 @@
 	transform: rotate(12deg) scale(0.95);
 }
 
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
 .old-card { 
 	background: #edddd4;
 	border: 3px solid #772e25;
@@ -146,7 +155,7 @@
 	display: flex;
 	flex-direction: column; 
 	align-items: center;
-	padding-top: 400px;
+	padding-top: 300px;
 }
 
 .card-row {
