@@ -54,7 +54,7 @@ html {
 	position: absolute;
 	width: 100%;
 	top: 50%;
-	width: 40%;
+	width: 70%;
 	border-top: 3px solid #772e25;
 	opacity: 0.6;
 }
@@ -89,7 +89,7 @@ html {
 	color: #772e25;
 	letter-spacing: 3px;
 	text-transform: uppercase:
-	margin-bottom: 10px;
+	margin-bottom: 0px; 
 }
 
 .old-card h2 {
@@ -109,8 +109,8 @@ html {
   font-family: Garamond, serif;
   font-size: 3.8rem;
   line-height: 0.8;
-  padding-right: 1px;
-  padding-top: 6px;
+  padding-right: 0px;
+  padding-top: 0px;
   color: #772e25;
   text-shadow: 1px 1px 0 #c44536;
 }
