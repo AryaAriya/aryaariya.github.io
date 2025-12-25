@@ -197,7 +197,7 @@ html {
     color: #772e25;              
     font-family: "Garamond", serif;
     text-align: center;
-    padding: 40px 0;
+    padding: 0px 0;
     border-top: 3px solid #772e25; /* matches card borders */
     opacity: 0.9;
 }
