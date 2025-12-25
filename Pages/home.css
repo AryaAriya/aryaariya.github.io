@@ -37,7 +37,7 @@
     width: 100%;
 	border: none;
     border-top: 3px solid #772e25;
-    margin-top: 120px;
+    margin-top: 200px;
 	margin-bottom: 0px;
     opacity: 0.6;
 }
@@ -155,7 +155,7 @@
 	display: flex;
 	flex-direction: column; 
 	align-items: center;
-	padding-top: 300px;
+	padding-top: 30px;
 }
 
 .card-row {
