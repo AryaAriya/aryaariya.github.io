@@ -155,14 +155,14 @@
 	display: flex;
 	flex-direction: column; 
 	align-items: center;
-	padding-top: 60px;
+	padding-top: 100px;
 }
 
 .card-row {
 	width: 100%;
 	display: flex; 
 	justify-content: center; 
-	gap: 120px; 
+	gap: 80px; 
 	margin-bottom: 40px; 
 	flex-wrap: wrap; 
 }
