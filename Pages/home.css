@@ -34,13 +34,12 @@
 }
 
 hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-	margin-bottom: 300px;
+    width: 80%;
+	border: none;
+    border-top: 3px solid #772e25;
+    margin-top: 120px;
+	margin-bottom: 80px;
+    opacity: 0.6;
 }
 
 .old-card { 
