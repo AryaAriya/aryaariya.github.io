@@ -6,6 +6,11 @@ html {
 	scroll-behavior: smooth; 
 }
 
+.case-wrapper {
+  max-width: 900px;
+  margin: auto;
+}
+
 .stamp {
     transform: rotate(12deg);
 	color: #c44536;
@@ -52,7 +57,6 @@ html {
 .divider-line::after {
 	content: "";
 	position: absolute;
-	width: 100%;
 	top: 50%;
 	width: 45%;
 	border-top: 3px solid #772e25;
@@ -197,18 +201,9 @@ html {
 }
 
 .site-footer {
-    background: #edddd4;         
-    color: #772e25;               
-    font-family: "Garamond", serif;
-    text-align: center;
-    padding: 40px 0;
-    margin-top: 120px;            
+	text-align: center;                    
+    margin-top: 60px;   
+	padding-top: 20px;
     border-top: 3px solid #772e25;
     opacity: 0.9;
-}
-
-.site-footer p {
-    margin: 20 px;
-    font-size: 18px;
-    letter-spacing: 1px;
 }
