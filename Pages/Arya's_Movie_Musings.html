@@ -81,6 +81,33 @@ body {
   padding-bottom: 5px;
 }
 
+.project-role {
+  display: flex; 
+  justify-content: center; 
+  text-align: center;
+  gap: 20px;
+}
+
+.role {
+ background-color: #DCC7B8;
+ width: 300px;
+}
+
+.tools {
+ background-color:#DCC7B8 ;
+ width: 300px;
+}
+
+.details {
+  background-color: #DCC7B8;
+  width: 300px;
+}
+
+.project-role-h2 {
+  font-size: 16px;
+  
+}
+
 .case-image {
   width: 100%;
   margin-top: 20px;
@@ -116,11 +143,23 @@ body {
     <h2>Overview</h2>
     <p>
       This project examines the end-to-end UX and UI design process behind creating a movie review website that centers on my personal opinions, ratings, critiques, and in-depth analyses of films.
-      
-      The overall goal was to design, code, and create a platform that provides insightful, easy-to-navigate, and accessible content for a wide range of movie lovers, ranging from casual viewers to dedicated cinephiles. 
+  
+      The overall goal was to design, code, and create a platform that provides insightful, easy-to-navigate, and accessible content for a wide range of movie lovers, ranging from casual viewers to dedicated cinephiles. </p>
 
-      Role:  Tools: Details:
-    </p>
+      <div class="project-role">
+         <div class='role'>
+           <h2 class="project-role-h2">Role</h2> 
+           <p>UX designer, coder, random stuff</p>
+      </div>
+         <div class='tools'>
+           <h2 class="project-role-h2">Tools</h2> 
+           <p>Tools</p>
+      </div>
+      <div class='details'>
+         <h2 class="project-role-h2">Details</h2> 
+         <p>Details</p>
+      </div>
+    </div>
   </section>
 
   <section class="case-section">
@@ -221,7 +260,7 @@ body {
     <section class="case-subsection"> 
       <h2> Information Architecture</h2>
       <p> I created a sitemap to help me figure out the structure and organization of the website: </p>
-       <img src="../Images/sample.jpg" alt="Process Image" class="case-image">
+       <img src="Images/movie-sitemap.jpg" alt="Process Image" class="case-image">
     </section>
 
     <section class="case-subsection"> 
@@ -232,7 +271,7 @@ body {
 
     <section class="case-subsection"> 
      <h2>Wireframes</h2>
-      <p>I created responsive wireframes for desktop, tablet, and mobile to ensure a consistent experience across devices.</p>
+      <p>I created a few low-fidelity wireframes for desktop, tablet, and mobile to visualize a consistent experience across devices.</p>
       <img src="../Images/sample.jpg" alt="Process Image" class="case-image">
     </section>
 
