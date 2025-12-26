@@ -111,6 +111,20 @@ body {
   text-align: center;
 }
 
+ .project-role-p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+ }
+
+ .project-role-p dl, 
+ .project-role-p dd, 
+ .project-role-p dt { 
+   margin: 0; 
+   padding: 0; 
+ } 
+
 .design-process { 
   display: flex; 
   justify-content: center; 
@@ -160,7 +174,7 @@ body {
    flex-direction: column;   
  } 
  
- .design-process-h2 { 
+ .design-process-h2 h2{ 
    font-family: "Garamond", serif; 
    font-size: 16px;  
    font-color: #FFFFFF;
@@ -224,7 +238,7 @@ body {
       <div class="project-role">
          <div class='role'>
            <h2 class="project-role-h2">Role</h2> 
-           <div>
+           <div class="project-role-p">
              <dl>
               <dd>UX researcher</dd>
               <dd>UX designer</dd>
@@ -235,7 +249,7 @@ body {
       </div>
          <div class='tools'>
            <h2 class="project-role-h2">Tools</h2> 
-           <div>
+           <div class="project-role-p">
              <dl>
               <dd>Visual Studio Code</dd>
               <dd>Figma</dd>
