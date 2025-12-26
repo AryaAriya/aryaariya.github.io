@@ -108,13 +108,13 @@ html {
 	padding-bottom: 6px;
 }
 
-.old-card p:first-letter {
-    float: left;
+.old-card p::first-letter {
+    display: inline-block;
     font-family: Garamond, serif;
-    font-size: 3.8rem;
+    font-size: 4rem;
     line-height: 0.8;
-    padding-right: 0px;
-    padding-top: 0px;
+    padding-right: 6px;
+    padding-top: 4px;
     color: #772e25;
     text-shadow: 1px 1px 0 #c44536;
 }
