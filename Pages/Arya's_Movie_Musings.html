@@ -61,8 +61,20 @@ body {
   margin-bottom: 60px;
 }
 
+.case-subsection {
+  margin-bottom: 60px;
+}
+
 .case-section h2 {
   font-size: 32px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #772e25;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.case-subsection h2{
+  font-size: 24px;
   margin-bottom: 10px;
   border-bottom: 2px solid #772e25;
   display: inline-block;
@@ -106,15 +118,19 @@ body {
       This project examines the end-to-end UX and UI design process behind creating a movie review website that centers on my personal opinions, ratings, critiques, and in-depth analyses of films.
       
       The overall goal was to design, code, and create a platform that provides insightful, easy-to-navigate, and accessible content for a wide range of movie lovers, ranging from casual viewers to dedicated cinephiles. 
+
+      Role:  Tools: Details:
     </p>
   </section>
 
   <section class="case-section">
     <h2>Process</h2>
+    
     <p>The process for this project consists of the following:</p>
-    <dl>
-      <dt>Problem Space</dt>
-      <dd>Movie lovers often rely on movie sites to decide what to watch, but many platforms either overwhelm users with clutter or lack depth and personality. I wanted to create a site that blends:
+    
+    <section class="case-subsection">
+      <h2>Problem Space</h2>
+      <p>Movie lovers often rely on movie sites to decide what to watch, but many platforms either overwhelm users with clutter or lack depth and personality. I wanted to create a site that blends:
         <ul>
           <li>Deep, thoughtful analyses of films for movie lovers and cinephiles</li>
           <li>Quick, digestible recommendations for casual users</li>
@@ -123,57 +139,70 @@ body {
           <li>Family‑friendly guidance for parents</li>
         </ul>
       The challenge was to design an entire system that effectively incorporates and supports all of those needs without becoming visually or structurally overwhelming.
-      </dd>
-      <dt>Target Audience and Pain Points</dt>
-      <dd>
+      </p>
+    </section>
+
+    <section class="case-subsection"> 
+      <h2>Target Audience and Pain Points</h2>
+      <p>
         I identified six primary users, each with their own needs, motivations, and pain points.
-      </dd>
-      <dt>Competitive Audit</dt>
-       <dd>I did a competitive audit on two websites
-          <p>Moria - The Science Fiction, Horror, & Fantasy Film Review</p>
-          <dt>Strengths:</dt>
-            <dd>
-              <ul>
-                <li>Easy Navigation</li>
-                <li>Simple palatte</li>
-               </ul>
-            </dd>
-          <dt>Weaknesses</dt>
-           <dd>
-             <ul>
-               <li>Lacks color and polish</li>
-               <li>Feels cramped</li>
-               <li>Needs more categories and imagery</li>
-             </ul>
-           </dd>
-           <p>RogerEbert.com</p>
-           <dt>Strengths</dt>
+      </p>
+    </section>
+
+    <section class="case-subsection"> 
+      <h2>Competitive Audit</h2>
+       <p>I did a competitive audit on two websites
+         <dl>Moria - The Science Fiction, Horror, & Fantasy Film Review</p>
+           <dt>Strengths:</dt>
              <dd>
                <ul>
-                 <li>Strong navigation</li>
-                 <li>Great search and filter</li>
-                 <li>Clean layout</li>
+                 <li>Easy Navigation</li>
+                 <li>Simple palatte</li>
                </ul>
-             </dd>
-          <dt>Weaknesses</dt>
-            <dd>
-              <ul>
-                <li>Palette is slightly too bright</li>
-              </ul>
             </dd>
-        </dd>            
-      <dt>Project Goals</dt>
-      <dd>
-        The website needed to:
+            <dt>Weaknesses</dt>
+              <dd>
+                <ul>
+                  <li>Lacks color and polish</li>
+                  <li>Feels cramped</li>
+                  <li>Needs more categories and imagery</li>
+                </ul>
+               </dd>
+             </dl>
+             <dl>RogerEbert.com
+                <dt>Strengths</dt>
+                 <dd>
+                  <ul>
+                    <li>Strong navigation</li>
+                    <li>Great search and filter</li>
+                    <li>Clean layout</li>
+                  </ul>
+                 </dd>
+                <dt>Weaknesses</dt>
+                  <dd>
+                   <ul>
+                     <li>Palette is slightly too bright</li>
+                  </ul>
+                 </dd>
+              </dl> 
+           </p>
+     </section>
+
+     <section class="case-subsection"> 
+      <h2>Project Goals</h2>
+      <p> The website needed to:
         <ul>
           <li>Inform users through reviews, ratings, and critiques</li>
           <li>Guide users toward movies that match their interests, mood, or platform</li>
           <li>Engage users through comments, rankings, and multimedia</li>
           <li>Support discovery with filters, lists, and genre hubs</li>
         </ul>
-      </dd>
-      <dt>Content Strategy</dt>
-      <dd>
+      </p>
+     </section>
+
+     <section class="case-subsection"> 
+      <h2>Content Strategy</h2>
+      <p>
         The site's content ecosystem consists of:
         <ul>
           <li>Homepage with featured reviews, lists, and news</li>
@@ -186,30 +215,61 @@ body {
           <li>About and Contact pages</li>
         </ul>
        Each content type was mapped to a specific user need, ensuring the site feels cohesive. 
-      </dd>
-      <dt> Information Architecture</dt>
-      <dd> I created a sitemap to help me figure out the structure and organization of the website: </dd>
-    </dl>
-    <img src="../Images/sample.jpg" alt="Process Image" class="case-image">
-    <dt>Visual Design Direction</dt>
-     <dd>I created a mood board to help me plan out the color palette, typography, and a couple of site elements</dd>
+      </p>
+    </section>
+
+    <section class="case-subsection"> 
+      <h2> Information Architecture</h2>
+      <p> I created a sitemap to help me figure out the structure and organization of the website: </p>
+       <img src="../Images/sample.jpg" alt="Process Image" class="case-image">
+    </section>
+
+    <section class="case-subsection"> 
+      <h2>Visual Design Direction</h2>
+      <p>I created several stylesheets to help me plan out the color palette, typography, imagery, and a couple of site elements</p>
+       <img src="../Images/sample.jpg" alt="Process Image" class="case-image">
+    </section>
+
+    <section class="case-subsection"> 
+     <h2>Wireframes</h2>
+      <p>I created responsive wireframes for desktop, tablet, and mobile to ensure a consistent experience across devices.</p>
       <img src="../Images/sample.jpg" alt="Process Image" class="case-image">
-    <dt>Wireframes</dt>
-     <dd>I created responsive wireframes for desktop, tablet, and mobile to ensure a consistent experience across devices.</dd>
-      <img src="../Images/sample.jpg" alt="Process Image" class="case-image">
-     <dt>Competitive Analysis</dt>
-      <dd></dd>
-  </dl>
+    </section>
+
+    <section class="case-subsection">  
+     <h2>Prototyping</h2>
+      <p>I coded a few prototypes of a few of the pages together</p>
+    </section>
   </section>
 
   <section class="case-section">
-    <h2>Final Outcome</h2>
+    <h2>Final Outcome: Live Website</h2>
     <p>
-      Summarize the final result. What did you create? What impact did it have?
+      See the final website in action link:
+        screenshot of homepage
+        2-4 key screens (desktop + mobile)
+        The final outcome is a fully functional movie review website built using the visual system, IA, and interaction patterns defined in this case study. The live site demonstrates the complete user flow - from browsing reviews to exploring genres, rankings, and curated lists."
     </p>
     <img src="../Images/sample.jpg" alt="Final Image" class="case-image">
   </section>
 
+  <section class="case-section">
+    <h2>Reflection and Next Steps</h2>
+     <p>
+       This project strengthened my skills in:
+• 	Information architecture
+• 	Responsive wireframing
+• 	Designing for multiple user groups
+• 	Balancing personality with usability
+Next steps include:
+• 	Building high‑fidelity mockups
+• 	Creating interactive prototypes
+• 	Conducting usability testing
+• 	Exploring dark mode
+• 	Adding personalization features
+     </p>
+  </section>
+  
   <div class="victorian-divider">
     ✦
   </div>
