@@ -1,1 +1,40 @@
+.contact-form {
+  max-width: 600px;
+  margin: 40px auto;
+  font-family: "Garamond", serif;
+  color: #772e25;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #772e25;
+  background: #edddd4;
+  font-family: inherit;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.send-btn {
+  background: #772e25;
+  color: #edddd4;
+  border: none;
+  padding: 12px 24px;
+  font-size: 20px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
+}
+
+.send-btn:hover {
+  background: #c44536;
+}
 
