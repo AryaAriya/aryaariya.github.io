@@ -104,9 +104,68 @@ body {
 }
 
 .project-role-h2 {
-  font-size: 16px;
-  
+  font-size: 16px;  
 }
+
+.design-process { 
+  display: flex; 
+  justify-content: center; 
+  text-align: center; 
+  gap: 20px; 
+ } 
+ 
+ .research { 
+   background-color: #444457; 
+   width: 150px; 
+   display: flex;         
+   flex-direction: column;
+ } 
+ 
+ .analysis {
+   background-color:#4D4457; 
+   width: 150px; 
+   display: flex;         
+   flex-direction: column;
+ } 
+ 
+ .ideation { 
+   background-color: #534356; 
+   width: 150px; 
+   display: flex;         
+   flex-direction: column;
+ } 
+ 
+ .design { 
+   background-color: #8A5A6A; 
+   width: 150px;
+   display: flex;         
+   flex-direction: column;
+ } 
+ 
+ .feedback { 
+   background-color: #9A7483; 
+   width: 150px; 
+   display: flex;         
+   flex-direction: column;
+ } 
+ 
+ .handoff { 
+   background-color: #A28190; 
+   width: 150px; 
+   display: flex;         
+   flex-direction: column;
+   
+ } 
+ 
+ .design-process-h2 { 
+   font-family: "Garamond", serif; 
+ }
+ 
+ .design-process-p {
+  background: #DCC7B8;
+  flex-grow: 1;           
+  margin: 0;  
+ }
 
 .case-image {
   width: 100%;
@@ -166,6 +225,30 @@ body {
     <h2>Process</h2>
     
     <p>The process for this project consists of the following:</p>
+     <div class="design-process"> 
+   <div class='research'> 
+     <h2 class="design-process-h2">Research</h2> 
+     <p class="design-process-p">UX designer, coder, random stuff</p> 
+   </div> 
+   <div class="analysis"> 
+     <h2 class="design-process-h2">Analysis</h2> 
+     <p class="design-process-p">Tools</p> 
+   </div> 
+   <div class='ideation'> 
+     <h2 class="design-process-h2">Ideation</h2>
+     <p class="design-process-p">Details</p> 
+   </div> 
+   <div class='design'> 
+     <h2 class="design-process-h2">Design</h2> 
+     <p class="design-process-p">Details</p> 
+   </div> 
+   <div class='feedback'> 
+     <h2 class="design-process-h2">Feedback</h2> 
+     <p class="design-process-p">Details</p> 
+   </div> 
+   <div class='handoff'> 
+     <h2 class="design-process-h2">Handoff</h2>
+     <p class="design-process-p">Details</p>
     
     <section class="case-subsection">
       <h2>Problem Space</h2>
