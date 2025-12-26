@@ -178,7 +178,7 @@ html {
 }
 
 .list { 
-	padding: 100px 0 0; 
+	padding: 80px 0 0; 
 	display: flex;
 	flex-direction: column; 
 	align-items: center;
@@ -200,6 +200,8 @@ html {
 }
 
 .site-footer {
+	font-family: "Garamond", serif;
+	font-size: 22 px;
 	text-align: center;                    
     margin-top: 60px;   
 	padding-top: 20px;
