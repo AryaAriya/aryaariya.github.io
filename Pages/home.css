@@ -178,12 +178,10 @@ html {
 }
 
 .list { 
-	padding: 100px 0px; 
+	padding: 100px 0 0; 
 	display: flex;
 	flex-direction: column; 
 	align-items: center;
-	padding-top: 100px;
-	margin-bottom: 0;
 }
 
 .card-row {
