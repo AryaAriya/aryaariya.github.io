@@ -246,8 +246,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  
+  text-align: center; 
 }
 
 .case-image {
@@ -275,9 +274,29 @@ body {
     width: 100%;
 }
 
-.top-row { 
-  display: flex; 
-  align-items: center; 
+.card-content {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.speech-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+}
+
+.feedback-column {
+  width: 60%;
+}
+
+.card.left .card-content {
+  flex-direction: row;
+}
+
+.card.right .card-content {
+  flex-direction: row-reverse;
 }
 
 .avatar {
@@ -371,7 +390,6 @@ body {
     border-right: 0;
 }
 
-/* Border for right bubbles' tail */
 .right .bubble::before {
     content: "";
     position: absolute;
@@ -732,64 +750,88 @@ body {
       <p>I shared my prototype website with several of my peers, and I got feedback in the process, which I then implemented into my project. The most notable ones were:</p>
 
 <div class="card-container">
+  
   <div class="card left">
-   <div class="top-row">
+   <div class="card-content">
+    <div class="speech-column">
     <div class="avatar"></div>
     <div class="bubble">
       <p>"Banner/Header image is too plain and simple"</p>
     </div>
-   </div>
+    </div>
+    <div class="feedback-column"> 
     <p class="feedback-text"> Peers noted that while the site stands out in color palette, the banner image was too simple and did not convey anything or add anything to the site.</p>
   </div>
+ </div>
+</div>
 
   <div class="card right">
-   <div class="top-row">
+   <div class="card-content">
+    <div class="speech-column">
     <div class="bubble">
       <p>"The horizontal drop-down menus are too small and make the site feel cluttered"</p>
     </div>
-   </div>
     <div class="avatar"></div>
+    <div class="feedback-column">
     <p class="feedback-text"> Some peers felt that the horizontal drop-down menus made the site feel cluttered and were hard to see.</p>
   </div>
-
+   </div>
+  </div>
+  
   <div class="card left">
-   <div class="top-row">
+   <div class="card-content">
+    <div class="speech-column">
     <div class="avatar"></div>
     <div class="bubble">
       <p>"The font on the navigation bar could be changed"</p>
     </div>
    </div>
+     <div class="feedback-column">
     <p class="feedback-text">Many peers felt that the font used on the navigation bar doesn't match the fonts used by the rest of the site. </p>
+  </div>
+   </div>
   </div>
 
   <div class="card right">
-    <div class="top-row">
+    <div class="card-content">
+    <div class="speech-column">
     <div class="bubble">
       <p>"The navigation is comprehensive, but could be reduced"</p>
     </div>
   </div>
     <div class="avatar"></div>
+     <div class="feedback-column"> 
     <p class="feedback-text">Peers highlighted that while the navigation is easy to navigate, there are a lot of navigation items, and they take up a lot of space.</p>
+  </div>
+    </div>
   </div>
 
   <div class="card left">
-   <div class="top-row">
+   <div class="card-content">
+     <div class="speech-column">
     <div class="avatar"></div>
     <div class="bubble">
       <p>"The background color and the tags color could be changed"</p>
     </div>
    </div>
+    <div class="feedback-column">
     <p class="feedback-text"> Peers noticed that the background color and the tags color were too dark to be noticed, since it was dark blue on black, which made it hard to notice and barely visible.</p>
+  </div>
+   </div>
   </div>
 
   <div class="card right">
-   <div class="top-row">
+   <div class="card-content">
+    <div class="speech-column">
     <div class="bubble">
       <p>"The logo size could be increased"</p>
     </div>
    </div>
     <div class="avatar"></div>
+     <div class="feedback-column">
     <p class="feedback-text">Peers felt that the logo was tiny, and as such was not prominent and not visible as much.</p>
+  </div>
+  <div>
   </div>
 
 </div>
