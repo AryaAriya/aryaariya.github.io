@@ -270,29 +270,32 @@ body {
 
 .card {
     display: flex;
-    align-items: flex-start;
+    align-items: columnn;
     margin-bottom: 20px;
-    /* This ensures they don't grow and wrap unexpectedly */
     width: 100%;
+}
+
+.top-row { 
+  display: flex; 
+  align-items: center; 
 }
 
 .avatar {
     width: 40px;
     height: 40px;
-    background-color: #ccc; /* Generic silhouette color */
+    background-color: #ccc; 
     border-radius: 50%;
-    /* Placeholder for a background image/icon */
     background-image: url('placeholder-avatar.png'); 
     background-size: cover;
-    flex-shrink: 0; /* Prevents avatar from shrinking */
+    flex-shrink: 0; 
 }
 
 .bubble {
     position: relative;
     padding: 10px 15px;
-    border-radius: 18px; /* Rounded corners */
-    background-color: #f0f0f0; /* Light gray background */
-    border: 1px solid #ddd; /* Thin border */
+    border-radius: 18px;
+    background-color: #f0f0f0; 
+    border: 1px solid #ddd; 
     max-width: 75%;
     word-wrap: break-word;
 }
@@ -303,9 +306,6 @@ body {
     line-height: 1.4;
 }
 
-/* --- Alternating Sides --- */
-
-/* Left side alignment and spacing */
 .left {
     justify-content: flex-start;
 }
@@ -315,10 +315,9 @@ body {
 }
 
 .left .bubble {
-    margin-left: 10px; /* Space for the tail */
+    margin-left: 10px; 
 }
 
-/* Right side alignment and spacing */
 .right {
     justify-content: flex-end;
 }
@@ -328,12 +327,9 @@ body {
 }
 
 .right .bubble {
-    margin-right: 10px; /* Space for the tail */
+    margin-right: 10px; 
 }
 
-/* --- Speech Bubble Tails (Pointers) --- */
-
-/* Base for the tail using ::after pseudo-element */
 .bubble::after {
     content: "";
     position: absolute;
@@ -342,33 +338,30 @@ body {
     border: 8px solid transparent;
 }
 
-/* Tail for left bubbles */
 .left .bubble::after {
     right: 100%;
-    top: 15px; /* Adjust vertical position */
-    border-right-color: #f0f0f0; /* Same as bubble background */
+    top: 15px; 
+    border-right-color: #f0f0f0; 
     border-left: 0;
 }
 
-/* Border for left bubbles' tail (to show the thin border line) */
 .left .bubble::before {
     content: "";
     position: absolute;
     width: 0;
     height: 0;
-    border: 9px solid transparent; /* Slightly larger border for the outline */
+    border: 9px solid transparent; 
     right: 100%;
     top: 14px;
-    border-right-color: #ddd; /* Same as bubble border color */
+    border-right-color: #ddd; 
     border-left: 0;
-    z-index: -1; /* Place behind the main bubble */
+    z-index: -1; 
 }
 
-/* Tail for right bubbles */
 .right .bubble::after {
     left: 100%;
-    top: 15px; /* Adjust vertical position */
-    border-left-color: #f0f0f0; /* Same as bubble background */
+    top: 15px; 
+    border-left-color: #f0f0f0; 
     border-right: 0;
 }
 
@@ -730,73 +723,67 @@ body {
   <h2 class="case-process">Feedback</h2>
   <section class="case-subsection">  
      <h2>Peer Critiques</h2>
-      <p>
-  I shared my prototype website with several of my peers, and I got feedback in the process,
-  which I then implemented into my project. The most notable ones were:
-</p>
+      <p>I shared my prototype website with several of my peers, and I got feedback in the process, which I then implemented into my project. The most notable ones were:</p>
 
 <div class="card-container">
   <div class="card left">
+   <div class="top-row">
     <div class="avatar"></div>
     <div class="bubble">
       <p>"Banner/Header image is too plain and simple"</p>
     </div>
-    <p>
-      Peers noted that while the site stands out in color palette, the banner image was too simple
-      and did not convey anything or add anything to the site.
-    </p>
+   </div>
+    <p class="feedback-text"> Peers noted that while the site stands out in color palette, the banner image was too simple and did not convey anything or add anything to the site.</p>
   </div>
 
   <div class="card right">
+   <div class="top-row">
     <div class="bubble">
       <p>"The horizontal drop-down menus are too small and make the site feel cluttered"</p>
     </div>
+   </div>
     <div class="avatar"></div>
-    <p>
-      Some peers felt that the horizontal drop-down menus made the site feel cluttered and were hard to see.
-    </p>
+    <p class="feedback-text"> Some peers felt that the horizontal drop-down menus made the site feel cluttered and were hard to see.</p>
   </div>
 
   <div class="card left">
+   <div class="top-row">
     <div class="avatar"></div>
     <div class="bubble">
       <p>"The font on the navigation bar could be changed"</p>
     </div>
-    <p>
-      Many peers felt that the font used on the navigation bar doesn't match the fonts used by the rest of the site.
-    </p>
+   </div>
+    <p class="feedback-text">Many peers felt that the font used on the navigation bar doesn't match the fonts used by the rest of the site. </p>
   </div>
 
   <div class="card right">
+    <div class="top-row">
     <div class="bubble">
       <p>"The navigation is comprehensive, but could be reduced"</p>
     </div>
+  </div>
     <div class="avatar"></div>
-    <p>
-      Peers highlighted that while the navigation is easy to navigate, there are a lot of navigation items,
-      and they take up a lot of space.
-    </p>
+    <p class="feedback-text">Peers highlighted that while the navigation is easy to navigate, there are a lot of navigation items, and they take up a lot of space.</p>
   </div>
 
   <div class="card left">
+   <div class="top-row">
     <div class="avatar"></div>
     <div class="bubble">
       <p>"The background color and the tags color could be changed"</p>
     </div>
-    <p>
-      Peers noticed that the background color and the tags color were too dark to be noticed,
-      since it was dark blue on black, which made it hard to notice and barely visible.
-    </p>
+   </div>
+    <p class="feedback-text"> Peers noticed that the background color and the tags color were too dark to be noticed, since it was dark blue on black, which made it hard to notice and barely visible.</p>
   </div>
 
   <div class="card right">
+   <div class="top-row">
     <div class="bubble">
       <p>"The logo size could be increased"</p>
     </div>
+   </div>
     <div class="avatar"></div>
-    <p>
-      Peers felt that the logo was tiny, and as such was not prominent and not visible as much.
-    </p>
+    <p class="feedback-text">Peers felt that the logo was tiny, and as such was not prominent and not visible as much.</p>
   </div>
 
 </div>
