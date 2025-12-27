@@ -208,6 +208,45 @@ body {
    padding: 0; 
  }
 
+ .icon-row {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 40px 0;
+}
+
+.icon-item {
+  text-align: center;
+  font-family: "Garamond", serif;
+  color: #772e25;
+}
+
+.icon-frame {
+  width: 110px;
+  height: 110px;
+  padding: 12px;
+  background: #edddd4;
+  border: 4px double #772e25;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow:
+    inset 0 0 10px rgba(0,0,0,0.15),
+    0 0 8px rgba(0,0,0,0.2);
+}
+
+.icon-frame svg {
+  width: 90%;
+  height: 90%;
+}
+
+.icon-label {
+  margin-top: 10px;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+
 .case-image {
   width: 100%;
   margin-top: 20px;
@@ -241,10 +280,8 @@ body {
 
   <section class="case-section">
     <h2>Overview</h2>
-    <p>
-      This project examines the end-to-end UX and UI design process behind creating a movie review website that centers on my personal opinions, ratings, critiques, and in-depth analyses of films.
-  
-      The overall goal was to design, code, and create a platform that provides insightful, easy-to-navigate, and accessible content for a wide range of movie lovers, ranging from casual viewers to dedicated cinephiles. </p>
+    <p>This project examines the end-to-end UX and UI design process behind creating a movie review website that centers on my personal opinions, ratings, critiques, and in-depth analyses of films.</p>
+    <p>The overall goal was to design, code, and create a platform that provides insightful, easy-to-navigate, and accessible content for a wide range of movie lovers, ranging from casual viewers to dedicated cinephiles. </p>
 
       <div class="project-role">
          <div class='role'>
@@ -344,20 +381,36 @@ body {
     <h2 class="case-process"> Research</h2>
     <section class="case-subsection">
       <h2>Context study</h2>
-      <p>Movie lovers often rely on movie sites to decide what to watch, but many platforms either overwhelm users with clutter or lack depth and personality. I wanted to create a site that blends:</p>
+      <p>The movie review landscape is crowded, but many existing ones fall into two extremes: overly posh/academic or overly commercial with no personality. Users often struggle to find a space that feels insightful, personal, and easy to navigate</p>
     </section>
 
     <section class="case-subsection"> 
       <h2>Target Audience</h2>
       <p>
-        I identified six primary users, each with their own needs, motivations, and pain points.
+        I identified six primary users, each with their own needs, motivations, and behaviors.
+        <dl>
+          <dt>Cinephiles and Film Students</dt>
+          <dt>Casual Viewers and Streaming Suscribers</dt>
+          <dt>Parents and Families</dt>
+          <dt>Older Adults</dt>
+          <dt>Genre Fans (Horror, Sci-Fi, Action, etc.)</dt>
+          <dt>Pop Culture Followers</dt>
+        </dl>
       </p>
     </section>
 
     <section class="case-subsection"> 
       <h2>Pain Points</h2>
       <p>
-        I identified the pain points of each of the primary users
+        The following are the core pain points shared by all of the primary users that this project aims to take into consideration:
+        <ul>
+          <li>Overwhelming layouts with too much text</li>
+          <li>Poor search and filtering tools</li>
+          <li>Lack of personalization</li>
+          <li>Inconsistent categorization of films</li>
+          <li>Sites feel either too posh/academic/stuffy or too commercial</li>
+          <li>Mobile experiances are often poorly optimized</li>
+        </ul>
       </p>
     </section>
 
@@ -403,7 +456,8 @@ body {
 
      <section class="case-subsection">
       <h2>Problem Space</h2>
-      <p>Movie lovers often rely on movie sites to decide what to watch, but many platforms either overwhelm users with clutter or lack depth and personality. I wanted to create a site that blends:
+      <p>Movie lovers often rely on movie sites to decide what to watch, but many platforms either overwhelm users with clutter or lack depth and personality. </p>
+      <p> I wanted to create a site that blends:
         <ul>
           <li>Deep, thoughtful analyses of films for movie lovers and cinephiles</li>
           <li>Quick, digestible recommendations for casual users</li>
@@ -429,10 +483,56 @@ body {
 
      <section class="case-subsection"> 
       <h2>Use cases</h2>
-      <p>
-        I identified six primary users, each with their own needs, motivations, and pain points.
-      </p>
-     </section>
+      <div class ="icon-row"</div>
+        <div class="icon-frame">
+          <!--Movie Review Icon-->
+          <svg viewBox="0 0 100 100">
+            <rect x="20" y="30" width="60" height="40" rx="4" stroke="#772e25" stroke-width="4" fill="none"/>
+            <line x1="35" y1="30" x2="35" y2="70" stroke="#772e25" stroke-width="3"/>
+            <line x1="65" y1="30" x2="65" y2="70" stroke="#772e25" stroke-width="3"/>
+            <path d="M20 75 Q50 90 80 75" stroke="#772e25" stroke-width="3" fill="none"/>
+          </svg>
+       </div>
+       <p class="icon-label">I want to read a deep, thoughtful analysis, opinion, and review of a movie</p>
+      </div>
+      <!--News Icon-->
+      <div class="icon-item">
+       <div class="icon-frame">
+      <svg viewBox="0 0 100 100">
+        <rect x="15" y="20" width="70" height="60" rx="4" stroke="#772e25" stroke-width="4" fill="none"/>
+        <rect x="25" y="30" width="20" height="20" fill="#772e25"/>
+        <line x1="50" y1="35" x2="75" y2="35" stroke="#772e25" stroke-width="3"/>
+        <line x1="50" y1="45" x2="75" y2="45" stroke="#772e25" stroke-width="3"/>
+        <line x1="25" y1="60" x2="75" y2="60" stroke="#772e25" stroke-width="3"/>
+      </svg>
+    </div>
+    <p class="icon-label">I want to stay updated on trailers, interviews, and award predictions</p>
+  </div> 
+  <div class="icon-item">
+    <div class="icon-frame">
+      <!-- STREAMING ICON -->
+      <svg viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="25" stroke="#772e25" stroke-width="4" fill="none"/>
+        <polygon points="45,38 65,50 45,62" fill="#772e25"/>
+        <path d="M20 50 Q50 20 80 50" stroke="#772e25" stroke-width="3" fill="none"/>
+        <path d="M20 55 Q50 85 80 55" stroke="#772e25" stroke-width="3" fill="none"/>
+      </svg>
+    </div>
+    <p class="icon-label">I'm looking for a movie to watch on Netflix or Hulu</p>
+  </div>
+    <div class="icon-item">
+    <div class="icon-frame">
+      <!-- GENRE ICON -->
+      <svg viewBox="0 0 100 100">
+        <path d="M20 40 Q50 10 80 40 Q50 55 20 40" stroke="#772e25" stroke-width="4" fill="none"/>
+        <circle cx="40" cy="35" r="3" fill="#772e25"/>
+        <circle cx="60" cy="35" r="3" fill="#772e25"/>
+        <path d="M40 45 Q50 55 60 45" stroke="#772e25" stroke-width="3" fill="none"/>
+      </svg>
+    </div>
+    <p class="icon-label">I'm trying to find genre-specific recommendations</p>
+  </div>  
+  </section>
 
      <section class="case-subsection"> 
       <h2>Summary</h2>
