@@ -476,6 +476,47 @@ body {
     transform: translateY(-2px); 
   }  
 
+.before-after {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.before-after-card {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 16px;
+}
+
+.screens {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.before, .after {
+  flex: 1;
+  height: 80px;
+  background: #e5e5e5;
+  border-radius: 6px;
+}
+
+before-after-card h4 {
+  margin: 0 0 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #555;
+}
+
+before-after-card ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+before-after-card li {
+  margin-bottom: 4px;
+}
+
 .case-footer {
   text-align: center;
   margin-top: 60px;
@@ -926,17 +967,91 @@ body {
 
     <section class="case-subsection">
     <h2>Before/After Critiques</h2>
-     <p></p>
+     <div class="before-after">
+  <div class="before-after-card">
+    <div class="screens">
+      <div class="before"></div>
+      <div class="after"></div>
+    </div>
+    <h4>What Changed</h4>
+    <ul>
+      <li>Clearer layout</li>
+      <li>Improved spacing</li>
+      <li>Better contrast</li>
+    </ul>
+  </div>
+
+  <div class="before-after-card">
+    <div class="screens">
+      <div class="before"></div>
+      <div class="after"></div>
+    </div>
+    <h4>What Changed</h4>
+    <ul>
+      <li>Reduced steps</li>
+      <li>Cleaner CTA</li>
+      <li>Less clutter</li>
+    </ul>
+  </div>
+
+  <div class="before-after-card">
+    <div class="screens">
+      <div class="before"></div>
+      <div class="after"></div>
+    </div>
+    <h4>What Changed</h4>
+    <ul>
+      <li>Improved hierarchy</li>
+      <li>Readable typography</li>
+      <li>Consistent icons</li>
+    </ul>
+  </div>
+
+  <div class="before-after-card">
+    <div class="screens">
+      <div class="before"></div>
+      <div class="after"></div>
+    </div>
+    <h4>What Changed</h4>
+    <ul>
+      <li>Aligned components</li>
+      <li>Reduced noise</li>
+      <li>Clearer labels</li>
+    </ul>
+  </div>
+
+  <div class="before-after-card">
+    <div class="screens">
+      <div class="before"></div>
+      <div class="after"></div>
+    </div>
+    <h4>What Changed</h4>
+    <ul>
+      <li>Better grouping</li>
+      <li>Improved flow</li>
+      <li>More intuitive actions</li>
+    </ul>
+  </div>
+
+  <div class="before-after-card">
+    <div class="screens">
+      <div class="before"></div>
+      <div class="after"></div>
+    </div>
+    <h4>What Changed</h4>
+    <ul>
+      <li>Cleaner visuals</li>
+      <li>Reduced friction</li>
+      <li>Clear CTA priority</li>
+    </ul>
+  </div>
+</div>        
     <section>
  </section>
 
   <section class="case-section">
     <h2>Final Outcome: Live Website</h2>
     <p>
-      See the final website in action link:
-        screenshot of homepage
-        2-4 key screens (desktop + mobile)
-        The final outcome is a fully functional movie review website built using the visual system, IA, and interaction patterns defined in this case study. The live site demonstrates the complete user flow - from browsing reviews to exploring genres, rankings, and curated lists."
     </p>
     <img src="../Images/sample.jpg" alt="Final Image" class="case-image">
   </section>
