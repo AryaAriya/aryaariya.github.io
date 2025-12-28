@@ -353,10 +353,14 @@ body {
 }
 
 .left .bubble::after {
+    content: "";
     right: 100%;
-    top: 15px; 
-    border-right-color: #772e25; 
-    border-left: 0;
+    top: 18px; 
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparennt;
+    border-bottom: 8px solid transparent;
+    border-right: 12px solid #DCC7B8;
 }
 
 .left .bubble::before {
@@ -364,19 +368,23 @@ body {
     position: absolute;
     width: 0;
     height: 0;
-    border: 6px solid #772e25; 
     right: 100%;
-    top: 14px;
-    border-right-color: #772e25; 
-    border-left: 0;
-    z-index: -1; 
+    top: 17px;
+    border-top: 9px solid transparent;
+    border-bottom: solid transparent;
+    border-right: 13px solid #772e25;
 }
 
 .right .bubble::after {
+    content: "";
+    position: absolute;
     left: 100%;
-    top: 15px; 
-    border-left-color: ##772e25; 
-    border-right: 0;
+    top: 18px; 
+    width: 0; 
+    height: 0;
+    border-top: 8px solid transparent; 
+    border-bottom: 8px solid transparent; 
+    border-left: 12px solid #772e25;
 }
 
 .right .bubble::before {
@@ -384,12 +392,11 @@ body {
     position: absolute;
     width: 0;
     height: 0;
-    border: 6px solid #772e25;
     left: 100%;
-    top: 14px;
-    border-left-color: ##772e25; 
-    border-right: 0;
-    z-index: -1;
+    top: 17px;
+    border-top: 9px solid transparent; 
+    border-bottom: 9px solid transparent;
+    border-left: 13px solid #772e25;
 }
 
 .case-footer {
