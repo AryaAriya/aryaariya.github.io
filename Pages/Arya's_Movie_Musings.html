@@ -298,7 +298,6 @@ body {
     border-radius: 18px;
     background-color: #DCC7B8; 
     border: 2px solid #772e25;
-    color: #772e25;
     max-width: 75%;
     box-shadow: 0 0 6px rgba(0,0,0,0.15);
     word-wrap: break-word;
@@ -350,17 +349,14 @@ body {
     position: absolute;
     width: 0;
     height: 0;
-    border-top: 10px solid transparent; 
-    border-bottom: 10px solid transparent; 
-    border-right: 12px solid #f7f1e3;
+    border: 2px solid #772e25;
 }
 
 .left .bubble::after {
     right: 100%;
     top: 15px; 
-    border-right-color: #f0f0f0; 
+    border-right-color: #772e25; 
     border-left: 0;
-    border: 9px solid transparent; 
 }
 
 .left .bubble::before {
@@ -368,9 +364,10 @@ body {
     position: absolute;
     width: 0;
     height: 0;
+    border: 6px solid #772e25; 
     right: 100%;
     top: 14px;
-    border-right-color: ##772e25; 
+    border-right-color: #772e25; 
     border-left: 0;
     z-index: -1; 
 }
@@ -387,10 +384,10 @@ body {
     position: absolute;
     width: 0;
     height: 0;
-    border: 9px solid transparent; /* Slightly larger border for the outline */
+    border: 6px solid #772e25;
     left: 100%;
     top: 14px;
-    border-left-color: ##772e25; /* Same as bubble border color */
+    border-left-color: ##772e25; 
     border-right: 0;
     z-index: -1;
 }
