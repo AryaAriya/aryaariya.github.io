@@ -508,13 +508,21 @@ before-after-card h4 {
   color: #555;
 }
 
-before-after-card ul {
+before-after-card p {
   margin: 0;
   padding-left: 18px;
 }
 
-before-after-card li {
-  margin-bottom: 4px;
+.ba-text-columns { 
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  gap: 12px; 
+} 
+  
+.ba-text-columns p { 
+  margin: 0; 
+  font-size: 0.9rem; 
+  color: #555; 
 }
 
 .case-footer {
@@ -963,7 +971,7 @@ before-after-card li {
   </div>
 
 </div>
-  </section>
+    </section>
 
     <section class="case-subsection">
     <h2>Before/After Critiques</h2>
@@ -987,11 +995,10 @@ before-after-card li {
       <div class="after"></div>
     </div>
     <h4>What Changed</h4>
-    <ul>
-      <li>Reduced steps</li>
-      <li>Cleaner CTA</li>
-      <li>Less clutter</li>
-    </ul>
+    <div class="ba-text-columns"> 
+      <p>Left side text goes here.</p> 
+      <p>Right side text goes here.</p>
+    </div>
   </div>
 
   <div class="before-after-card">
@@ -1000,11 +1007,10 @@ before-after-card li {
       <div class="after"></div>
     </div>
     <h4>What Changed</h4>
-    <ul>
-      <li>Improved hierarchy</li>
-      <li>Readable typography</li>
-      <li>Consistent icons</li>
-    </ul>
+    <div class="ba-text-columns"> 
+      <p>Left side text goes here.</p> 
+      <p>Right side text goes here.</p>
+    </div> 
   </div>
 
   <div class="before-after-card">
@@ -1013,11 +1019,10 @@ before-after-card li {
       <div class="after"></div>
     </div>
     <h4>What Changed</h4>
-    <ul>
-      <li>Aligned components</li>
-      <li>Reduced noise</li>
-      <li>Clearer labels</li>
-    </ul>
+    <div class="ba-text-columns"> 
+      <p>Left side text goes here.</p> 
+      <p>Right side text goes here.</p>
+    </div>
   </div>
 
   <div class="before-after-card">
@@ -1026,11 +1031,10 @@ before-after-card li {
       <div class="after"></div>
     </div>
     <h4>What Changed</h4>
-    <ul>
-      <li>Better grouping</li>
-      <li>Improved flow</li>
-      <li>More intuitive actions</li>
-    </ul>
+    <div class="ba-text-columns"> 
+      <p>Left side text goes here.</p> 
+      <p>Right side text goes here.</p>
+    </div>
   </div>
 
   <div class="before-after-card">
@@ -1039,11 +1043,10 @@ before-after-card li {
       <div class="after"></div>
     </div>
     <h4>What Changed</h4>
-    <ul>
-      <li>Cleaner visuals</li>
-      <li>Reduced friction</li>
-      <li>Clear CTA priority</li>
-    </ul>
+    <div class="ba-text-columns"> 
+      <p>Left side text goes here.</p> 
+      <p>Right side text goes here.</p>
+    </div>
   </div>
 </div>        
     <section>
