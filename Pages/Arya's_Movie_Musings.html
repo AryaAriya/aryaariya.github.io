@@ -401,6 +401,56 @@ body {
     z-index: -1; 
 }
 
+ .comparison-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 40px auto;
+  max-width: 1200px;
+}
+
+.comparison-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  width: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.comp-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.comp-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.comp-screenshot {
+  width: 100%;
+  border-radius: 8px;
+  margin: 15px 0;
+  border: 1px solid #ccc;
+}
+
+.section h4 {
+  margin-bottom: 6px;
+  font-size: 1.1rem;
+}
+
+.section ul {
+  margin: 0 0 12px 18px;
+}
+
+.section p {
+  margin: 0 0 12px 0;
+} 
+
 .case-footer {
   text-align: center;
   margin-top: 60px;
@@ -570,43 +620,71 @@ body {
 
     <section class="case-subsection"> 
       <h2>Competitive Audit</h2>
-       <p>I did a competitive audit on two websites
-         <dl>Moria - The Science Fiction, Horror, & Fantasy Film Review</p>
-           <dt>Strengths:</dt>
-             <dd>
-               <ul>
-                 <li>Easy Navigation</li>
-                 <li>Simple palatte</li>
-               </ul>
-            </dd>
-            <dt>Weaknesses</dt>
-              <dd>
-                <ul>
-                  <li>Lacks color and polish</li>
-                  <li>Feels cramped</li>
-                  <li>Needs more categories and imagery</li>
-                </ul>
-               </dd>
-             </dl>
-             <dl>RogerEbert.com
-                <dt>Strengths</dt>
-                 <dd>
-                  <ul>
-                    <li>Strong navigation</li>
-                    <li>Great search and filter</li>
-                    <li>Clean layout</li>
-                  </ul>
-                 </dd>
-                <dt>Weaknesses</dt>
-                  <dd>
-                   <ul>
-                     <li>Palette is slightly too bright</li>
-                  </ul>
-                 </dd>
-              </dl> 
-           </p>
-     </section>
-    </h2>
+       <p>I did a competitive audit on two websites</p>
+     <div class="comparison-container"> 
+       <div class="comparison-card">
+    <div class="comp-header">
+      <img src="logo1.png" alt="Competitor 1 Logo" class="comp-logo">
+      <h3>Competitor 1</h3>
+    </div>
+
+    <img src="screenshot1.jpg" alt="Homepage Screenshot" class="comp-screenshot">
+
+    <div class="section">
+      <h4>Strengths</h4>
+      <ul>
+        <li>Clear navigation structure</li>
+        <li>Strong visual hierarchy</li>
+        <li>Fast loading times</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h4>Weaknesses</h4>
+      <ul>
+        <li>Outdated visual style</li>
+        <li>Inconsistent iconography</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h4>Key Takeaways</h4>
+      <p>Competitor 1 excels in clarity but lacks modern aesthetics. I should prioritize visual polish while maintaining strong structure.</p>
+    </div>
+  </div>
+
+  <!-- Competitor 2 -->
+  <div class="comparison-card">
+    <div class="comp-header">
+      <img src="logo2.png" alt="Competitor 2 Logo" class="comp-logo">
+      <h3>Competitor 2</h3>
+    </div>
+
+    <img src="screenshot2.jpg" alt="Homepage Screenshot" class="comp-screenshot">
+
+    <div class="section">
+      <h4>Strengths</h4>
+      <ul>
+        <li>Modern, appealing visuals</li>
+        <li>Strong brand consistency</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h4>Weaknesses</h4>
+      <ul>
+        <li>Overuse of animations</li>
+        <li>Navigation requires too many clicks</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h4>Key Takeaways</h4>
+      <p>Competitor 2’s visuals are strong, but usability suffers. My design should balance aesthetics with simplicity.</p>
+    </div>
+</div> 
+     </div>
+    </section>
 
     <h2 class="case-process">Analysis</h2>
      <section class="case-subsection">
