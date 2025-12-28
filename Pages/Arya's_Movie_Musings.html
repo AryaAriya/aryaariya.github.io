@@ -283,10 +283,14 @@ body {
 .avatar {
     width: 40px;
     height: 40px;
-    background-color: #ccc; 
+    background-color: #d8c7a1;
     border-radius: 50%;
+    border: 2px solid #8b6f47;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
     background-image: url('placeholder-avatar.png'); 
     background-size: cover;
+    background-position: center;
+    filter: sepia(40%) contrast (90%);
     flex-shrink: 0; 
 }
 
@@ -294,9 +298,11 @@ body {
     position: relative;
     padding: 10px 15px;
     border-radius: 18px;
-    background-color: #f0f0f0; 
-    border: 1px solid #ddd; 
+    background-color: #f7f1e3; 
+    border: 2px solid #8b6f47;
+    color: #3b2f2f;
     max-width: 75%;
+    box-shadow: 0 0 6px rgba(0,0,0,0.15);
     word-wrap: break-word;
 }
 
@@ -346,7 +352,9 @@ body {
     position: absolute;
     width: 0;
     height: 0;
-    border: 8px solid transparent;
+    border-top: 10px solid transparent; 
+    border-bottom: 10px solid transparent; 
+    border-right: 12px solid #f7f1e3;
 }
 
 .left .bubble::after {
@@ -361,7 +369,6 @@ body {
     position: absolute;
     width: 0;
     height: 0;
-    border: 9px solid transparent; 
     right: 100%;
     top: 14px;
     border-right-color: #ddd; 
