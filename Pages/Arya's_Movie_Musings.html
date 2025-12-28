@@ -411,30 +411,34 @@ body {
 }
 
 .comparison-card {
-  background: #fff;
-  border: 1px solid #ddd;
-  padding: 20px;
+  background: #edddd4;
+  border: 2px solid #772e25;
+  padding: 25px;
   width: 50%;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  position: relative;
 }
+
+ .comparison-card::after {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border: 1px solid #772e25;
+  pointer-events: none;
+} 
 
 .comp-header {
   display: flex;
   align-items: center;
   gap: 12px;
-}
-
-.comp-logo {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
+  margin-bottom: 10px;
 }
 
 .comp-screenshot {
   width: 100%;
   border-radius: 8px;
   margin: 15px 0;
-  border: 1px solid #ccc;
+  border: 1px solid #772e25;
 }
 
 .section h4 {
@@ -626,7 +630,7 @@ body {
       <h3>Moria - The Science Fiction, Horror, & Fantasy Film Review</h3>
     </div>
 
-    <img src="..Images/moria.jpg" alt="Homepage Screenshot" class="comp-screenshot">
+    <img src="../Images/moria.jpg" alt="Homepage Screenshot" class="comp-screenshot">
 
     <div class="section">
       <h4>Strengths</h4>
@@ -657,7 +661,7 @@ body {
       <h3>RogerEbert.com</h3>
     </div>
 
-    <img src="..Images/roger-ebert.jpg" alt="Homepage Screenshot" class="comp-screenshot">
+    <img src="../Images/roger-ebert.jpg" alt="Homepage Screenshot" class="comp-screenshot">
 
     <div class="section">
       <h4>Strengths</h4>
