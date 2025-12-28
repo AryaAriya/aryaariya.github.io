@@ -456,16 +456,39 @@ body {
 
 .mySlides {
   margin-top: 20px;
-  border: 3px double #772e25;
+  border: 4px double #772e25;
   gap: 10px;
-  display: none;
 }
+
+.prototype-slideshow { 
+  border: 2px solid ##772e25; 
+  border-radius: 6px; 
+  padding: 8px 14px; 
+  font-size: 22px; 
+  cursor: pointer; 
+  margin: 5px; 
+  box-shadow: 0 0 10px rgba(0,0,0,0.25), 
+    inset 0 0 6px rgba(0,0,0,0.15); 
+    transition: all 0.2s ease-in-out; 
+} 
+  
+  .prototype-slideshow:hover { 
+    border-color: #c9b27a; 
+    box-shadow: 0 0 14px rgba(0,0,0,0.3), 
+      inset 0 0 8px rgba(0,0,0,0.2); 
+    transform: translateY(-2px); 
+  }  
+  
+  .prototype-slideshow:active { 
+    transform: translateY(1px); 
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.3); 
+  }
 
 .case-footer {
   text-align: center;
   margin-top: 60px;
   padding-top: 20px;
-  border-top: 3px solid #772e25;
+  border-top: 2px solid #772e25;
 }
 </style>
 
@@ -823,16 +846,16 @@ body {
       <p>I coded a few prototypes of a few of the pages together through Visual Studio Code:</p>
       <p><a href="https://aryaariya.github.io/assignments6/index.html">Prototype</a></p>
 
-      <div class="Prototype-slideshow">
+      <div class="prototype-slideshow">
        <img class="mySlides" src="../Images/home-prototype.jpg" style="width:100%">
        <img class="mySlides" src="../Images/genres-prototype.jpg" style="width:100%">
        <img class="mySlides" src="../Images/about-prototype.jpg" style="width:100%">
        <img class="mySlides" src="../Images/contact-prototype.jpg" style="width:100%">
 
-       <button class="Prototype-slideshow" onclick="plusDivs(-1)">&#10094;</button>
-       <button class="Prototype-slideshow" onclick="plusDivs(1)">&#10095;</button>
+       <button class="prototype-slideshow" onclick="plusDivs(-1)">&#10094;</button>
+       <button class="prototype-slideshow" onclick="plusDivs(1)">&#10095;</button>
       </div>    
-      <p>I also tested one of the pages to make sure that it's responsive on desktop, tablet, and mobile</p>
+      <p>I also tested one of the pages to make sure that it's responsive on desktop, tablet, and mobile:</p>
     </section>
   </section>
 
