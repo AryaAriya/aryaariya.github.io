@@ -508,7 +508,7 @@ body {
 .final-slideshow { 
   background: #edddd4;
   color: #772e25;
-  border: 2px solid #772e25; 
+  border: 2px double #772e25; 
   padding: 8px 14px; 
   font-size: 22px; 
   cursor: pointer; 
@@ -1010,9 +1010,11 @@ body {
     </div>
          
       <p>I also tested one of the pages to make sure that it's responsive on desktop, tablet, and mobile:</p>
+      <div class="image-row">
        <img src="../Images/desktop-prototype.jpg" alt="desktop-prototype" class="case-image">
        <img src="../Images/tablet-prototype.jpg" alt="tablet-prototype" class="case-image">
        <img src="../Images/mobile-prototype.jpg" alt="mobile-prototype" class="case-image">
+      </div>
     </section>
   </section>
 
@@ -1250,10 +1252,11 @@ body {
       </div>   
      </div>
     <p>I once again tested one of the pages to make sure that it's responsive on desktop, tablet, and mobile:</p>
+    <div class="image-row">
      <img src="../Images/home-final.jpg" alt="desktop-final" class="case-image">
      <img src="../Images/tablet-final.jpg" alt="tablet-final" class="case-image">
      <img src="../Images/mobile-final.jpg" alt="mobile-final" class="case-image">
-     
+    </div>
   </section>
 
   <section class="case-section">
@@ -1306,47 +1309,3 @@ function showDivs1(n) {
     x[slideIndex2-1].style.display = "block"; 
   }
 </script>
-
-<!-- side-by-side img
-1. <div class="image-row">
-<img src="../Images/tablet-final.jpg" class="case-image"> 
-<img src="../Images/mobile-final.jpg" class="case-image">
-</div>
-
-.image-row { 
-display: flex; 
-gap: 20px; /* space between images */ 
-justify-content: center; 
-align-items: center; 
-} 
-
-.case-image { 
-max-width: 100%; 
-height: auto; /* prevents stretching */ 
-}
-
-2. <div class="image-grid"> 
-  <img src="../Images/tablet-final.jpg" class="case-image"> 
-  <img src="../Images/mobile-final.jpg" class="case-image"> 
-</div>
-
-.image-grid { 
-  display: grid; 
-  grid-template-columns: repeat(2, 1fr); gap: 20px; 
-} 
-
-.case-image {
-width: 100%;
-height: auto; 
-}
-
-3. .image-row { 
-display: flex; 
-gap: 20px; justify-content: center; 
-} 
-
-.case-image {
-width: 45%; 
-height: auto; 
-}
--->
