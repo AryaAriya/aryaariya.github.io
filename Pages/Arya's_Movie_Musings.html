@@ -252,6 +252,7 @@ body {
 
 .case-image {
   width: 100%;
+  object-fit: cover;
   margin-top: 20px;
   border: 3px solid #772e25;
   display: flex;
@@ -470,6 +471,28 @@ body {
 } 
   
 .prototype-slideshow:hover { 
+  border-color: #772e25; 
+  box-shadow: 0 0 14px rgba(0,0,0,0.3), 
+  inset 0 0 8px rgba(0,0,0,0.2); 
+  transform: translateY(-2px); 
+}  
+
+.myotherSlides {
+  margin-top: 20px;
+  border: 4px double #772e25;
+  gap: 10px;
+}
+
+.final-slideshow { 
+  background: #edddd4;
+  border: 2px solid #772e25; 
+  padding: 8px 14px; 
+  font-size: 22px; 
+  cursor: pointer; 
+  margin: 5px; 
+} 
+  
+.final-slideshow:hover { 
   border-color: #772e25; 
   box-shadow: 0 0 14px rgba(0,0,0,0.3), 
   inset 0 0 8px rgba(0,0,0,0.2); 
@@ -1123,7 +1146,26 @@ body {
  
   <section class="case-section">
     <h2>Final Outcome: Live Website</h2>
-    <img src="../Images/sample.jpg" alt="Final Image" class="case-image">
+     <div class="final-slideshow">
+       <img class="myotherSlides" src="../Images/home-final.jpg" style="width:100%">
+       <img class="myotherSlides" src="../Images/review-final.jpg" style="width:100%">
+       <img class="myotherSlides" src="../Images/review-detail.jpg" style="width:100%">
+       <img class="myotherSlides" src="../Images/genres-final.jpg" style="width:100%">
+       <img class="myotherSlides" src="../Images/genreslook-final.jpg" style="width:100%">
+       <img class="myotherSlides" src="../Images/top20-final.jpg" style="width:100%">
+       <img class="myotherSlides" src="../Images/monthly-final.jpg" style="width:100%">
+       <img class="myotherSlides" src="../Images/yearly-final.jpg" style="width:100%">
+       <img class="myotherSlides" src="../Images/filmseries-final.jpg" style="width:100%">
+       <img class="myotherSlides" src="../Images/-final.jpg" style="width:100%">
+       <img class="myotherSlides" src="../Images/genrespotlight-final.jpg" style="width:100%">
+       <img class="myotherSlides" src="../Images/streaming-final.jpg" style="width:100%">
+       <img class="myotherSlides" src="../Images/news-final.jpg" style="width:100%">
+       <img class="myotherSlides" src="../Images/about-final.jpg" style="width:100%">
+       <img class="myotherSlides" src="../Images/contact-final.jpg" style="width:100%">
+
+       <button class="final-slideshow" onclick="plusDivs2(-1)">&#10094;</button>
+       <button class="final-slideshow" onclick="plusDivs2(1)">&#10095;</button>
+      </div>    
   </section>
 
   <section class="case-section">
@@ -1141,10 +1183,11 @@ body {
 </div>
 
 <script>
-  var slideIndex = 1;
+//Slideshow 1
+var slideIndex1 = 1;
 showDivs(slideIndex);
 
-function plusDivs(n) {
+function plusDivs1(n) {
   showDivs(slideIndex += n);
 }
 
@@ -1158,4 +1201,22 @@ function showDivs(n) {
   }
   x[slideIndex-1].style.display = "block";  
 }
+
+//Slideshow 2
+  var slideIndex2 = 1; 
+  showDivs2(slideIndex2); 
+  
+  function plusDivs2(n) {
+    showDivs2(slideIndex2 += n); 
+  } 
+  
+  function showDivs2(n) { 
+    var i; var x = document.getElementsByClassName("myotherSlides");
+    if (n > x.length) {slideIndex2 = 1} 
+    if (n < 1) {slideIndex2 = x.length} 
+    for (i = 0; i < x.length; i++) { 
+      x[i].style.display = "none"; 
+    } 
+    x[slideIndex2-1].style.display = "block"; 
+  }
 </script>
