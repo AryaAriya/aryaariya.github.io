@@ -472,6 +472,36 @@ body {
   transform: translateY(-2px); 
 }  
 
+.slideshow-arrows {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* space between arrows */
+  margin-top: 10px;
+}
+
+.slideshow-btn {
+  background: #edddd4;
+  border: 3px double #772e25;
+  padding: 6px 14px;
+  font-family: "Garamond", serif;
+  font-size: 22px;
+  color: #772e25;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow:
+    inset 0 0 6px rgba(0,0,0,0.15),
+    0 0 6px rgba(0,0,0,0.2);
+}
+
+.slideshow-btn:hover {
+  background: #f3e6d8;
+  border-color: #5e1f18;
+  box-shadow:
+    0 0 12px rgba(0,0,0,0.3),
+    inset 0 0 8px rgba(0,0,0,0.2);
+  transform: translateY(-2px);
+}
+
 .myotherSlides {
   margin-top: 20px;
   border: 4px double #772e25;
@@ -493,6 +523,37 @@ body {
   inset 0 0 8px rgba(0,0,0,0.2); 
   transform: translateY(-2px); 
 }  
+
+.OtherSlideshow-arrows {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* space between arrows */
+  margin-top: 10px;
+}
+
+.Otherslideshow-btn {
+  background: #edddd4;
+  border: 3px double #772e25;
+  padding: 6px 14px;
+  font-family: "Garamond", serif;
+  font-size: 22px;
+  color: #772e25;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow:
+    inset 0 0 6px rgba(0,0,0,0.15),
+    0 0 6px rgba(0,0,0,0.2);
+}
+
+.otherSlideshow-btn:hover {
+  background: #f3e6d8;
+  border-color: #5e1f18;
+  box-shadow:
+    0 0 12px rgba(0,0,0,0.3),
+    inset 0 0 8px rgba(0,0,0,0.2);
+  transform: translateY(-2px);
+}
+
 
 .before-after {
   display: grid;
@@ -919,9 +980,12 @@ body {
        <img class="mySlides" src="../Images/about-prototype.jpg" style="width:100%">
        <img class="mySlides" src="../Images/contact-prototype.jpg" style="width:100%">
 
-       <button class="prototype-slideshow" onclick="plusDivs1(-1)">&#10094;</button>
-       <button class="prototype-slideshow" onclick="plusDivs1(1)">&#10095;</button>
-      </div>    
+      <div class="slideshow-arrows">
+       <button class="prototype-slideshow" onclick="plusDivs1(-1)">⇜></button>
+       <button class="prototype-slideshow" onclick="plusDivs1(1)">⇝</button>
+      </div>  
+    </div>
+         
       <p>I also tested one of the pages to make sure that it's responsive on desktop, tablet, and mobile:</p>
        <img src="../Images/desktop-prototype.jpg" alt="desktop-prototype" class="case-image">
        <img src="../Images/tablet-prototype.jpg" alt="tablet-prototype" class="case-image">
@@ -1157,9 +1221,11 @@ body {
        <img class="myotherSlides" src="../Images/about-final.jpg" style="width:100%">
        <img class="myotherSlides" src="../Images/contact-final.jpg" style="width:100%">
 
+      <div class="OtherSlideshow-arrows">
        <button class="final-slideshow" onclick="plusDivs2(-1)">⇜</button>
        <button class="final-slideshow" onclick="plusDivs2(1)">⇝</button>
       </div>   
+     </div>
     <p>I once again tested one of the pages to make sure that it's responsive on desktop, tablet, and mobile:</p>
      <img src="../Images/home-final.jpg" alt="desktop-final" class="case-image">
      <img src="../Images/tablet-final.jpg" alt="tablet-final" class="case-image">
