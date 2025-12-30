@@ -262,6 +262,140 @@ body {
   text-align: center; 
 }
 
+.card-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.top-row { 
+   display: flex; 
+   align-items: center; 
+   text-align: center;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    background-color: #8A5A6A;
+    border-radius: 50%;
+    border: 6px double #772e25;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    background-image: url('placeholder-avatar.png'); 
+    background-size: cover;
+    flex-shrink: 0; 
+}
+
+.bubble {
+    position: relative;
+    padding: 10px 15px;
+    border-radius: 18px;
+    background-color: #DCC7B8; 
+    border: 2px solid #772e25;
+    max-width: 75%;
+    box-shadow: 0 0 6px rgba(0,0,0,0.15);
+    word-wrap: break-word;
+}
+
+.bubble p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.feedback-text { 
+  display: flex; 
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1.5rem;
+  margin-top: 0.5rem; 
+  max-width: 400px; 
+  line-height: 1.4; 
+}
+
+.left {
+    justify-content: flex-start;
+}
+
+.left .avatar {
+    margin-right: 10px;
+}
+
+.left .bubble {
+    margin-left: 10px; 
+}
+
+.right {
+    justify-content: flex-end;
+}
+
+.right .avatar {
+    margin-left: 10px;
+}
+
+.right .bubble {
+    margin-right: 10px; 
+}
+
+.left .bubble::after {
+    content: "";
+    position: absolute;
+    right: 100%;
+    top: 18px; 
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 12px solid #DCC7B8;
+}
+
+.left .bubble::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: 100%;
+    top: 17px;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+    border-right: 13px solid #772e25;
+}
+
+.right .bubble::after {
+    content: "";
+    position: absolute;
+    left: 100%;
+    top: 18px; 
+    width: 0; 
+    height: 0;
+    border-top: 8px solid transparent; 
+    border-bottom: 8px solid transparent; 
+    border-left: 12px solid #DCC7B8;
+}
+
+.right .bubble::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 100%;
+    top: 17px;
+    border-top: 9px solid transparent; 
+    border-bottom: 9px solid transparent;
+    border-left: 13px solid #772e25;
+}
+
 .case-footer {
   text-align: center;
   margin-top: 60px;
@@ -369,7 +503,6 @@ body {
      <div class="design-process-p">
        <dl>
           <dd>Peer Critiques</dd>
-          <dd>Before/After Critiques</dd>
        </dl>
      </div> 
    </div> 
@@ -387,10 +520,6 @@ body {
    </div>
 
     <h2 class="case-process"> Research</h2>
-    <section class="case-subsection">
-      <h2>Context study</h2>
-      <p>T</p>
-    </section>
 
     <section class="case-subsection"> 
       <h2>Target Audience</h2>
@@ -651,10 +780,56 @@ body {
      <h2>Low-fidelity Wireframes</h2>
       <p>I created low-fidelity wireframes:</p>
       <img src="../Images/low-fidelity-wireframes-shop.jpg" alt="Low-fidelity Wireframe" class="case-image">
+     </section>
     </section>
 
-    
-    </section>
+        <h2 class="case-process"> Feedback</h2>
+    <section class="case-subsection">  
+     <h2>Peer Critiques</h2>
+      <p>I shared my sitemap and my low-fidelity wireframes with several of my peers, and I got feedback in the process, which I then implemented into my project. The most notable one was:</p>
+
+<div class="card-container">
+  <div class="card left">
+   <div class="top-row">
+    <div class="avatar"></div>
+    <div class="bubble">
+      <p>"The navigation categories could be reduced"</p>
+    </div>
+   </div>
+    <p class="feedback-text"> Peers felt that the navigation had too many categories, especially secondary categories, which could make the site feel cluttered</p>
+  </div>
+   </div>
+ </section>
+
+  <h2 class="case-process"> Handoff</h2>
+  <section class="case-section">
+    <h2>High-Fidelity Wireframes</h2>
+     <p> The high fidelity wireframes: </p>
+  </section>
+
+  <section class="case-subsection">
+    <h2>Case Study Summary</h2>
+     <p>The final outcome</p>
+  </section>
+  
+  <section class="case-subsection">
+    <h2>Reflection</h2>
+     <p>Key Takeaways:
+      <ul>
+        <li>T</li>
+        <li>T</li>
+      </ul>
+    </p>
+  </section>
+
+  <section class="case-subsection">
+    <h2>Next Steps</h2>
+    <p> This project laid the groundwork for a more interactive and functional site. The next phase will include:
+      <ul>
+        <li>A dark mode</li>
+      </ul>
+    </p>
+  </section>
   </section>
 
 
