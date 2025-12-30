@@ -445,6 +445,55 @@ body {
   transform: translateY(-2px);
 }
 
+.myotherSlides {
+  margin-top: 20px;
+  border: 4px double #772e25;
+  gap: 10px;
+}
+
+.final-slideshow { 
+  background: #edddd4;
+  color: #772e25;
+  border: 2px double #772e25; 
+  padding: 8px 14px; 
+  font-size: 22px; 
+  cursor: pointer; 
+  margin: 5px; 
+  transition: all 0.2s ease-in-out;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.15),
+    0 0 6px rgba(0, 0, 0, 0.2);
+}   
+
+.OtherSlideshow-arrows {
+  display: flex;
+  justify-content: center;
+  gap: 20px; 
+  margin-top: 10px;
+}
+
+.Otherslideshow-btn {
+  background: #edddd4;
+  border: 3px double #772e25;
+  padding: 6px 14px;
+  font-family: "Garamond", serif;
+  font-size: 22px;
+  color: #772e25;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow:
+    inset 0 0 6px rgba(0,0,0,0.15),
+    0 0 6px rgba(0,0,0,0.2);
+}
+
+.otherSlideshow-btn:hover {
+  background: #f3e6d8;
+  border-color: #5e1f18;
+  box-shadow:
+    0 0 12px rgba(0,0,0,0.3),
+    inset 0 0 8px rgba(0,0,0,0.2);
+  transform: translateY(-2px);
+}
+
 .case-footer {
   text-align: center;
   margin-top: 60px;
@@ -489,6 +538,7 @@ body {
            <div class="project-role-p">
              <dl>
               <dd>Figma</dd>
+              <dd>Draw.io</dd>
              </dl>
            </div>
       </div>
@@ -882,6 +932,24 @@ body {
   <section class="case-section">
     <h2>High-Fidelity Wireframes</h2>
      <p>I finally made clickable, interactive high-fidelity wireframes, which applied the feedback provided by peers: </p>
+        <div class="final-slideshow">
+       <img class="myotherSlides" src="../Images/shop-popup-final.jpg" style="width:100%">
+       <img class="myotherSlides" src="../Images/shop-sign-in-final.jpg" style="width:100%">
+       <img class="myotherSlides" src="../Images/shop-sign-up-detail.jpg" style="width:100%">
+       <img class="myotherSlides" src="../Images/shop-home-final.jpg" style="width:100%">
+       <img class="myotherSlides" src="../Images/shop-dress-final.jpg" style="width:100%">
+       <img class="myotherSlides" src="../Images/shop-sub-final.jpg" style="width:100%">
+       <img class="myotherSlides" src="../Images/shop-tailoring-final.jpg" style="width:100%">
+       <img class="myotherSlides" src="../Images/shop-about-final.jpg" style="width:100%">
+       <img class="myotherSlides" src="../Images/shop-contact-final.jpg" style="width:100%">
+       <img class="myotherSlides" src="../Images/shop-account-final.jpg" style="width:100%">
+       <img class="myotherSlides" src="../Images/shop-cart-final.jpg" style="width:100%">
+
+      <div class="OtherSlideshow-arrows">
+       <button class="final-slideshow" onclick="plusDivs2(-1)">⇜</button>
+       <button class="final-slideshow" onclick="plusDivs2(1)">⇝</button>
+      </div>   
+     </div>
   </section>
 
   <section class="case-subsection">
@@ -937,6 +1005,23 @@ function showDivs1(n) {
   }
   x[slideIndex1-1].style.display = "block";  
 }
+
+var slideIndex2 = 1; 
+  showDivs2(slideIndex2); 
+  
+  function plusDivs2(n) {
+    showDivs2(slideIndex2 += n); 
+  } 
+  
+  function showDivs2(n) { 
+    var i; var x = document.getElementsByClassName("myotherSlides");
+    if (n > x.length) {slideIndex2 = 1} 
+    if (n < 1) {slideIndex2 = x.length} 
+    for (i = 0; i < x.length; i++) { 
+      x[i].style.display = "none"; 
+    } 
+    x[slideIndex2-1].style.display = "block"; 
+  }
 </script>
 
 <!--
