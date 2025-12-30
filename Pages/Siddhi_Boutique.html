@@ -396,6 +396,55 @@ body {
     border-left: 13px solid #772e25;
 }
 
+.mySlides {
+  margin-top: 20px;
+  border: 4px double #772e25;
+  gap: 10px;
+}
+
+.prototype-slideshow { 
+  background: #edddd4;
+  color: #772e25;
+  border: 2px double #772e25; 
+  padding: 8px 14px; 
+  font-size: 22px; 
+  cursor: pointer; 
+  margin: 5px; 
+  transition: all 0.2s ease-in-out;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.15),
+    0 0 6px rgba(0, 0, 0, 0.2);
+}   
+
+.slideshow-arrows {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.slideshow-btn {
+  background: #edddd4;
+  border: 3px double #772e25;
+  padding: 6px 14px;
+  font-family: "Garamond", serif;
+  font-size: 22px;
+  color: #772e25;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow:
+    inset 0 0 6px rgba(0,0,0,0.15),
+    0 0 6px rgba(0,0,0,0.2);
+}
+
+.slideshow-btn:hover {
+  background: #f3e6d8;
+  border-color: #5e1f18;
+  box-shadow:
+    0 0 12px rgba(0,0,0,0.3),
+    inset 0 0 8px rgba(0,0,0,0.2);
+  transform: translateY(-2px);
+}
+
 .case-footer {
   text-align: center;
   margin-top: 60px;
@@ -735,7 +784,7 @@ body {
         The site's content ecosystem consists of:
         <ul>
           <li>Homepage</li>
-          <li>All Products<li>
+          <li>All Products</li>
           <li>Blouses</li>
           <li>Traditional Indian Dresses</li>
           <li>Jewelry
@@ -788,6 +837,25 @@ body {
     <section class="case-subsection"> 
      <h2>Low-fidelity Wireframes</h2>
       <p>I created low-fidelity wireframes:</p>
+       <div class="prototype-slideshow">
+        <img class="mySlides" src="../Images/popup-low.jpg" style="width:100%">
+        <img class="mySlides" src="../Images/sign-in-low.jpg" style="width:100%">
+        <img class="mySlides" src="../Images/sign-up-low.jpg" style="width:100%">
+        <img class="mySlides" src="../Images/home-low.jpg" style="width:100%">
+         <img class="mySlides" src="../Images/mainpages-low.jpg" style="width:100%">
+         <img class="mySlides" src="../Images/sub-low.jpg" style="width:100%">
+         <img class="mySlides" src="../Images/tailoring-low.jpg" style="width:100%">
+         <img class="mySlides" src="../Images/about-low.jpg" style="width:100%">
+         <img class="mySlides" src="../Images/contact-low.jpg" style="width:100%">
+         <img class="mySlides" src="../Images/account-low.jpg" style="width:100%">
+         <img class="mySlides" src="../Images/cart-low.jpg" style="width:100%">
+
+        <div class="slideshow-arrows">
+         <button class="prototype-slideshow" onclick="plusDivs1(-1)">⇜</button>
+         <button class="prototype-slideshow" onclick="plusDivs1(1)">⇝</button>
+        </div>  
+      </div>
+        
       <img src="../Images/low-fidelity-wireframes-shop.jpg" alt="Low-fidelity Wireframe" class="case-image">
      </section>
     </section>
@@ -813,7 +881,7 @@ body {
   <h2 class="case-process"> Handoff</h2>
   <section class="case-section">
     <h2>High-Fidelity Wireframes</h2>
-     <p> The high fidelity wireframes: </p>
+     <p>I finally made clickable, interactive high-fidelity wireframes, which applied the feedback provided by peers: </p>
   </section>
 
   <section class="case-subsection">
@@ -851,3 +919,22 @@ body {
   </footer>
 
 </div>
+<script>
+  var slideIndex1 = 1;
+showDivs1(slideIndex1);
+
+function plusDivs1(n) {
+  showDivs1(slideIndex1 += n);
+}
+
+function showDivs1(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex1 = 1}
+  if (n < 1) {slideIndex1 = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex1-1].style.display = "block";  
+}
+</script>
