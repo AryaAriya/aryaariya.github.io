@@ -208,6 +208,60 @@ body {
    padding: 0; 
  }
 
+  .comparison-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 40px auto;
+  max-width: 1200px;
+}
+
+.comparison-card {
+  background: #edddd4;
+  border: 2px solid #772e25;
+  padding: 25px;
+  width: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  position: relative;
+}
+
+ .comparison-card::after {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border: 1px solid #772e25;
+  pointer-events: none;
+} 
+
+.comp-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.comp-screenshot {
+  width: 100%;
+  margin: 15px 0;
+  border: 2px double #772e25;
+}
+
+.section h4 {
+  margin-bottom: 6px;
+  font-size: 1.1rem;
+  border-bottom: 2px solid #772e25;
+  display: inline-block;
+}
+
+.section ul {
+  margin: 0 0 12px 18px;
+}
+
+.section p {
+  margin: 0 0 12px 0;
+} 
+
 .case-footer {
   text-align: center;
   margin-top: 60px;
@@ -319,23 +373,20 @@ body {
 
     <h2 class="case-process"> Research</h2>
     <section class="case-subsection">
-
-    <section class="case-subsection"> 
-      <h2>Target Audience</h2>
-      <p>
-        I identified six primary users, each with their own needs, motivations, and behaviors.
-        <ul>
-          <li>Cinephiles and Film Students</li>
-          <li>Casual Viewers and Streaming Suscribers</li>
-          <li>Parents and Families</li>
-          <li>Older Adults</li>
-          <li>Genre Fans (Horror, Sci-Fi, Action, etc.)</li>
-          <li>Pop Culture Followers</li>
-        </ul>
-      </p>
+      <h2>Context Study</h2>
+        <p></p>
     </section>
 
-    <section class="case-subsection"> 
+    <section class="case-subsection">
+      <h2>User Personas</h2>
+       <h2>I created two user personas</h2>
+
+       <h3>Persona 1: Beatrice West</h3>
+          <img src="../Images/bwest.jpg" alt="Movie Sitemap" class="case-image">
+       <h3>Persona 2: Mark Sterling</h3>
+          <img src="../Images/msterling.jpg" alt="Movie Sitemap" class="case-image">
+
+     <section class="case-subsection"> 
       <h2>Pain Points</h2>
       <p>
         The following are the core pain points shared by all of the primary users that this project aims to take into consideration:
@@ -347,6 +398,155 @@ body {
         </ul>
       </p>
     </section>
+
+      <section class="case-subsection"> 
+      <h2>Competitive Audit</h2>
+       <p>I did a competitive audit on four websites: </p>
+     <div class="comparison-container"> 
+       <div class="comparison-card">
+    <div class="comp-header">
+      <h3>Hearthstone</h3>
+    </div>
+
+    <img src="../Images/" alt="Homepage Screenshot" class="comp-screenshot">
+
+    <div class="section">
+      <h4>Strengths</h4>
+      <ul>
+        <li>Strong brand recognition via Warcraft Universe</li>
+        <li>Polished visuals and animations</li>
+        <li>Large community and player base</li>
+        <li>Frequent expansions and content updates</li>
+        <li>Accessible gameplay for casual players</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h4>Weaknesses</h4>
+      <ul>
+        <li>Heavy reliance on monetization (pay-to-win)</li>
+        <li>Progression system feels grind-heavy for casual players</li>
+        <li>Limited deck-building</li>
+        <li>Visually cluttered menus</li>
+        <li>Aging mechanics with fewer innovations</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h4>Key Takeaways</h4>
+      <p>Moria Reviews excels in easy navigation, but lacks polish and color, and is rather cluttered. I should prioritize visual polish while maintaining strong structure.</p>
+    </div>
+  </div>
+
+  <!-- Competitor 2 -->
+  <div class="comparison-card">
+    <div class="comp-header">
+      <h3>Magic: The Gathering Arena</h3>
+    </div>
+
+    <img src="../Images/" alt="Homepage Screenshot" class="comp-screenshot">
+
+    <div class="section">
+      <h4>Strengths</h4>
+      <ul>
+        <li>Deep strategic complexity and competitive depth</li>
+        <li>Legacy brand with high recognition for decades</li>
+        <li>Integration with physical cards by codes or events</li>
+        <li>High-quality card art and expansive, consistent lore</li>
+        <li>Strong competitive scene</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h4>Weaknesses</h4>
+      <ul>
+        <li>Steep learning curve due to complex rules</li>
+        <li>Resource-heavy client; performance issues on older devices</li>
+        <li>Dense card text and visuals</li>
+        <li>Progression system requires significant time or money</li>
+        <li>Less accessible for casual audiences</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h4>Key Takeaways</h4>
+      <p>RogerEbert.com’s site excels in most areas, but the color palette is a bit too bright for my taste. My design should take into consideration the color pallatte and which colors to choose.</p>
+    </div>
+  </div>
+
+  <!--Competitior 3-->
+     <div class="comparison-container"> 
+       <div class="comparison-card">
+    <div class="comp-header">
+      <h3>Marvel Snap</h3>
+    </div>
+
+    <img src="../Images/" alt="Homepage Screenshot" class="comp-screenshot">
+
+    <div class="section">
+      <h4>Strengths</h4>
+      <ul>
+        <li>Global Marvel IP with iconic, instantly recognizable characters</li>
+        <li>Fast-paced matches (3 minutes), which are suited for mobile</li>
+        <li>Innovative location-based mechanics</li>
+        <li>Highly accessible onboarding and progression</li>
+        <li>Strong engagement through cosmetics and seasonal content</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h4>Weaknesses</h4>
+      <ul>
+        <li>Limited deck-building</li>
+        <li>Heavy reliance on Marvel IP (may overshadow gameplay innovation)</li>
+        <li>Heavy monetization through cosmetics and seasonal gameplay and passes</li>
+        <li>Less robust competitive tracking tools</li>
+      </ul>
+    </div>
+
+     <div class="section">
+      <h4>Key Takeaways</h4>
+      <p>RogerEbert.com’s site excels in most areas, but the color palette is a bit too bright for my taste. My design should take into consideration the color pallatte and which colors to choose.</p>
+    </div>
+</div> 
+
+  <!--Competior 4-->
+     <div class="comparison-container"> 
+       <div class="comparison-card">
+    <div class="comp-header">
+      <h3>Slay the Spire</h3>
+    </div>
+
+    <img src="../Images/" alt="Homepage Screenshot" class="comp-screenshot">
+
+    <div class="section">
+      <h4>Strengths</h4>
+      <ul>
+        <li>Unique fusion of roguelike and deck-building mechanics</li>
+        <li>High replayability via procedural generation</li>
+        <li>Lightweight install and stable performance across platforms</li>
+        <li>Well-known among indie players and people who love and use strategy-based methods and games</li>
+        <li>Affordable one-time purchase model</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h4>Weaknesses</h4>
+      <ul>
+        <li>Single-player only; lacks community features</li>
+        <li>Minimalist visuals and designs can be polarizing</li>
+        <li>Sparse lore and limited narrative depth</li>
+        <li>Limited accessibility features </li>
+        <li>Replayability heavily relies on procedural generation, which can feel repetitive</li>
+      </ul>
+    </div>
+
+     <div class="section">
+      <h4>Key Takeaways</h4>
+      <p>RogerEbert.com’s site excels in most areas, but the color palette is a bit too bright for my taste. My design should take into consideration the color pallatte and which colors to choose.</p>
+    </div>
+  </div>
+ </section>
 
   <div class="victorian-divider">
     ✦
