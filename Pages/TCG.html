@@ -219,6 +219,7 @@ body {
 
   .comparison-container {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
   align-items: flex-start;
@@ -230,7 +231,8 @@ body {
   background: #edddd4;
   border: 2px solid #772e25;
   padding: 25px;
-  width: 50%;
+  width:  calc(50% - 20px);
+  box-sizing: border-box;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   position: relative;
 }
@@ -283,7 +285,7 @@ body {
 
   <a href="../index.html#case-studies" class="back-link">← Back to Case Studies</a>
 
-  <h1 class="case-title">Arya's Movie Musings</h1>
+  <h1 class="case-title">Mobile Trading Card Game</h1>
 
   <div class="victorian-divider">
     ✦
@@ -407,7 +409,7 @@ body {
 
       <section class="case-subsection"> 
       <h2>Competitive Audit</h2>
-       <p>I did a competitive audit on four websites: </p>
+       <p>I conducted a competitive audit on four major digital card game platforms:</p>
      <div class="comparison-container"> 
        <div class="comparison-card">
     <div class="comp-header">
@@ -641,3 +643,5 @@ The journey will help you identify areas in the process which can be improved.
   </footer>
 
 </div>
+
+<!-- “Arya’s Movie Musings is a personal UX project exploring how film enthusiasts discover, evaluate, and engage with movie content online.”-->
