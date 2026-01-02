@@ -20,7 +20,7 @@ html {
 	cursor: pointer;
     display: inline-block;
 	margin: 3rem auto 2rem;
-	transform: rotate(12deg);
+	transform: rotate(12deg) translate(-40px, 80px);
 	left: 0;
 	top: 0;
 	border: 0.25rem solid #c44536;
@@ -36,7 +36,7 @@ html {
 }
 
 .stamp:hover {
-	transform: rotate(12deg) translate(5px, -5px);
+	transform: rotate(12deg) translate(-35px, 75px);
 	color: #9e3a2e;
 	border-color: #9e3a2e;
 }
@@ -226,8 +226,14 @@ html {
   }
 
   .stamp {
-    transform: rotate(12deg);
-    margin: 2rem auto;
+    transform: rotate(12deg) translate (-15px, 50px);
+    font-size: 2.5rem;
   }
 }
 
+@media (max-width: 768px) {
+	.stamp {
+		transform: rotate(12deg) translate(-10px, 30px);
+		font-size: 2rem;
+	}
+}
