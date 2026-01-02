@@ -20,7 +20,7 @@ html {
 	cursor: pointer;
     display: inline-block;
 	margin: 3rem auto 2rem;
-	transform: rotate(12deg) translate(-400px, 75px);
+	transform: rotate(12deg) translate(-400px, 100px);
 	left: 0;
 	top: 0;
 	border: 0.25rem solid #c44536;
