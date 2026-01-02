@@ -18,8 +18,11 @@ html {
 	font-weight: 700;
 	position: relative; 
 	cursor: pointer;
-	top: 90px;
-	left: -400px;
+    display: inline-block;
+	margin: 3rem auto 2rem;
+	transform: rotate(12deg);
+	left: 0;
+	top: 0;
 	border: 0.25rem solid #c44536;
 	display: inline-block;
 	padding: 0.25rem 1rem;
@@ -33,7 +36,7 @@ html {
 }
 
 .stamp:hover {
-	transform: rotate(12deg) translate (5px, -5px);
+	transform: rotate(12deg) translate(5px, -5px);
 	color: #9e3a2e;
 	border-color: #9e3a2e;
 }
@@ -84,12 +87,13 @@ html {
 	right: 0px; 
 	border-left: none; 
 	box-shadow: 0 0 0 6px #edddd4, 0 0 0 10px #772e25, 0 12px 30px rgba(0, 0, 0, 0.25);
-	filter: sepia(0.15) contrast (1.05);
+	filter: sepia(0.15) contrast(1.05);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
 } 
 
 .old-card-heading {
 	font-family: "Garamond", serif;
-	font-size: 22 px;
+	font-size: 22px;
 	color: #772e25;
 	letter-spacing: 3px;
 	text-transform: uppercase;
@@ -128,11 +132,21 @@ html {
 	margin-top: 20px;
 }
 
+.old-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+.old-card:active {
+  transform: translateY(-2px) scale(0.98);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
 .old-card .chapter-num {
 	font-family: "Garamond", serif;
 	font-size: 70px;
 	color: #c44536;
-	opacity: 2.5;
+	opacity: 0.25;
 	position: absolute;
 	top: -25px;
 	right: 25px;
@@ -167,17 +181,6 @@ html {
     letter-spacing: 0.5px;
 }
 
-.old-card .chapter-num {
-	font-family: "Garamond", serif;
-	font-size: 70px;
-	color: #c44536;
-	opacity: 2.5;
-	position: absolute;
-	top: -25px;
-	right: 25px;
-	pointer-events: none;
-}
-
 .list { 
 	padding: 100px 0 0; 
 	display: flex;
@@ -203,10 +206,28 @@ html {
 .site-footer {
 	font-family: "Garamond", serif;
 	color: #772e25;
-	font-size: 22 px;
+	font-size: 22px;
 	text-align: center;                    
     margin-top: 60px;   
 	padding-top: 20px;
     border-top: 3px solid #772e25;
     opacity: 0.9;
 }
+
+@media (max-width: 768px) {
+  .card-row {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .old-card {
+    width: 90%;
+  }
+
+  .stamp {
+    transform: rotate(12deg);
+    margin: 2rem auto;
+  }
+}
+
