@@ -1,3 +1,117 @@
-.about-page p { 
-	font-size: 22px; 
+body {
+  background: #edddd4;
+  font-family: "Garamond", serif;
+  color: #772e25;
+  padding: 40px;
 }
+
+.about-wrapper {
+  max-width: 900px;
+  margin: auto;
+}
+
+.about-title {
+  font-size: 64px;
+  font-weight: 100;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.victorian-divider {
+  text-align: center;
+  font-size: 28px;
+  margin: 40px 0 20px;
+  color: #772e25;
+  position: relative;
+}
+
+.victorian-divider::before,
+.victorian-divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  border-top: 2px solid #772e25;
+  opacity: 0.6;
+}
+
+.victorian-divider::before {
+  left: 0;
+}
+
+.victorian-divider::after {
+  right: 0;
+}
+
+/* Intro */
+.lead {
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Portrait */
+.about-portrait {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.portrait-img {
+  width: 260px;
+  height: auto;
+  border: 3px solid #772e25;
+  box-shadow: 0 0 0 6px #edddd4, 0 0 0 9px #772e25;
+}
+
+/* Sections */
+.about-section {
+  margin-bottom: 60px;
+}
+
+.about-section h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #772e25;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Drop cap paragraph */
+.dropcap::first-letter {
+  font-size: 4rem;
+  float: left;
+  line-height: 0.8;
+  padding-right: 10px;
+  padding-top: 4px;
+  color: #772e25;
+}
+
+/* Beliefs list */
+.beliefs {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.beliefs li {
+  font-size: 20px;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.beliefs li::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #772e25;
+}
+
+.about-footer {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 3px solid #772e25;
+}
+
