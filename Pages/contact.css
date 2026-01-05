@@ -1,8 +1,39 @@
+.victorian-divider {
+  text-align: center;
+  font-size: 28px;
+  margin: 40px 0 20px;
+  color: #772e25;
+  position: relative;
+}
+
+.victorian-divider::before,
+.victorian-divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  border-top: 2px solid #772e25;
+  opacity: 0.6;
+}
+
+.victorian-divider::before {
+  left: 0;
+}
+
+.victorian-divider::after {
+  right: 0;
+}
+
+/* Victorian Letter Form */
 .contact-form {
   max-width: 600px;
-  margin: 40px auto;
+  margin: 0 auto;
+  padding: 30px 40px;
+  background: #edddd4;
+  border: 3px solid #772e25;
   font-family: "Garamond", serif;
   color: #772e25;
+  box-shadow: 0 0 0 6px #edddd4, 0 0 0 9px #772e25;
 }
 
 .contact-form label {
@@ -17,7 +48,7 @@
   width: 100%;
   padding: 12px;
   border: 2px solid #772e25;
-  background: #edddd4;
+  background: #f4e9df;
   font-family: inherit;
   font-size: 18px;
   margin-bottom: 20px;
@@ -37,4 +68,3 @@
 .send-btn:hover {
   background: #c44536;
 }
-
