@@ -33,7 +33,7 @@ html {
 }
 
 .stamp:hover {
-	transform: rotate(12deg) scale (1.02); 
+	transform: rotate(12deg) scale(1.02); 
 	color: #9e3a2e;
 	border-color: #9e3a2e;
 }
