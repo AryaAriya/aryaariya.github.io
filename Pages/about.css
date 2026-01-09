@@ -30,7 +30,7 @@ body {
   content: "";
   position: absolute;
   top: 50%;
-  width: 40%;
+  width: calc(50%-30px);
   border-top: 2px solid #772e25;
   opacity: 0.6;
 }
