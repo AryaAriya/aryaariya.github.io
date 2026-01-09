@@ -50,6 +50,7 @@ html {
 	margin-bottom: 0px;
 	position: relative;
 	text-align: center;
+	margin-bottom: 60px;
 }
 
 .divider-line::before,
