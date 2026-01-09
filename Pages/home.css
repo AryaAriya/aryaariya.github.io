@@ -13,8 +13,8 @@ html {
 }
 
 .stamp {
-    transform: rotate(12deg) translate(-200px, 100px);; 
-	position: absolute;
+    transform: rotate(12deg) translate(-400px, 100px);; 
+	position: fixed;
 	color: #c44536;
 	font-size: 3rem;
 	font-weight: 700;
