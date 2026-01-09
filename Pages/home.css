@@ -33,6 +33,7 @@ html {
 }
 
 .stamp:hover {
+	transform: rotate(12deg) translate(-400px, 100px) translateY(-4px);
 	color: #9e3a2e;
 	border-color: #9e3a2e;
 }
@@ -132,7 +133,7 @@ html {
 }
 
 .old-card:hover {
-  transform: rotate(12deg) translate(-400px, 100px) translateY(-4px);
+  transform: translateY(-6px);
   box-shadow: 0 12px 30px rgba(0,0,0,0.2);
 }
 
