@@ -3,6 +3,7 @@
   font-size: 28px;
   margin: 40px 0 20px;
   color: #772e25;
+  line-height: 1.2;
   position: relative;
 }
 
@@ -24,8 +25,15 @@
   right: 0;
 }
 
+h2 { 
+  text-align: center; 
+  margin: 0 0 30px; 
+  font-size: 36px; 
+}
+
 /* Victorian Letter Form */
 .contact-form {
+  margin-top: 20px;
   max-width: 600px;
   margin: 0 auto;
   padding: 40px 50px;
