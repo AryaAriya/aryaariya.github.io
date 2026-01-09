@@ -125,14 +125,17 @@ section .content {
   
 #one {
   background:#edddd4;
+  transform: translateY(0);
 }
   
 #three {
  background:#edddd4;
+ transform: translateY(100%);
 }
   
 #four {
   background:#edddd4;
+  transform: translateY(200%);
 }
   
 a[id="nav-one"]:target ~ #one {
@@ -160,9 +163,9 @@ a[id="nav-four"]:target ~ #four {
           <img src="Images/key-logo.jpg" alt="Logo">
         </div>
         <ul>
-          <li><a href="#nav-one">HOME</a></li>
-          <li><a href="#nav-three">ABOUT</a></li>
-          <li><a href="#nav-four">CONTACT</a></li>
+          <li><span href="#nav-one">HOME</span></li>
+          <li><span href="#nav-three">ABOUT</span></li>
+          <li><span href="#nav-four">CONTACT</span></li>
         </ul>
       </div>
       </nav>
@@ -204,3 +207,4 @@ window.addEventListener("DOMContentLoaded", () => {
 }); 
      </script>
    </body>
+
