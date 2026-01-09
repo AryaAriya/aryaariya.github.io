@@ -2,11 +2,13 @@ body {
   background: #edddd4;
   font-family: "Garamond", serif;
   color: #772e25;
-  padding: 40px;
+  padding: 20px;
 }
 
 .about-wrapper {
-  max-width: 1200px;
+  max-width: 1100px;
+  margin: auto; 
+  padding: 0 30px;
 }
 
 .about-title {
