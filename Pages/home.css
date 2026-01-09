@@ -12,7 +12,6 @@ html {
 }
 
 .stamp {
-    transform: rotate(12deg);
 	color: #c44536;
 	font-size: 3rem;
 	font-weight: 700;
@@ -36,7 +35,7 @@ html {
 }
 
 .stamp:hover {
-	transform: rotate(12deg) 
+	transform: rotate(12deg);
 	color: #9e3a2e;
 	border-color: #9e3a2e;
 }
