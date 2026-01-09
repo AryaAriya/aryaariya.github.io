@@ -14,7 +14,7 @@ html {
 
 .stamp {
     position: fixed;
-	top: 100px;
+	top: 20px;
 	left: 40px;
     transform: rotate(12deg);
     color: #c44536;
@@ -224,11 +224,11 @@ html {
   .old-card {
     width: 90%;
   }
-}
 
-@media (max-width: 768px) {
-	.stamp {
-		transform: rotate(12deg) translate(-10px, 30px);
-		font-size: 2rem;
-	}
+  .stamp { 
+	  top: 20px; 
+	  left: 20px; 
+	  transform: rotate(12deg); 
+	  font-size: 2rem; 
+  }
 }
