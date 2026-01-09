@@ -24,6 +24,17 @@
   right: 0;
 }
 
+.form-box {
+  width: 100%;          
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Victorian Letter Form */
 .contact-form {
   max-width: 1100px;
@@ -55,6 +66,7 @@
 }
 
 .send-btn {
+  font-family: Garamond;
   background: #772e25;
   color: #edddd4;
   border: none;
