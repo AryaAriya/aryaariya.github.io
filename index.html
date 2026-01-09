@@ -6,7 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <title>My Portfolio</title>
 <style>
-  
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -15,8 +21,16 @@
 body,html {
   text-align: center;
   height: 100%;
-  overflow: hidden;
   background: #edddd4;
+}
+
+html {
+ overflow-x: hidden;
+}
+
+body {
+ overflow-y: hidden;
+ margin: 0;
 }
       
 nav {
@@ -42,6 +56,11 @@ nav .box {
   display: block;
   padding: 10px 20px;
   margin-right: auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
       
 nav ul li {
@@ -74,10 +93,10 @@ nav ul li a:hover::after {
 }
   
 section {
-  height:100%;
+  height: calc(100vh-80px);
   width:100%;
-  display:table;
-  pointer-events:auto;
+  display: table;
+  pointer-events: auto;
   z-index:0;
   transition: transform 0.45s cubic-bezier(0,0,0.21,1);
   background: #edddd4;
@@ -97,7 +116,7 @@ section h1 {
 }
 
 section .content { 
- height: calc(100vh - 80px); 
+ height: 100%;
  overflow-y: auto; 
  padding: 20px; 
 } 
@@ -183,6 +202,7 @@ window.addEventListener("DOMContentLoaded", () => {
 }); 
      </script>
    </body>
+
 
 
 
