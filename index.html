@@ -98,9 +98,14 @@ section h1 {
 
 section .content { 
  height: calc(100vh - 80px); 
- overflow-y: auto; 
+ overflow-y: scroll; 
  padding: 20px; 
+ scrollbar-width: none;
 } 
+
+section .content::-webkit-scrollbar {
+ display: none; 
+}
   
 #one {
   background:#edddd4;
@@ -183,3 +188,4 @@ window.addEventListener("DOMContentLoaded", () => {
 }); 
      </script>
    </body>
+
