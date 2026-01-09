@@ -1,12 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
 body {
   background: #edddd4;
   font-family: "Garamond", serif;
   color: #772e25;
   padding: 40px;
-}
-
-html, body {
-  overflow-x: hidden;
 }
 
 .about-wrapper {
