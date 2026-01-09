@@ -31,7 +31,7 @@ body {
   content: "";
   position: absolute;
   top: 50%;
-  width: calc(50%-30px);
+  width: calc(50% - 30px);
   border-top: 2px solid #772e25;
   opacity: 0.6;
 }
@@ -78,6 +78,7 @@ body {
 
 /* Drop cap paragraph */
 .dropcap::first-letter {
+  text-indent: 0;
   font-size: 4rem;
   float: left;
   line-height: 0.8;
