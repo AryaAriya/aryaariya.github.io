@@ -19,7 +19,7 @@ html {
 	font-weight: 700;
 	top: 100px;
 	left: -400px;
-	position: relative; 
+	position: absolute;
 	cursor: pointer;
     display: inline-block;
 	margin: 3rem auto 2rem;
