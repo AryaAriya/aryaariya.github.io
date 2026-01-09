@@ -36,7 +36,7 @@ html {
 }
 
 .stamp:hover {
-	transform: rotate(12deg) translate(5px, -5px);
+	transform: rotate(12deg) 
 	color: #9e3a2e;
 	border-color: #9e3a2e;
 }
@@ -223,11 +223,6 @@ html {
 
   .old-card {
     width: 90%;
-  }
-
-  .stamp {
-    transform: rotate(12deg) translate (-15px, 50px);
-    font-size: 2.5rem;
   }
 }
 
