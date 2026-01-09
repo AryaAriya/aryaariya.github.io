@@ -30,7 +30,7 @@ html {
 
 body {
  overflow-y: hidden;
- margin: 0;
+ position: relative;
 }
       
 nav {
@@ -93,11 +93,13 @@ nav ul li a:hover::after {
 }
   
 section {
-  height: calc(100vh-80px);
+  height: calc(100vh - 80px);
+  top: 80px;
+  left: 0;
   width:100%;
   display: table;
   pointer-events: auto;
-  z-index:0;
+  z-index: 0;
   transition: transform 0.45s cubic-bezier(0,0,0.21,1);
   background: #edddd4;
 }
@@ -202,6 +204,7 @@ window.addEventListener("DOMContentLoaded", () => {
 }); 
      </script>
    </body>
+
 
 
 
