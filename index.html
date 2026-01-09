@@ -139,15 +139,39 @@ section .content {
 }
   
 a[id="nav-one"]:target ~ #one {
-  transform:translate3d(0,0,0);
+  transform: translateY(0);
 }
   
 a[id="nav-three"]:target ~ #three {
-  transform:translate3d(0,-100%,0);
+  transform: translateY(100%);
 }
   
 a[id="nav-four"]:target ~ #four {
-  transform:translate3d(0,-200%,0);
+  transform: translateY(200%);
+}
+
+a#nav-three:target ~ #one {
+  transform: translateY(-100%);
+}
+
+a#nav-three:target ~ #three {
+  transform: translateY(0);
+}
+
+a#nav-three:target ~ #four {
+  transform: translateY(100%);
+}
+
+a#nav-four:target ~ #one {
+  transform: translateY(-200%);
+}
+
+a#nav-four:target ~ #three {
+  transform: translateY(-100%);
+}
+
+a#nav-four:target ~ #four {
+  transform: translateY(0);
 }
 </style>
  </head>
@@ -207,5 +231,6 @@ window.addEventListener("DOMContentLoaded", () => {
 }); 
      </script>
    </body>
+
 
 
