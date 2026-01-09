@@ -5,6 +5,10 @@ body {
   padding: 40px;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 .about-wrapper {
   max-width: 900px;
   margin: auto;
