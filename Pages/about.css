@@ -77,14 +77,19 @@ body {
   padding-bottom: 5px;
 }
 
+.dropcap {
+  text-indent: 0;
+  line-height: q.6;
+  overflow: hidden;
+}
+
 /* Drop cap paragraph */
 .dropcap::first-letter {
-  text-indent: 0;
   font-size: 4rem;
   float: left;
-  line-height: 0.8;
-  padding-right: 10px;
-  padding-top: 4px;
+  line-height: 0.85;
+  padding-right: 12px;
+  padding-top: 6px;
   color: #772e25;
 }
 
