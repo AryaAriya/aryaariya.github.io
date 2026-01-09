@@ -44,14 +44,12 @@ body {
   right: 0;
 }
 
-/* Intro */
 .lead {
   font-size: 22px;
   text-align: center;
   margin-bottom: 40px;
 }
 
-/* Portrait */
 .about-portrait {
   text-align: center;
   margin-bottom: 40px;
@@ -67,6 +65,7 @@ body {
 /* Sections */
 .about-section {
   margin-bottom: 60px;
+  font-size: 20px;
 }
 
 .about-section h2 {
@@ -84,28 +83,6 @@ body {
   line-height: 0.8;
   padding-right: 10px;
   padding-top: 4px;
-  color: #772e25;
-}
-
-/* Beliefs list */
-.beliefs {
-  list-style: none;
-  padding: 0;
-  margin-top: 20px;
-}
-
-.beliefs li {
-  font-size: 20px;
-  margin-bottom: 10px;
-  padding-left: 20px;
-  position: relative;
-}
-
-.beliefs li::before {
-  content: "✦";
-  position: absolute;
-  left: 0;
-  top: 0;
   color: #772e25;
 }
 
