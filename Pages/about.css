@@ -1,11 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
-html, body {
-  overflow-x: hidden;
-}
-
 body {
   background: #edddd4;
   font-family: "Garamond", serif;
@@ -14,8 +6,7 @@ body {
 }
 
 .about-wrapper {
-  max-width: 900px;
-  margin: auto;
+  max-width: 1200px;
 }
 
 .about-title {
