@@ -138,41 +138,21 @@ section .content {
   transform: translateY(200%);
 }
   
-a[id="nav-one"]:target ~ #one {
-  transform: translateY(0);
-}
-  
-a[id="nav-three"]:target ~ #three {
-  transform: translateY(100%);
-}
-  
-a[id="nav-four"]:target ~ #four {
-  transform: translateY(200%);
-}
+/* HOME */
+a#nav-one:target ~ #one   { transform: translateY(0); }
+a#nav-one:target ~ #three{ transform: translateY(100%); }
+a#nav-one:target ~ #four { transform: translateY(200%); }
 
-a#nav-three:target ~ #one {
-  transform: translateY(-100%);
-}
+/* ABOUT */
+a#nav-three:target ~ #one   { transform: translateY(-100%); }
+a#nav-three:target ~ #three{ transform: translateY(0); }
+a#nav-three:target ~ #four { transform: translateY(100%); }
 
-a#nav-three:target ~ #three {
-  transform: translateY(0);
-}
+/* CONTACT */
+a#nav-four:target ~ #one   { transform: translateY(-200%); }
+a#nav-four:target ~ #three{ transform: translateY(-100%); }
+a#nav-four:target ~ #four { transform: translateY(0); }
 
-a#nav-three:target ~ #four {
-  transform: translateY(100%);
-}
-
-a#nav-four:target ~ #one {
-  transform: translateY(-200%);
-}
-
-a#nav-four:target ~ #three {
-  transform: translateY(-100%);
-}
-
-a#nav-four:target ~ #four {
-  transform: translateY(0);
-}
 </style>
  </head>
    <body>
@@ -187,9 +167,9 @@ a#nav-four:target ~ #four {
           <img src="Images/key-logo.jpg" alt="Logo">
         </div>
         <ul>
-          <li><a href="#nav-one">HOME</a></li>
-          <li><a href="#nav-three">ABOUT</a></li>
-          <li><a href="#nav-four">CONTACT</a></li>
+           <span id="nav-one"></span>
+           <span id="nav-three"></span>
+           <span id="nav-four"></span>
         </ul>
       </div>
       </nav>
@@ -231,6 +211,7 @@ window.addEventListener("DOMContentLoaded", () => {
 }); 
      </script>
    </body>
+
 
 
 
