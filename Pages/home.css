@@ -13,13 +13,10 @@ html {
 }
 
 .stamp {
-    transform: rotate(12deg);
+    transform: rotate(12deg) translate(-200px, 100px);; 
 	color: #c44536;
 	font-size: 3rem;
 	font-weight: 700;
-	top: 400px;
-	left: -100px;
-	position: absolute;
 	cursor: pointer;
     display: inline-block;
 	margin: 3rem auto 2rem;
