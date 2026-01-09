@@ -30,7 +30,7 @@ html {
 
 body {
  overflow-y: hidden;
- position: relative;
+ margin: 0;
 }
       
 nav {
@@ -93,13 +93,11 @@ nav ul li a:hover::after {
 }
   
 section {
-  height: calc(100vh - 80px);
-  position: absolute;
-  top: 80px;
-  left: 0;
+  height: calc(100vh-80px);
   width:100%;
+  display: table;
   pointer-events: auto;
-  z-index: 0;
+  z-index:0;
   transition: transform 0.45s cubic-bezier(0,0,0.21,1);
   background: #edddd4;
 }
@@ -125,34 +123,27 @@ section .content {
   
 #one {
   background:#edddd4;
-  transform: translateY(0);
 }
   
 #three {
  background:#edddd4;
- transform: translateY(100%);
 }
   
 #four {
   background:#edddd4;
-  transform: translateY(200%);
 }
   
-/* HOME */
-a#nav-one:target ~ #one   { transform: translateY(0); }
-a#nav-one:target ~ #three{ transform: translateY(100%); }
-a#nav-one:target ~ #four { transform: translateY(200%); }
-
-/* ABOUT */
-a#nav-three:target ~ #one   { transform: translateY(-100%); }
-a#nav-three:target ~ #three{ transform: translateY(0); }
-a#nav-three:target ~ #four { transform: translateY(100%); }
-
-/* CONTACT */
-a#nav-four:target ~ #one   { transform: translateY(-200%); }
-a#nav-four:target ~ #three{ transform: translateY(-100%); }
-a#nav-four:target ~ #four { transform: translateY(0); }
-
+a[id="nav-one"]:target ~ #one {
+  transform:translate3d(0,0,0);
+}
+  
+a[id="nav-three"]:target ~ #three {
+  transform:translate3d(0,-100%,0);
+}
+  
+a[id="nav-four"]:target ~ #four {
+  transform:translate3d(0,-200%,0);
+}
 </style>
  </head>
    <body>
@@ -167,9 +158,9 @@ a#nav-four:target ~ #four { transform: translateY(0); }
           <img src="Images/key-logo.jpg" alt="Logo">
         </div>
         <ul>
-           <span id="nav-one"></span>
-           <span id="nav-three"></span>
-           <span id="nav-four"></span>
+          <li><a href="#nav-one">HOME</a></li>
+          <li><a href="#nav-three">ABOUT</a></li>
+          <li><a href="#nav-four">CONTACT</a></li>
         </ul>
       </div>
       </nav>
@@ -211,7 +202,3 @@ window.addEventListener("DOMContentLoaded", () => {
 }); 
      </script>
    </body>
-
-
-
-
