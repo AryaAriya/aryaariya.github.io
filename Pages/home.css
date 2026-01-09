@@ -7,8 +7,9 @@ html {
 }
 
 .case-wrapper {
-  max-width: 900px;
+  max-width: 1100px;
   margin: auto;
+  padding: 0 30px;
 }
 
 .stamp {
