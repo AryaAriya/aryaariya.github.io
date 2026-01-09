@@ -20,7 +20,6 @@ html {
 	cursor: pointer;
     display: inline-block;
 	margin: 3rem auto 2rem;
-	transform: rotate(12deg) translate(-400px, 100px);
 	left: 0;
 	top: 0;
 	border: 0.25rem solid #c44536;
@@ -36,7 +35,7 @@ html {
 }
 
 .stamp:hover {
-	transform: rotate(12deg) 
+	transform: rotate(12deg); 
 	color: #9e3a2e;
 	border-color: #9e3a2e;
 }
