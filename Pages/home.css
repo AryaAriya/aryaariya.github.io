@@ -37,7 +37,7 @@ html {
 }
 
 .stamp:hover {
-	transform: rotate(12deg) translate(-400px, 100px); 
+	transform: rotate(12deg); 
 	color: #9e3a2e;
 	border-color: #9e3a2e;
 }
