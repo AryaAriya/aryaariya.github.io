@@ -132,7 +132,7 @@ html {
 }
 
 .old-card:hover {
-  transform: translateY(-6px);
+  transform: rotate(12deg) translate(-400px, 100px) translateY(-4px);
   box-shadow: 0 12px 30px rgba(0,0,0,0.2);
 }
 
