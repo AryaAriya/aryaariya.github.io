@@ -29,17 +29,16 @@ html {
 	-webkit-mask-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/8399/grunge.png');
     -webkit-mask-size: 944px 604px;
     mix-blend-mode: normal;
-	transition: transform .2s ease, background-color .2s ease, color .2s ease;
+	transition: background-color .2s ease, color .2s ease, border-color .2s ease;
 }
 
 .stamp:hover {
-	transform: rotate(12deg);
 	color: #9e3a2e;
 	border-color: #9e3a2e;
 }
 
 .stamp:active {
-	transform: rotate(12deg) scale(0.95);
+	transform: rotate(12deg) translate(-400px, 100px) scale(0.95);
 }
 
 .divider-line {
@@ -208,7 +207,7 @@ html {
 	color: #772e25;
 	font-size: 22px;
 	text-align: center;                    
-    margin-top: 60px;   
+    margin-top: 40px;   
 	padding-top: 20px;
     border-top: 3px solid #772e25;
     opacity: 0.9;
