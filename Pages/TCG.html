@@ -225,6 +225,7 @@ body {
   align-items: flex-start;
   margin: 40px auto;
   max-width: 1200px;
+  padding: 0 20px;  
 }
 
 .comparison-card {
@@ -235,7 +236,8 @@ body {
   box-sizing: border-box;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   position: relative;
-  height: 900px;
+  height: 850px;
+  overflow: hidden;
 }
 
  .comparison-card::after {
@@ -258,8 +260,8 @@ body {
   height: 200px;
   object-fit: contain;
   margin: 15px 0;
-  background-color:  #edddd4;
   border: 2px double #772e25;
+  display: block;
 }
 
 .section h4 {
@@ -327,6 +329,12 @@ body {
   margin-top: 60px;
   padding-top: 20px;
   border-top: 2px solid #772e25;
+}
+
+@media (max-width: 768px) { 
+  .comparison-card {
+    width: 100%; 
+ } 
 }
 </style>
 
