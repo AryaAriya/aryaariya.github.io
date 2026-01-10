@@ -223,7 +223,7 @@ html {
 }
 
   .old-card {
-    width: 90%;
+    max-width: 100%;
   }
 	
   .stamp {
