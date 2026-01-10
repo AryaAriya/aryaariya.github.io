@@ -225,11 +225,9 @@ html {
   .old-card {
     width: 90%;
   }
-}
-
-@media (max-width: 768px) {
-	.stamp {
-		transform: rotate(12deg) translate(-10px, 30px);
-		font-size: 2rem;
-	}
+	
+  .stamp {
+	transform: rotate(12deg) translate(-10px, 30px);
+	font-size: 2rem;
+  }
 }
