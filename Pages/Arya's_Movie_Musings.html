@@ -411,6 +411,8 @@ body {
   width: 50%;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   position: relative;
+  height: 500px;
+  overflow: hidden;
 }
 
  .comparison-card::after {
@@ -432,6 +434,9 @@ body {
   width: 100%;
   margin: 15px 0;
   border: 2px double #772e25;
+  height: 200px;
+  object-fit: contain;
+  display: block;
 }
 
 .section h4 {
@@ -557,6 +562,8 @@ body {
   background: #edddd4;
   border: 3px double #772e25;
   padding: 16px;
+  height: 200px;
+  overflow: hidden;
 }
 
 .screens {
@@ -609,6 +616,12 @@ body {
   margin-top: 60px;
   padding-top: 20px;
   border-top: 2px solid #772e25;
+}
+
+@media (max-width: 768px) { 
+  .comparison-card {
+    width: 100%; 
+ } 
 }
 </style>
 
@@ -737,15 +750,17 @@ body {
     <h2 class="case-process"> Research</h2>
     <section class="case-subsection">
       <h2>Context study</h2>
-      <p>The current landscape of movie review platforms is polarized: academic sites that overwhelm casual viewers and commercial platforms that prioritize volume over depth. Competitors like Moria and RogerEbert.com offer valuable content but struggle with issues such as dense layouts, inconsistent categorization, limited accessibility, limited personalization, and accesiblity gaps. 
-      <p>Audiences today expect:
+      <p>The current landscape of movie review platforms is polarized — academic sites overwhelm casual viewers, while commercial platforms prioritize volume over depth. Yet movie lovers want more than reviews; they want a platform that helps them discover, understand, and enjoy films in a way that matches their pace, interests, and viewing habits.</p> 
+      <p>I studied how users currently interact with movie review platforms, focusing on navigation, categorization, readability, personalization, and mobile experience. Users consistently expect platforms that:
         <ul>
-           <li>Quick recommendations</li>
-           <li>Clear content warnings</li>
-           <li>Mobile‑friendly layouts</li>
-           <li>Deeper analysis when they want it</li>
+           <li>Provide quick, trustworthy recommendations</li>
+           <li>Offer clear content warnings and age guidance</li>
+           <li>Support both casual browsing and deep analysis</li>
+           <li>Organize films with consistent, intuitive categories</li>
+           <li>Feel accessible and easy to read across devices</li>
+           <li>Balance personality with clarity and structure</li>
         </ul>
-        This gap revealed a clear opportunity to design a platform that balances cinematic atmosphere with user‑centered structure - offering both fast answers and rich, organized film analysis.
+        These insights revealed where users feel supported — and where they feel overwhelmed or lost — highlighting a clear opportunity for a platform that blends cinematic atmosphere with user‑centered design.
       </p>
     </section>
 
