@@ -19,7 +19,7 @@ html {
 	cursor: pointer;
     display: inline-block;
 	margin: 3rem auto 2rem;
-	transform: rotate(12deg) translate(-400px, 100px);
+	transform: rotate(12deg) translate(-40%, 30%);
 	border: 0.25rem solid #c44536;
 	display: inline-block;
 	padding: 0.25rem 1rem;
@@ -33,13 +33,13 @@ html {
 }
 
 .stamp:hover {
-	transform: rotate(12deg) translate(-400px, 100px) translateY(-4px);
+	transform: rotate(12deg) translate(-40%, 30%) translateY(-4px);
 	color: #9e3a2e;
 	border-color: #9e3a2e;
 }
 
 .stamp:active {
-	transform: rotate(12deg) translate(-400px, 100px) scale(0.95);
+	transform: rotate(12deg) translate(-40%, 30%) scale(0.95);
 }
 
 .divider-line {
@@ -228,7 +228,7 @@ html {
   }
 	
   .stamp {
-	transform: rotate(12deg) translate(-10px, 30px);
+	transform: rotate(12deg) translate(-10%, 10%);
 	font-size: 2rem;
   }
 }
