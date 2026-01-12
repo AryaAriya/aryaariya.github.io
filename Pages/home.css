@@ -221,8 +221,14 @@ html {
 }
 
   .old-card {
-    width: 100%;
-	max-width: 100%;  
+	height: auto;
+	min-height: 0; 
+  }
+
+  .plate-image { 
+	  height: auto; 
+	  width: 100%; 
+	  object-fit: contain; 
   }
 	
   .stamp {
