@@ -152,7 +152,8 @@ html {
 
 .plate-image {
     width: 100%;
-    height: 100px;
+    height: 160px;
+	width: 100px;
     object-fit: contain;
     object-position: center;
     margin: 15px auto;
