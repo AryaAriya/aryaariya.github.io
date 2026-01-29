@@ -403,7 +403,7 @@ body {
      <div class="design-process-p">
        <dl>
           <dd>Context study</dd>
-          <dd>User Personas</dd>
+          <dd>Target Audience</dd>
           <dd>Pain Points</dd>
        </dl>
      </div> 
@@ -414,7 +414,6 @@ body {
        <dl>
           <dd>Project Goals</dd>
           <dd>Use Cases</dd>
-          <dd>Executive Summary</dd>
        </dl>
      </div> 
    </div> 
@@ -424,6 +423,7 @@ body {
         <dl>
           <dd>Journey Map</dd>
           <dd>Information Architecture</dd>
+          <dd>Visual Design Direction</dd>
        </dl>
      </div> 
    </div> 
@@ -435,20 +435,44 @@ body {
        </dl>
      </div> 
    </div> 
+    <div class='design'> 
+     <h2 class="design-process-h2">Hand-off</h2> 
+     <div class="design-process-p">
+        <dl>
+          <dd>Final product</dd>
+          <dd>Case Study Summary</dd>
+          <dd>Reflection</dd>
+          <dd>Next Steps</dd>
+       </dl>
+     </div> 
+   </div>  
    </div>
 
     <h2 class="case-process"> Research</h2>
     <section class="case-subsection">
       <h2>Context Study</h2>
-        <p>Players expect more from modern digital trading card games than just matches - they want a platform that helps them collect, trade, compete, relax, and connect. To understand how well current TCGs meet these expectations, I examined how players interact with existing digital platforms.</p>
-         <p>I focused on four key areas:</p>
+        <p>People today interact with automated decision systems constantly — from loan approvals to job screenings to rental applications — yet most have little understanding of how these systems work or why certain outcomes occur. To evaluate how well current platforms support users in navigating algorithm‑driven decisions, I analyzed how individuals experience and interpret these opaque processes.</p>
+         <p>I focused on three key areas:</p>
           <ul>
-           <li>Onboarding and tutorial clarity</li>
-           <li>Progression and reward systems</li>
-           <li>Card collection and trading mechanics</li>
-           <li>Community and social features</li>
+           <li>Clarity and transparency of decison explainations</li>
+           <li>Accesiblity of information about underlying algorithms</li>
+           <li>User ability to identify potential bias or unfairness</li>
         </ul>
-       This study helped reveal where players feel supported and where friction, confusion, or unmet needs still exist.
+       This study highlighted where users feel informed and empowered and where confusion, opacity, or unmet needs continue to create frustration and uncertaintly.
+      </p>
+    </section>
+
+     <section class="case-subsection"> 
+      <h2>Target Audience</h2>
+      <p>
+       I identified four primary users:
+        <ul>
+          <li>Job seekers</li>
+          <li>Loan and credit applicants</li>
+          <li>Renters</li>
+          <li>Consumers</li>
+        </ul>
+       Each group had distinct motivations, but they all shared a desire for clarity, fairness, and a sense of control.
       </p>
     </section>
 
@@ -457,10 +481,10 @@ body {
       <p>
        Across research, players consistently struggled with:
         <ul>
-          <li>Slow or clunky user interfaces lead to user frustration and unsmooth play sessions</li>
-          <li>Unclear or overwhelming tutorials overwhelm and don’t guide both newcomers and returning players</li>
-          <li>Lack of family-friendly or community-driven content lowers deeper engagement and doesn’t encourage shared play</li>
-          <li>Limited language and accessibility support doesn’t make the game and content welcoming to families and diverse players</li>
+          <li>Opaque decison making</li>
+          <li>Difficulty overcoming bias</li>
+          <li>Confusing or complex technical language</li>
+          <li>No clear next steps</li>
         </ul>
        These pain points became core design targets.
       </p>
@@ -468,7 +492,7 @@ body {
      
     <section class="case-subsection">
      <h2>Project Goals</h2> 
-      <p> The goal of this project was to design a mobile trading card game experience that is accessible to new and casual players while still supporting strategic mastery, fair progression, and strong community interaction - without relying on pay-to-win mechanics.</p>
+      <p>The website needed to:</p>
     </section>
 
       <section class="case-subsection"> 
@@ -498,7 +522,7 @@ body {
         stroke="#772e25" stroke-width="3" stroke-linecap="round" />
      </svg>
     </div>
-    <p class="icon-label">I want to climb leaderboards</p>
+    <p class="icon-label">I want to understand a loan denial</p>
   </div>
 
   <!-- Trade and collect rare cards -->
@@ -519,7 +543,7 @@ body {
         stroke="#772e25" stroke-width="3"/>
       </svg>
     </div>
-    <p class="icon-label">I want to collect and trade rare cards</p>
+    <p class="icon-label">I want to decode a job application rejection</p>
   </div>
 
   <!--Community-->
@@ -539,28 +563,24 @@ body {
         stroke="#772e25" stroke-width="3" fill="none"/>
       </svg>
     </div>
-    <p class="icon-label">I'm looking for a strong, vibrant community that I can engage with</p>
+    <p class="icon-label">I'm looking to interpret a rental application result</p>
   </div>
 
   <!--Strategic Gameplay -->
   <div class="icon-item">
     <div class="icon-frame">
      <svg viewBox="0 0 200 100">
-        <path d="M25 70 L25 45 Q25 30 45 25 Q60 30 65 45 L65 70 Z"
-        stroke="#772e25" stroke-width="4" fill="none"/>
-        <circle cx="50" cy="40" r="3" fill="#772e25"/>
-        <rect x="30" y="70" width="30" height="8" rx="2"
-        fill="#772e25"/>
-        <path d="M120 55 Q125 35 145 35 L155 35 Q175 35 180 55 
-           Q175 75 160 75 L140 75 Q125 75 120 55 Z"
-        stroke="#772e25" stroke-width="4" fill="none"/>
-        <rect x="130" y="50" width="6" height="18" fill="#772e25"/>
-        <rect x="124" y="56" width="18" height="6" fill="#772e25"/>
-        <circle cx="165" cy="55" r="4" fill="#772e25"/>
-        <circle cx="175" cy="60" r="4" fill="#772e25"/>
+        <line x1="100" y1="20" x2="100" y2="70" stroke="#772e25" stroke-width="4" stroke-linecap="round"/> 
+        <rect x="80" y="70" width="40" height="8" rx="2" fill="#772e25"/> 
+        <line x1="70" y1="35" x2="150" y2="40" stroke="#772e25" stroke-width="4" stroke-linecap="round"/>
+        <line x1="80" y1="36" x2="80" y2="52" stroke="#772e25" stroke-width="3" stroke-linecap="round"/>
+        <line x1="140" y1="39" x2="140" y2="60" stroke="#772e25" stroke-width="3" stroke-linecap="round"/>
+        <rect x="65" y="52" width="30" height="8" rx="3" fill="none" stroke="#772e25" stroke-width="3"/> 
+        <rect x="125" y="60" width="30" height="8" rx="3" fill="none" stroke="#772e25" stroke-width="3"/>
+        <circle cx="100" cy="30" r="3" fill="#772e25"/>
       </svg>
     </div>
-    <p class="icon-label">I'm trying to master strategic gameplay</p>
+    <p class="icon-label">I'm trying to learn about algorithmic bias in general</p>
   </div>
 </div>
       </section>
