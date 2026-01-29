@@ -1,0 +1,921 @@
+<style>
+body {
+  background: #edddd4;
+  font-family: "Garamond", serif;
+  color: #772e25;
+  padding: 40px;
+}
+
+.case-wrapper {
+  max-width: 900px;
+  margin: auto;
+}
+
+.back-link {
+  text-decoration: none;
+  color: #772e25;
+  font-size: 18px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.case-title {
+  font-size: 64px;
+  font-weight: 100;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.victorian-divider {
+  text-align: center;
+  font-size: 28px;
+  margin: 40px 0;
+  position: relative;
+}
+
+.victorian-divider::before,
+.victorian-divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  border-top: 2px solid #772e25;
+  opacity: 0.6;
+}
+
+.victorian-divider::before {
+  left: 0;
+}
+
+.victorian-divider::after {
+  right: 0;
+}
+
+.case-intro .lead {
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.case-section {
+  margin-bottom: 20px;
+}
+
+.case-subsection {
+  margin-bottom: 20px;
+}
+
+.case-section h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #772e25;
+  border-bottom: 2px solid #772e25;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.case-subsection h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #c44536;
+  border-bottom: 2px solid #c44536;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.case-section h2.case-process {
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: #8a5a6a;
+  border-bottom: 2px solid #8a5a6a;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.case-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+  border: 3px solid #772e25;
+  display: block;
+  gap: 10px; 
+}
+  
+.project-role {
+  display: flex; 
+  justify-content: center; 
+  text-align: center;
+  gap: 20px;
+}
+
+.role {
+ background-color: #DCC7B8;
+ width: 300px;
+ text-align: center; 
+}
+
+.tools {
+ background-color:#DCC7B8 ;
+ width: 300px;
+ text-align: center; 
+}
+
+.details {
+  background-color: #DCC7B8;
+  width: 300px;
+  text-align: center;
+}
+
+.project-role-h2 h2{
+  font-size: 16px; 
+  text-align: center;
+}
+
+ .project-role-p {
+  display: flex;
+  justify-content: center;
+ }
+
+ .project-role-p dl, 
+ .project-role-p dd, 
+ .project-role-p dt { 
+   margin: 0; 
+   padding: 0; 
+ } 
+
+.design-process { 
+  display: flex; 
+  justify-content: center; 
+  text-align: center; 
+  gap: 20px; 
+ } 
+ 
+ .research { 
+   background-color: #444457; 
+   width: 250px; 
+   display: flex;         
+   flex-direction: column;
+ } 
+ 
+ .analysis {
+   background-color:#4D4457; 
+   width: 250px; 
+   display: flex;         
+   flex-direction: column;
+ } 
+ 
+ .ideation { 
+   background-color: #534356; 
+   width: 250px; 
+   display: flex;         
+   flex-direction: column;
+ } 
+ 
+ .design { 
+   background-color: #8A5A6A; 
+   width: 250px;
+   display: flex;         
+   flex-direction: column;
+ } 
+ 
+ .feedback { 
+   background-color: #9A7483; 
+   width: 250px; 
+   display: flex;         
+   flex-direction: column;
+ } 
+ 
+ .handoff { 
+   background-color: #A28190; 
+   width: 250px; 
+   display: flex;         
+   flex-direction: column;   
+ } 
+ 
+ h2.design-process-h2{ 
+   font-family: "Garamond", serif; 
+   display: inline-block;
+   font-size: 16px;  
+   color: #FFFFFF;
+   border-bottom: 2px solid #FFFFFF;
+   width: 80%;
+ }
+ 
+ .design-process-p {
+  background: #edddd4;
+  flex-grow: 1;           
+  margin: 0;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+ }
+
+ .design-process-p dl, 
+ .design-process-p dd, 
+ .design-process-p dt {
+   margin: 0; 
+   padding: 0; 
+ }
+
+  .comparison-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 40px auto;
+  max-width: 1200px;
+  padding: 0 20px;  
+}
+
+.comparison-card {
+  background: #edddd4;
+  border: 2px solid #772e25;
+  padding: 25px;
+  width:  calc(50% - 20px);
+  box-sizing: border-box;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  position: relative;
+  height: 880px;
+  overflow: hidden;
+}
+
+ .comparison-card::after {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border: 1px solid #772e25;
+  pointer-events: none;
+} 
+
+.comp-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.comp-screenshot {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  margin: 15px 0;
+  border: 2px double #772e25;
+  display: block;
+}
+
+.section h4 {
+  margin-bottom: 6px;
+  font-size: 1.1rem;
+  border-bottom: 2px solid #772e25;
+  display: inline-block;
+}
+
+.section ul {
+  margin: 0 0 12px 18px;
+}
+
+.section p {
+  margin: 0 0 12px 0;
+} 
+
+.icon-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; 
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 150px;
+  width: 160px;
+}
+
+.icon-frame {
+  width: 80px;
+  height: 80px;
+  gap: 20px;
+  background: #edddd4;
+  border: 6px double #772e25;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow:
+    inset 0 0 10px rgba(0,0,0,0.15),
+    0 0 8px rgba(0,0,0,0.2);
+}
+
+.icon-frame svg {
+  width: 90%;
+  height: 90%;
+}
+
+.icon-label {
+  margin-top: 10px;
+  letter-spacing: 0.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; 
+}
+
+.case-footer {
+  text-align: center;
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 2px solid #772e25;
+}
+
+@media (max-width: 768px) { 
+  .comparison-card {
+    width: 100%; 
+ } 
+}
+</style>
+
+<div class="case-wrapper">
+
+  <a href="../index.html#case-studies" class="back-link">← Back to Case Studies</a>
+
+  <h1 class="case-title">Eternal Sigils</h1>
+
+  <div class="victorian-divider">
+    ✦
+  </div>
+
+  <section class="case-intro">
+    <p class="lead">
+     Eternal Sigils is a streamlined mobile TCG experience that balances strategic depth with intuitive onboarding, fair progression, and strong community features.
+    </p>
+  </section>
+
+  <section class="case-section">
+    <h2>Overview</h2>
+    <p>Many digital trading card games struggle to balance accessibility, strategic depth, and community engagement. Players often face disorganized card decks, unsafe or unreliable trading methods, and limited opportunities for gameplay and community.</p>
+    <p>The overall goal was to design a mobile TCG experience that supports both competitive mastery and casual enjoyment - while remaining fair, intuitive, and community-driven.</p>
+
+      <div class="project-role">
+         <div class='role'>
+           <h2 class="project-role-h2">Role</h2> 
+           <div class="project-role-p">
+             <dl>
+              <dd>UX researcher</dd>
+              <dd>UX designer</dd>
+             </dl>
+         </div>
+      </div>
+         <div class='tools'>
+           <h2 class="project-role-h2">Tools</h2> 
+           <div class="project-role-p">
+             <dl>
+              <dd>Draw.io</dd>
+              <dd>Figma</dd>
+              <dd>MockFlow</dd>
+             </dl>
+           </div>
+      </div>
+      <div class='details'>
+         <h2 class="project-role-h2">Details</h2> 
+          <dl>
+            <dd>Duration: November 2, 2025 - December 14, 2025</dd>
+            <dd>Company/Client: Myself</dd>
+          </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <h2>Process</h2>
+    
+    <p>The process for this project consists of the following:</p>
+   <div class="design-process"> 
+   <div class='research'> 
+     <h2 class="design-process-h2">Research</h2> 
+     <div class="design-process-p">
+       <dl>
+          <dd>Context study</dd>
+          <dd>User Personas</dd>
+          <dd>Pain Points</dd>
+          <dd>Competitive Audit</dd>
+       </dl>
+     </div> 
+   </div> 
+   <div class="analysis"> 
+     <h2 class="design-process-h2">Analysis</h2> 
+     <div class="design-process-p">
+       <dl>
+          <dd>Market Gaps From Competive Audit</dd>
+          <dd>Project Goals</dd>
+          <dd>Use Cases</dd>
+          <dd>Executive Summary</dd>
+       </dl>
+     </div> 
+   </div> 
+   <div class='ideation'> 
+     <h2 class="design-process-h2">Ideation</h2>
+     <div class="design-process-p">
+        <dl>
+          <dd>Oppertunities</dd>
+          <dd>Journey Map</dd>
+          <dd>Information Architecture</dd>
+       </dl>
+     </div> 
+   </div> 
+   <div class='design'> 
+     <h2 class="design-process-h2">Design</h2> 
+     <div class="design-process-p">
+        <dl>
+          <dd>Low-Fidelity Wireframes</dd>
+       </dl>
+     </div> 
+   </div> 
+   </div>
+
+    <h2 class="case-process"> Research</h2>
+    <section class="case-subsection">
+      <h2>Context Study</h2>
+        <p>Players expect more from modern digital trading card games than just matches - they want a platform that helps them collect, trade, compete, relax, and connect. To understand how well current TCGs meet these expectations, I examined how players interact with existing digital platforms.</p>
+         <p>I focused on four key areas:</p>
+          <ul>
+           <li>Onboarding and tutorial clarity</li>
+           <li>Progression and reward systems</li>
+           <li>Card collection and trading mechanics</li>
+           <li>Community and social features</li>
+        </ul>
+       This study helped reveal where players feel supported and where friction, confusion, or unmet needs still exist.
+      </p>
+    </section>
+
+    <section class="case-subsection">
+      <h2>User Personas</h2>
+       <p>To represent core audience needs, I created two primary personas.</p>
+
+       <h3>Persona 1: Beatrice West</h3>
+       <p>Beatrice is a competitive, progression-driven player who values rankings, rare cards, and strategic mastery. She wants robust deck-building, fair competition, and a vibrant community.</p>
+          <img src="../Images/bwest.jpg" alt="Movie Sitemap" class="case-image">
+       <h3>Persona 2: Mark Sterling</h3>
+       <p> Mark is a nostalgia-driven, casual player looking for relaxing gameplay and short sessions. He wants to introduce TCGs to his family in a way that is approachable and enjoyable.</p>
+          <img src="../Images/msterling.jpg" alt="Movie Sitemap" class="case-image">
+       <p>These personas guided decisions around complexity, pacing, and accessibility.</p>
+
+     <section class="case-subsection"> 
+      <h2>Pain Points</h2>
+      <p>
+       Across research, players consistently struggled with:
+        <ul>
+          <li>Slow or clunky user interfaces lead to user frustration and unsmooth play sessions</li>
+          <li>Unclear or overwhelming tutorials overwhelm and don’t guide both newcomers and returning players</li>
+          <li>Lack of family-friendly or community-driven content lowers deeper engagement and doesn’t encourage shared play</li>
+          <li>Limited language and accessibility support doesn’t make the game and content welcoming to families and diverse players</li>
+        </ul>
+       These pain points became core design targets.
+      </p>
+    </section>
+
+      <section class="case-subsection"> 
+      <h2>Competitive Audit</h2>
+       <p>I analyzed four major digital card game platforms:</p>
+     <div class="comparison-container"> 
+       <div class="comparison-card">
+    <div class="comp-header">
+      <h3>Hearthstone</h3>
+    </div>
+
+    <img src="../Images/hearthstone.jpg" alt="Homepage Screenshot" class="comp-screenshot">
+
+    <div class="section">
+      <h4>Strengths</h4>
+      <ul>
+        <li>Strong brand recognition via Warcraft Universe</li>
+        <li>Polished visuals and animations</li>
+        <li>Large community and player base</li>
+        <li>Frequent expansions and content updates</li>
+        <li>Accessible gameplay for casual players</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h4>Weaknesses</h4>
+      <ul>
+        <li>Heavy reliance on monetization (pay-to-win)</li>
+        <li>Progression system feels grind-heavy for casual players</li>
+        <li>Limited deck-building</li>
+        <li>Visually cluttered menus</li>
+        <li>Aging mechanics with fewer innovations</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h4>Key Takeaways</h4>
+       <p>Hearthstone showed the importance of pairing visual polish with simple, intuitive navigation to avoid overwhelming players.</p>
+    </div>
+  </div>
+
+  <!-- Competitor 2 -->
+  <div class="comparison-card">
+    <div class="comp-header">
+      <h3>Magic: The Gathering Arena</h3>
+    </div>
+
+    <img src="../Images/mtga.jpg" alt="Homepage Screenshot" class="comp-screenshot">
+
+    <div class="section">
+      <h4>Strengths</h4>
+      <ul>
+        <li>Deep strategic complexity and competitive depth</li>
+        <li>Legacy brand with high recognition for decades</li>
+        <li>Integration with physical cards by codes or events</li>
+        <li>High-quality card art and expansive, consistent lore</li>
+        <li>Strong competitive scene</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h4>Weaknesses</h4>
+      <ul>
+        <li>Steep learning curve due to complex rules</li>
+        <li>Resource-heavy client; performance issues on older devices</li>
+        <li>Dense card text and visuals</li>
+        <li>Progression system requires significant time or money</li>
+        <li>Less accessible for casual audiences</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h4>Key Takeaways</h4>
+      <p>Magic: The Gathering Arena demonstrated that deep strategy must be supported by gradual onboarding to prevent cognitive overload.</p>
+    </div>
+  </div>
+
+  <!--Competitior 3-->
+  <div class="comparison-card">
+    <div class="comp-header">
+      <h3>Marvel Snap</h3>
+    </div>
+
+    <img src="../Images/marvelsnap.jpg" alt="Homepage Screenshot" class="comp-screenshot">
+
+    <div class="section">
+      <h4>Strengths</h4>
+      <ul>
+        <li>Global Marvel IP with iconic, instantly recognizable characters</li>
+        <li>Fast-paced matches (3 minutes), which are suited for mobile</li>
+        <li>Innovative location-based mechanics</li>
+        <li>Highly accessible onboarding and progression</li>
+        <li>Strong engagement through cosmetics and seasonal content</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h4>Weaknesses</h4>
+      <ul>
+        <li>Limited deck-building</li>
+        <li>Heavy reliance on Marvel IP (may overshadow gameplay innovation)</li>
+        <li>Heavy monetization through cosmetics and seasonal gameplay, and passes</li>
+        <li>Less robust competitive tracking tools</li>
+      </ul>
+    </div>
+
+     <div class="section">
+      <h4>Key Takeaways</h4>
+       <p>Marvel Snap highlighted how short, fast-paced matches and friendly onboarding can make mobile play feel instantly rewarding.</p>
+    </div>
+  </div>
+
+  <!--Competior 4-->
+  <div class="comparison-card">
+    <div class="comp-header">
+      <h3>Slay the Spire</h3>
+    </div>
+
+    <img src="../Images/slaythespire.jpg" alt="Homepage Screenshot" class="comp-screenshot">
+
+    <div class="section">
+      <h4>Strengths</h4>
+      <ul>
+        <li>Unique fusion of roguelike and deck-building mechanics</li>
+        <li>High replayability via procedural generation</li>
+        <li>Lightweight install and stable performance across platforms</li>
+        <li>Well-known among indie players and people who love strategy methods and games</li>
+        <li>Affordable one-time purchase model</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h4>Weaknesses</h4>
+      <ul>
+        <li>Single-player only; lacks community features</li>
+        <li>Minimalist visuals and designs can be polarizing</li>
+        <li>Sparse lore and limited narrative depth</li>
+        <li>Limited accessibility features </li>
+        <li>Replayability heavily relies on procedural generation, which can feel repetitive</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h4>Key Takeaways</h4>
+       <p>Slay the Spire revealed that minimalist visuals can succeed when core mechanics are clear, satisfying, and consistently engaging.</p>
+    </div> 
+  </div>
+ </div>
+</section>
+
+  <h2 class="case-process">Analysis</h2>
+      <section class="case-subsection">
+        <h2>Market Gaps</h2>
+      <p>From the audit, I examined several opportunities:
+         <ul>
+            <li>Inclusive design </li>
+            <li>Engaging narrative campaigns alongside competitive play</li>
+            <li>Fair, transparent monetization models that reward skill and engagement rather than spending</li>
+            <li>Digital play <i>complementing</i> collectible ownership</li>
+            <li>Approachable onboarding <i>combined</i> with meaningful long-term mastery</li>
+            <li>Seamless play across desktop, mobile, and console without any trouble</li>
+            <li>Stronger community features (guilds, trading, co-op modes)</li>
+       </ul>
+      </p>
+      </section>
+     
+    <section class="case-subsection">
+     <h2>Project Goals</h2> 
+      <p> The goal of this project was to design a mobile trading card game experience that is accessible to new and casual players while still supporting strategic mastery, fair progression, and strong community interaction - without relying on pay-to-win mechanics.</p>
+    </section>
+
+      <section class="case-subsection"> 
+      <h2>Use cases</h2>
+       <div class="icon-row">
+<p>Beatrice West:</p>
+  <!-- Climb leaderboards -->
+  <div class="icon-item">
+    <div class="icon-frame">
+      <svg viewBox="0 0 100 100">
+        <line x1="35" y1="10" x2="35" y2="90"
+        stroke="#772e25" stroke-width="4" stroke-linecap="round" />
+        <line x1="65" y1="10" x2="65" y2="90"
+        stroke="#772e25" stroke-width="4" stroke-linecap="round" />
+        <line x1="35" y1="20" x2="65" y2="20"
+        stroke="#772e25" stroke-width="3" stroke-linecap="round" />
+        <line x1="35" y1="30" x2="65" y2="30"
+        stroke="#772e25" stroke-width="3" stroke-linecap="round" />
+        <line x1="35" y1="40" x2="65" y2="40"
+        stroke="#772e25" stroke-width="3" stroke-linecap="round" />
+        <line x1="35" y1="50" x2="65" y2="50"
+        stroke="#772e25" stroke-width="3" stroke-linecap="round" />
+        <line x1="35" y1="60" x2="65" y2="60"
+        stroke="#772e25" stroke-width="3" stroke-linecap="round" />
+        <line x1="35" y1="70" x2="65" y2="70"
+        stroke="#772e25" stroke-width="3" stroke-linecap="round" />
+        <line x1="35" y1="80" x2="65" y2="80"
+        stroke="#772e25" stroke-width="3" stroke-linecap="round" />
+     </svg>
+    </div>
+    <p class="icon-label">I want to climb leaderboards</p>
+  </div>
+
+  <!-- Trade and collect rare cards -->
+  <div class="icon-item">
+    <div class="icon-frame">
+      <svg viewBox="0 0 100 100">
+       <rect x="15" y="10" width="70" height="80" rx="6"
+        stroke="#772e25" stroke-width="4" fill="none"/>
+        <rect x="25" y="20" width="50" height="35" rx="3"
+        stroke="#772e25" stroke-width="3" fill="none"/>
+        <circle cx="50" cy="35" r="10" fill="#772e25"/>
+        <rect x="40" y="45" width="20" height="8" rx="2" fill="#772e25"/>
+        <rect x="25" y="60" width="50" height="8" rx="2"
+        fill="#772e25"/>
+        <line x1="25" y1="75" x2="75" y2="75"
+        stroke="#772e25" stroke-width="3"/>
+        <line x1="25" y1="82" x2="60" y2="82"
+        stroke="#772e25" stroke-width="3"/>
+      </svg>
+    </div>
+    <p class="icon-label">I want to collect and trade rare cards</p>
+  </div>
+
+  <!--Community-->
+  <div class="icon-item">
+    <div class="icon-frame">
+      <svg viewBox="0 0 100 100">
+        <rect x="15" y="20" width="70" height="60" rx="8"
+        stroke="#772e25" stroke-width="4" fill="none"/>
+        <circle cx="50" cy="45" r="8" fill="#772e25"/>
+        <path d="M42 60 Q50 52 58 60" 
+        stroke="#772e25" stroke-width="3" fill="none"/>
+        <circle cx="32" cy="50" r="6" fill="#772e25"/>
+        <path d="M25 62 Q32 56 39 62"
+        stroke="#772e25" stroke-width="3" fill="none"/>
+        <circle cx="68" cy="50" r="6" fill="#772e25"/>
+        <path d="M61 62 Q68 56 75 62"
+        stroke="#772e25" stroke-width="3" fill="none"/>
+      </svg>
+    </div>
+    <p class="icon-label">I'm looking for a strong, vibrant community that I can engage with</p>
+  </div>
+
+  <!--Strategic Gameplay -->
+  <div class="icon-item">
+    <div class="icon-frame">
+     <svg viewBox="0 0 200 100">
+        <path d="M25 70 L25 45 Q25 30 45 25 Q60 30 65 45 L65 70 Z"
+        stroke="#772e25" stroke-width="4" fill="none"/>
+        <circle cx="50" cy="40" r="3" fill="#772e25"/>
+        <rect x="30" y="70" width="30" height="8" rx="2"
+        fill="#772e25"/>
+        <path d="M120 55 Q125 35 145 35 L155 35 Q175 35 180 55 
+           Q175 75 160 75 L140 75 Q125 75 120 55 Z"
+        stroke="#772e25" stroke-width="4" fill="none"/>
+        <rect x="130" y="50" width="6" height="18" fill="#772e25"/>
+        <rect x="124" y="56" width="18" height="6" fill="#772e25"/>
+        <circle cx="165" cy="55" r="4" fill="#772e25"/>
+        <circle cx="175" cy="60" r="4" fill="#772e25"/>
+      </svg>
+    </div>
+    <p class="icon-label">I'm trying to master strategic gameplay</p>
+  </div>
+</div>
+        
+  <div class="icon-row">        
+  <p>Mark Sterling:</p>
+  <!--Relax through strategic play-->
+  <div class="icon-item">
+    <div class="icon-frame">
+      <svg viewBox="0 0 100 100">
+        <rect x="10" y="15" width="55" height="70" rx="10"
+        stroke="#772e25" stroke-width="4" fill="none"/>
+        <circle cx="37" cy="40" r="8" fill="#772e25"/>
+        <path d="M25 60 Q37 48 49 60"
+        stroke="#772e25" stroke-width="3" fill="none"/>
+        <path d="M30 65 Q37 70 44 65"
+        stroke="#772e25" stroke-width="3" fill="none"/>
+        <path d="M22 50 Q25 55 30 57"
+        stroke="#772e25" stroke-width="3" fill="none"/>
+        <path d="M52 50 Q49 55 44 57"
+        stroke="#772e25" stroke-width="3" fill="none"/>
+        <path d="M70 55 Q72 45 80 45 L88 45 Q96 45 98 55 
+           Q96 65 90 65 L78 65 Q72 65 70 55 Z"
+        stroke="#772e25" stroke-width="3" fill="none"/>
+        <rect x="74" y="52" width="4" height="12" fill="#772e25"/>
+       <rect x="70" y="56" width="12" height="4" fill="#772e25"/>
+       <circle cx="90" cy="54" r="3" fill="#772e25"/>
+       <circle cx="94" cy="59" r="3" fill="#772e25"/>
+      </svg>
+    </div>
+    <p class="icon-label">I want to relax through strategic play</p>
+  </div>
+
+  <!--Reconnect with nostaligia-->
+  <div class="icon-item">
+    <div class="icon-frame">
+      <svg viewBox="0 0 100 100">
+       <path d="M25 15 H75 
+           Q85 15 85 25 
+           L85 30 
+           Q85 40 70 50 
+           Q85 60 85 70 
+           L85 75 
+           Q85 85 75 85 
+           H25 
+           Q15 85 15 75 
+           L15 70 
+           Q15 60 30 50 
+           Q15 40 15 30 
+           L15 25 
+           Q15 15 25 15 Z"
+        stroke="#772e25" stroke-width="4" fill="none"/>
+        <path d="M30 28 Q50 22 70 28"
+        stroke="#772e25" stroke-width="3" fill="none"/>
+        <line x1="50" y1="30" x2="50" y2="50"
+        stroke="#772e25" stroke-width="3"/>
+        <path d="M35 70 Q50 60 65 70"
+        stroke="#772e25" stroke-width="3" fill="none"/>
+      </svg>
+    </div>
+    <p class="icon-label">I'm looking to reconnect with nostalgia</p>
+  </div>
+
+    <!--Introduce family-->
+  <div class="icon-item">
+    <div class="icon-frame">
+      <svg viewBox="0 0 100 100">
+        <rect x="15" y="10" width="70" height="80" rx="6"
+        stroke="#772e25" stroke-width="4" fill="none"/>
+        <circle cx="32" cy="38" r="7" fill="#772e25"/>
+        <path d="M25 52 Q32 45 39 52"
+        stroke="#772e25" stroke-width="3" fill="none"/>
+        <circle cx="68" cy="38" r="7" fill="#772e25"/>
+        <path d="M61 52 Q68 45 75 52"
+        stroke="#772e25" stroke-width="3" fill="none"/>
+        <circle cx="42" cy="58" r="5" fill="#772e25"/>
+        <path d="M37 68 Q42 63 47 68"
+        stroke="#772e25" stroke-width="3" fill="none"/>
+        <circle cx="58" cy="58" r="5" fill="#772e25"/>
+        <path d="M53 68 Q58 63 63 68"
+        stroke="#772e25" stroke-width="3" fill="none"/>
+       <line x1="25" y1="78" x2="75" y2="78"
+        stroke="#772e25" stroke-width="3"/>
+        <line x1="30" y1="85" x2="70" y2="85"
+        stroke="#772e25" stroke-width="3"/>
+      </svg>
+    </div>
+    <p class="icon-label">I want to introduce my family to TCGs in short, enjoyable sessions</p>
+  </div>
+</div>
+      </section>
+
+     <section class="case-subsection">
+     <h2>User Journey Maps</h2> 
+       <p>I mapped user journeys for both personas to identify friction points and opportunities: </p>
+        <h3>Beatrice West's User Journey Map: </h3>
+           <img src="../Images/user-journey-beatrice.jpg" alt="Movie Sitemap" class="case-image">
+       <p>Beatrice's journey highlighted the need for competitive clarity and progression transparency.</p>
+        <h3>Mark Sterling's User Journey Map: </h3>
+          <img src="../Images/user-journey-mark.jpg" alt="Movie Sitemap" class="case-image">
+        <p>Mark's journey emphasized quick onboarding, short sessions, and family-friendly interactions.</p>
+        <p>Both need intuitive navigation and rewarding feedback loops.</p>
+        <p>These journeys directly shaped the information architecture and user flows.</p>
+    </section>
+
+    <h2 class="case-process">Ideation</h2>
+         <section class="case-subsection">
+            <h2>Oppertunities</h2> 
+            <p>Based on research insights, I identified opportunities to:
+              <ul>
+                <li>Combine accessibility with strategic depth</li>
+                <li>Deliver seamless play across desktop, mobile, and console without performance issues</li> 
+                <li>Build strong community features</li>
+                <li>Offer cards that exist both digitally and physically</li> 
+                <li>Add colorblind mode, text-to-speech, simplified UI, and adaptive difficulty.</li>
+                <li>Integrate immersive storytelling alongside competitive play</li>
+                <li>Offer clear, skill-rewarding progression without pay-to-win transactions</li>
+                <li>Introduce rarity tracking and secure trading</li>
+                <li>Build structured tournaments with accessible entry points</li>
+              </ul>
+           </p>
+         </section>
+      
+        <section class="case-subsection">
+          <h2>User Flow Map</h2>
+           <p>The user flow map focuses on smooth onboarding, clear deck-building paths, intuitive trading interactions, accessible competitive and casual modes, and easy navigation between collection, gameplay, and community.</p>
+             <img src="../Images/tcg-user-flow-chart.jpg" alt="Movie Sitemap" class="case-image">
+        </section>
+
+        <section>
+          <h2>Information Architecture</h2>
+           <p>I designed a clear, scalable sitemap to reduce cognitive load, simplify navigation, and separate competitive, casual, and community experiences.</p>
+              <img src="../Images/tcg-sitemap.jpg" alt="Movie Sitemap" class="case-image">
+           <p>This structure supports both quick sessions and deeper engagement</p>
+        </section>
+
+      <h2 class="case-process">Design</h2> 
+      <section>
+          <h2>Low-Level Wireframes</h2>
+            <p>I created low-level wireframes using MockFlow, which focused on clarity, speed, and accessibility.</p>
+              <img src="../Images/tcg-low-wireframe.jpg" alt="Movie Sitemap" class="case-image">
+        </section>
+
+        <section class="case-subsection">
+    <h2>Case Study Summary</h2>
+     <p>Eternal Sigils focused on designing a mobile trading card game that balances strategic depth with accessibility, addressing common player frustrations such as overwhelming tutorials, unclear progression, and limited community features. Through user research, competitive analysis, and iterative design, I developed a concept that supports both competitive and casual playstyles, offering fair progression, intuitive collection and trading tools, and a community‑driven experience. The resulting structure provides a scalable foundation for future development, including high‑fidelity prototyping, usability testing, and expanded gameplay systems, demonstrating how thoughtful UX design can make a traditionally complex genre welcoming and engaging for a wide range of players.</p>
+  </section>
+  
+  <section class="case-section">
+    <h2>Reflection</h2>
+     <p>Key Takeaways:
+      <ul>
+        <li>This project reinforced the importance of designing for a wide spectrum of player needs without compromising clarity or depth. Balancing competitive complexity with casual accessibility required careful prioritization, iterative refinement, and a strong understanding of user motivations. . The research phase was especially valuable—it revealed gaps in onboarding, progression transparency, and community features that directly shaped the design direction. </li>
+        <li>How essential it is to create systems that feel fair, intuitive, and rewarding, regardless of a player’s experience level.</li>
+      </ul>
+    </p>
+  </section>
+
+  <section class="case-section">
+    <h2>Next Steps</h2>
+    <p> This project laid the groundwork for a more functional site. The next phase will include:
+      <ul>
+        <li>Creating clickable, interactive high-fidelity wireframes</li>
+        <li>Conducting usability testing with both casual and competitive players</li>
+        <li>Refining gameplay flows based on feedback</li>
+        <li>Exploring ethical monetization models</li>
+        <li>Preparing the system for cross‑platform scalability</li>
+      </ul>
+    </p>
+  </section>
+  </section>
+ </section>
+
+  <div class="victorian-divider">
+    ✦
+  </div>
+
+  <footer class="case-footer">
+    <p>© 2025 Arya • Crafted with care</p>
+  </footer>
+
+</div>
