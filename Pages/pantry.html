@@ -1,1 +1,754 @@
+<style>
+body {
+  background: #edddd4;
+  font-family: "Garamond", serif;
+  color: #772e25;
+  padding: 40px;
+}
 
+.case-wrapper {
+  max-width: 900px;
+  margin: auto;
+}
+
+.back-link {
+  text-decoration: none;
+  color: #772e25;
+  font-size: 18px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.case-title {
+  font-size: 64px;
+  font-weight: 100;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.victorian-divider {
+  text-align: center;
+  font-size: 28px;
+  margin: 40px 0;
+  position: relative;
+}
+
+.victorian-divider::before,
+.victorian-divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  border-top: 2px solid #772e25;
+  opacity: 0.6;
+}
+
+.victorian-divider::before {
+  left: 0;
+}
+
+.victorian-divider::after {
+  right: 0;
+}
+
+.case-intro .lead {
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.case-section {
+  margin-bottom: 20px;
+}
+
+.case-subsection {
+  margin-bottom: 20px;
+}
+
+.case-section h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #772e25;
+  border-bottom: 2px solid #772e25;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.case-subsection h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #c44536;
+  border-bottom: 2px solid #c44536;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.case-section h2.case-process {
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: #8a5a6a;
+  border-bottom: 2px solid #8a5a6a;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.case-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+  border: 3px solid #772e25;
+  display: block;
+  gap: 10px; 
+}
+  
+.project-role {
+  display: flex; 
+  justify-content: center; 
+  text-align: center;
+  gap: 20px;
+}
+
+.role {
+ background-color: #DCC7B8;
+ width: 300px;
+ text-align: center; 
+}
+
+.tools {
+ background-color:#DCC7B8 ;
+ width: 300px;
+ text-align: center; 
+}
+
+.details {
+  background-color: #DCC7B8;
+  width: 300px;
+  text-align: center;
+}
+
+.project-role-h2 h2{
+  font-size: 16px; 
+  text-align: center;
+}
+
+ .project-role-p {
+  display: flex;
+  justify-content: center;
+ }
+
+ .project-role-p dl, 
+ .project-role-p dd, 
+ .project-role-p dt { 
+   margin: 0; 
+   padding: 0; 
+ } 
+
+.design-process { 
+  display: flex; 
+  justify-content: center; 
+  text-align: center; 
+  gap: 20px; 
+ } 
+ 
+ .research { 
+   background-color: #444457; 
+   width: 250px; 
+   display: flex;         
+   flex-direction: column;
+ } 
+ 
+ .analysis {
+   background-color:#4D4457; 
+   width: 250px; 
+   display: flex;         
+   flex-direction: column;
+ } 
+ 
+ .ideation { 
+   background-color: #534356; 
+   width: 250px; 
+   display: flex;         
+   flex-direction: column;
+ } 
+ 
+ .design { 
+   background-color: #8A5A6A; 
+   width: 250px;
+   display: flex;         
+   flex-direction: column;
+ } 
+ 
+ .feedback { 
+   background-color: #9A7483; 
+   width: 250px; 
+   display: flex;         
+   flex-direction: column;
+ } 
+ 
+ .handoff { 
+   background-color: #A28190; 
+   width: 250px; 
+   display: flex;         
+   flex-direction: column;   
+ } 
+ 
+ h2.design-process-h2{ 
+   font-family: "Garamond", serif; 
+   display: inline-block;
+   font-size: 16px;  
+   color: #FFFFFF;
+   border-bottom: 2px solid #FFFFFF;
+   width: 80%;
+ }
+ 
+ .design-process-p {
+  background: #edddd4;
+  flex-grow: 1;           
+  margin: 0;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+ }
+
+ .design-process-p dl, 
+ .design-process-p dd, 
+ .design-process-p dt {
+   margin: 0; 
+   padding: 0; 
+ }
+
+  .comparison-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 40px auto;
+  max-width: 1200px;
+  padding: 0 20px;  
+}
+
+.comparison-card {
+  background: #edddd4;
+  border: 2px solid #772e25;
+  padding: 25px;
+  width:  calc(50% - 20px);
+  box-sizing: border-box;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  position: relative;
+  height: 880px;
+  overflow: hidden;
+}
+
+ .comparison-card::after {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border: 1px solid #772e25;
+  pointer-events: none;
+} 
+
+.comp-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.comp-screenshot {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  margin: 15px 0;
+  border: 2px double #772e25;
+  display: block;
+}
+
+.section h4 {
+  margin-bottom: 6px;
+  font-size: 1.1rem;
+  border-bottom: 2px solid #772e25;
+  display: inline-block;
+}
+
+.section ul {
+  margin: 0 0 12px 18px;
+}
+
+.section p {
+  margin: 0 0 12px 0;
+} 
+
+.icon-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; 
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 150px;
+  width: 160px;
+}
+
+.icon-frame {
+  width: 80px;
+  height: 80px;
+  gap: 20px;
+  background: #edddd4;
+  border: 6px double #772e25;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow:
+    inset 0 0 10px rgba(0,0,0,0.15),
+    0 0 8px rgba(0,0,0,0.2);
+}
+
+.icon-frame svg {
+  width: 90%;
+  height: 90%;
+}
+
+.icon-label {
+  margin-top: 10px;
+  letter-spacing: 0.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; 
+}
+
+.myotherSlides {
+  margin-top: 20px;
+  border: 4px double #772e25;
+  gap: 10px;
+}
+
+.final-slideshow { 
+  background: #edddd4;
+  color: #772e25;
+  border: 2px double #772e25; 
+  padding: 8px 14px; 
+  font-size: 22px; 
+  cursor: pointer; 
+  margin: 5px; 
+  transition: all 0.2s ease-in-out;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.15),
+    0 0 6px rgba(0, 0, 0, 0.2);
+}   
+
+.OtherSlideshow-arrows {
+  display: flex;
+  justify-content: center;
+  gap: 20px; 
+  margin-top: 10px;
+}
+
+.Otherslideshow-btn {
+  background: #edddd4;
+  border: 3px double #772e25;
+  padding: 6px 14px;
+  font-family: "Garamond", serif;
+  font-size: 22px;
+  color: #772e25;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow:
+    inset 0 0 6px rgba(0,0,0,0.15),
+    0 0 6px rgba(0,0,0,0.2);
+}
+
+.otherSlideshow-btn:hover {
+  background: #f3e6d8;
+  border-color: #5e1f18;
+  box-shadow:
+    0 0 12px rgba(0,0,0,0.3),
+    inset 0 0 8px rgba(0,0,0,0.2);
+  transform: translateY(-2px);
+}
+
+.case-footer {
+  text-align: center;
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 2px solid #772e25;
+}
+
+@media (max-width: 768px) { 
+  .comparison-card {
+    width: 100%; 
+ } 
+}
+</style>
+
+<div class="case-wrapper">
+
+  <a href="../index.html#case-studies" class="back-link">← Back to Case Studies</a>
+
+  <h1 class="case-title">Honorithm</h1>
+
+  <div class="victorian-divider">
+    ✦
+  </div>
+
+  <section class="case-intro">
+    <p class="lead">
+     Honorithm is a minimalist pantry‑tracking mobile app designed to help people stay aware of what they own, reduce food waste, and simplify grocery planning.
+    </p>
+  </section>
+
+  <section class="case-section">
+    <h2>Overview</h2>
+    <p>Many people receive automated decisions every day - job rejections, loan denials, and insurance quotes - yet have no idea how these decisions were made. Algorithms are opaque, incredibly complex, and often biased</p>
+    <p>The overall goal was to design </p>
+
+      <div class="project-role">
+         <div class='role'>
+           <h2 class="project-role-h2">Role</h2> 
+           <div class="project-role-p">
+             <dl>
+              <dd>UX researcher</dd>
+              <dd>UX designer</dd>
+              <dd>UX engineer</dd>
+             </dl>
+         </div>
+      </div>
+         <div class='tools'>
+           <h2 class="project-role-h2">Tools</h2> 
+           <div class="project-role-p">
+             <dl>
+              <dd>Draw.io</dd>
+              <dd>Figma</dd>
+              <dd>MockFlow</dd>
+              <dd>VisualStudio</dd>
+              <dd>GitHub</dd>
+             </dl>
+           </div>
+      </div>
+      <div class='details'>
+         <h2 class="project-role-h2">Details</h2> 
+          <dl>
+            <dd>Duration: November  - December 14, 2025</dd>
+            <dd>Company/Client: Myself</dd>
+          </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <h2>Process</h2>
+    
+    <p>The process for this project consists of the following:</p>
+   <div class="design-process"> 
+   <div class='research'> 
+     <h2 class="design-process-h2">Research</h2> 
+     <div class="design-process-p">
+       <dl>
+          <dd>Context study</dd>
+          <dd>Target Audience</dd>
+          <dd>Pain Points</dd>
+       </dl>
+     </div> 
+   </div> 
+   <div class="analysis"> 
+     <h2 class="design-process-h2">Analysis</h2> 
+     <div class="design-process-p">
+       <dl>
+          <dd>Project Goals</dd>
+          <dd>Use Cases</dd>
+       </dl>
+     </div> 
+   </div> 
+   <div class='ideation'> 
+     <h2 class="design-process-h2">Ideation</h2>
+     <div class="design-process-p">
+        <dl>
+          <dd>Journey Map</dd>
+          <dd>Information Architecture</dd>
+          <dd>Visual Design Direction</dd>
+       </dl>
+     </div> 
+   </div> 
+   <div class='design'> 
+     <h2 class="design-process-h2">Design</h2> 
+     <div class="design-process-p">
+        <dl>
+          <dd>Low-Fidelity Wireframes</dd>
+       </dl>
+     </div> 
+   </div> 
+    <div class='design'> 
+     <h2 class="design-process-h2">Hand-off</h2> 
+     <div class="design-process-p">
+        <dl>
+          <dd>High-fidelity wireframes</dd>
+          <dd>Case Study Summary</dd>
+          <dd>Reflection</dd>
+          <dd>Next Steps</dd>
+       </dl>
+     </div> 
+   </div>  
+   </div>
+
+    <h2 class="case-process"> Research</h2>
+    <section class="case-subsection">
+      <h2>Context Study</h2>
+        <p></p>
+         <p>I focused on three key areas:</p>
+          <ul>
+           <li>Clarity and transparency of decison explainations</li>
+           <li>Accesiblity of information about underlying algorithms</li>
+           <li>User ability to identify potential bias or unfairness</li>
+        </ul>
+       This study highlighted where users feel informed and empowered and where confusion, opacity, or unmet needs continue to create frustration and uncertainty.
+      </p>
+    </section>
+
+     <section class="case-subsection"> 
+      <h2>Target Audience</h2>
+      <p>
+       I identified four primary users:
+        <ul>
+          <li></li>
+          <li>Loan and credit applicants</li>
+          <li>Renters</li>
+          <li>Consumers</li>
+        </ul>
+       Each group had distinct motivations, but they all shared a desire for clarity, fairness, and a sense of control.
+      </p>
+    </section>
+
+     <section class="case-subsection"> 
+      <h2>Pain Points</h2>
+      <p>
+       Across research, players consistently struggled with:
+        <ul>
+          <li>Opaque decison making</li>
+          <li>Difficulty overcoming bias</li>
+          <li>Confusing or complex technical language</li>
+          <li>No clear next steps</li>
+        </ul>
+       These pain points became core design targets.
+      </p>
+    </section>
+     
+    <section class="case-subsection">
+     <h2>Project Goals</h2> 
+      <p>The website needed to: </p>
+      <ul>
+          <li>Make algorithmic decisions understandable</li>
+          <li>Help users identify bias risks</li>
+          <li>Build trust through transparency and simplicity</li>
+        </ul>
+     </section>
+    </section>
+
+      <section class="case-subsection"> 
+      <h2>Use cases</h2>
+       <div class="icon-row">
+  <!-- Climb leaderboards -->
+  <div class="icon-item">
+    <div class="icon-frame">
+      <svg viewBox="0 0 100 100">
+        <line x1="35" y1="10" x2="35" y2="90"
+        stroke="#772e25" stroke-width="4" stroke-linecap="round" />
+        <line x1="65" y1="10" x2="65" y2="90"
+        stroke="#772e25" stroke-width="4" stroke-linecap="round" />
+        <line x1="35" y1="20" x2="65" y2="20"
+        stroke="#772e25" stroke-width="3" stroke-linecap="round" />
+        <line x1="35" y1="30" x2="65" y2="30"
+        stroke="#772e25" stroke-width="3" stroke-linecap="round" />
+        <line x1="35" y1="40" x2="65" y2="40"
+        stroke="#772e25" stroke-width="3" stroke-linecap="round" />
+        <line x1="35" y1="50" x2="65" y2="50"
+        stroke="#772e25" stroke-width="3" stroke-linecap="round" />
+        <line x1="35" y1="60" x2="65" y2="60"
+        stroke="#772e25" stroke-width="3" stroke-linecap="round" />
+        <line x1="35" y1="70" x2="65" y2="70"
+        stroke="#772e25" stroke-width="3" stroke-linecap="round" />
+        <line x1="35" y1="80" x2="65" y2="80"
+        stroke="#772e25" stroke-width="3" stroke-linecap="round" />
+     </svg>
+    </div>
+    <p class="icon-label">I want to understand a loan denial</p>
+  </div>
+
+  <!-- Trade and collect rare cards -->
+  <div class="icon-item">
+    <div class="icon-frame">
+      <svg viewBox="0 0 100 100">
+       <rect x="15" y="10" width="70" height="80" rx="6"
+        stroke="#772e25" stroke-width="4" fill="none"/>
+        <rect x="25" y="20" width="50" height="35" rx="3"
+        stroke="#772e25" stroke-width="3" fill="none"/>
+        <circle cx="50" cy="35" r="10" fill="#772e25"/>
+        <rect x="40" y="45" width="20" height="8" rx="2" fill="#772e25"/>
+        <rect x="25" y="60" width="50" height="8" rx="2"
+        fill="#772e25"/>
+        <line x1="25" y1="75" x2="75" y2="75"
+        stroke="#772e25" stroke-width="3"/>
+        <line x1="25" y1="82" x2="60" y2="82"
+        stroke="#772e25" stroke-width="3"/>
+      </svg>
+    </div>
+    <p class="icon-label">I want to decode a job application rejection</p>
+  </div>
+
+  <!--Community-->
+  <div class="icon-item">
+    <div class="icon-frame">
+      <svg viewBox="0 0 100 100">
+        <rect x="15" y="20" width="70" height="60" rx="8"
+        stroke="#772e25" stroke-width="4" fill="none"/>
+        <circle cx="50" cy="45" r="8" fill="#772e25"/>
+        <path d="M42 60 Q50 52 58 60" 
+        stroke="#772e25" stroke-width="3" fill="none"/>
+        <circle cx="32" cy="50" r="6" fill="#772e25"/>
+        <path d="M25 62 Q32 56 39 62"
+        stroke="#772e25" stroke-width="3" fill="none"/>
+        <circle cx="68" cy="50" r="6" fill="#772e25"/>
+        <path d="M61 62 Q68 56 75 62"
+        stroke="#772e25" stroke-width="3" fill="none"/>
+      </svg>
+    </div>
+    <p class="icon-label">I'm looking to interpret a rental application result</p>
+  </div>
+
+  <!--Strategic Gameplay -->
+  <div class="icon-item">
+    <div class="icon-frame">
+     <svg viewBox="0 0 200 100">
+        <line x1="100" y1="20" x2="100" y2="70" stroke="#772e25" stroke-width="4" stroke-linecap="round"/> 
+        <rect x="80" y="70" width="40" height="8" rx="2" fill="#772e25"/> 
+        <line x1="70" y1="35" x2="150" y2="40" stroke="#772e25" stroke-width="4" stroke-linecap="round"/>
+        <line x1="80" y1="36" x2="80" y2="52" stroke="#772e25" stroke-width="3" stroke-linecap="round"/>
+        <line x1="140" y1="39" x2="140" y2="60" stroke="#772e25" stroke-width="3" stroke-linecap="round"/>
+        <rect x="65" y="52" width="30" height="8" rx="3" fill="none" stroke="#772e25" stroke-width="3"/> 
+        <rect x="125" y="60" width="30" height="8" rx="3" fill="none" stroke="#772e25" stroke-width="3"/>
+        <circle cx="100" cy="30" r="3" fill="#772e25"/>
+      </svg>
+    </div>
+    <p class="icon-label">I'm trying to learn about algorithmic bias in general</p>
+  </div>
+</div>
+      </section>
+
+    <h2 class="case-process">Ideation</h2>
+      
+        <section class="case-subsection">
+          <h2>User Flow Map</h2>
+           <p>The user flow map focuses on illustrating the step‑by‑step path users take from uploading a screenshot to receiving clear results and recommendations.</p>
+             <img src="../Images/honor_user.jpg" alt="Movie Sitemap" class="case-image">
+        </section>
+
+        <section>
+          <h2>Information Architecture</h2>
+           <p>I designed a clear, scalable sitemap to map out the structure and hierarchy of the website, ensuring intuitive navigation and clear content organization.</p>
+              <img src="../Images/honor_site.jpg" alt="Movie Sitemap" class="case-image">
+           <p>This structure supports both quick sessions and deeper engagement</p>
+        </section>
+
+      <h2 class="case-process">Design</h2> 
+      <section>
+          <h2>Low-Level Wireframes</h2>
+            <p>I created low-level wireframes using MockFlow, which focused on clarity, speed, and accessibility.</p>
+              <img src="../Images/honor_low.png" alt="Movie Sitemap" class="case-image">
+        </section>
+
+     <section class="case-subsection"> 
+      <h2>Visual Design Direction</h2>
+      <p>I created several stylesheets to establish the color palette, typography, imagery, and several of the UI elements. The idea was to create an aesthetic that felt grounded and trustworthy, yet serious and authoritative.</p>
+       <img src="../Images/honor_style.png" alt="Shop Stylesheets" class="case-image">
+    </section>
+
+
+        <section class="case-section"> 
+  <h2 class="case-process"> Handoff</h2>
+   
+  <section class="case-subsection">
+    <h2>High-Fidelity Wireframes</h2>
+     <p>After some adjustments based on the low-fidelity wireframes, interactive high-fidelity wireframes were created on Figma.</p>
+      <ul>
+           <li> <a href="https://www.figma.com/proto/q1qWMVK2NIyx6fSVQGBGJ8/Final-High-Fidelity-Wireframes--Copy-?node-id=1129169-938&t=AI65hY6ziX64h4BT-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1">Interactive, clickable wireframes</a></p></li>
+       </ul>
+        <div class="final-slideshow">
+       <img class="myotherSlides" src="../Images/honor_home.jpg" style="width:100%">
+       <img class="myotherSlides" src="../Images/honor_upload.jpg" style="width:100%">
+       <img class="myotherSlides" src="../Images/honor_process.jpg" style="width:100%">
+       <img class="myotherSlides" src="../Images/honor_detect.jpg" style="width:100%">
+       <img class="myotherSlides" src="../Images/honor_result.jpg" style="width:100%">
+       <img class="myotherSlides" src="../Images/honor_rec.jpg" style="width:100%">
+       <img class="myotherSlides" src="../Images/Images/honor_save.jpg" style="width:100%">
+
+      <div class="OtherSlideshow-arrows">
+       <button class="final-slideshow" onclick="plusDivs2(-1)">⇜</button>
+       <button class="final-slideshow" onclick="plusDivs2(1)">⇝</button>
+      </div>   
+     </div>
+
+     <img src="../Images/honor_high.jpg" alt="Final Wireframe" class="case-image">
+  </section>
+
+        <section class="case-subsection">
+    <h2>Case Study Summary</h2>
+     <p>Honorithm focused on creating a web‑based tool that makes automated decision‑making systems more understandable and accessible, addressing common user frustrations such as opaque algorithmic processes, unclear risk implications, and limited guidance on next steps. Through user research, competitive analysis, and iterative design, I developed a concept that identifies algorithmic signals within screenshots, highlights key indicators, explains potential bias risks, and offers clear, actionable recommendations. The resulting structure provides a scalable foundation for future development, including high‑fidelity prototyping, usability testing, and expanded detection capabilities, demonstrating how thoughtful UX design can transform a complex and often intimidating domain into an empowering, transparent experience for a wide range of users.</p>
+  </section>
+  
+  <section class="case-section">
+    <h2>Reflection</h2>
+     <p>Key Takeaways:
+      <ul>
+        <li>This project reinforced that explainability is a design problem, not just a technical one. Users don’t just want to know what the system detected—they need to understand why it matters and what they can do next. Designing for comprehension became just as important as designing for functionality. </li>
+        <li>How clarity beats complexity. Even when dealing with a highly technical domain like algorithmic transparency, users respond best to simple, well‑structured flows that reduce cognitive load and build trust.</li>
+      </ul>
+    </p>
+  </section>
+
+  <section class="case-section">
+    <h2>Next Steps</h2>
+    <p> This project laid the groundwork for a more functional site. The next phase will include:
+      <ul>
+        <li>Creating prototypes and then later a fully functioning website using GitHub, JSON, and Visual Studio Code</li>
+        <li>Conducting more usability testing</li>
+        <li>Exploring a browser extension for scanning decisions in real time</li>
+        <li>Implementing an “algorithm dictionary” for public education</li>
+      </ul>
+    </p>
+  </section>
+  </section>
+ </section>
+
+  <div class="victorian-divider">
+    ✦
+  </div>
+
+  <footer class="case-footer">
+    <p>© 2025 Arya • Crafted with care</p>
+  </footer>
+
+</div>
+<script>
+var slideIndex2 = 1; 
+  showDivs2(slideIndex2); 
+  
+  function plusDivs2(n) {
+    showDivs2(slideIndex2 += n); 
+  } 
+  
+  function showDivs2(n) { 
+    var i; var x = document.getElementsByClassName("myotherSlides");
+    if (n > x.length) {slideIndex2 = 1} 
+    if (n < 1) {slideIndex2 = x.length} 
+    for (i = 0; i < x.length; i++) { 
+      x[i].style.display = "none"; 
+    } 
+    x[slideIndex2-1].style.display = "block"; 
+  }
+</script>
