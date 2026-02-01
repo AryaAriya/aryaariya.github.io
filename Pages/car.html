@@ -1,0 +1,631 @@
+<style>
+body {
+  background: #edddd4;
+  font-family: "Garamond", serif;
+  color: #772e25;
+  padding: 40px;
+}
+
+.case-wrapper {
+  max-width: 900px;
+  margin: auto;
+}
+
+.back-link {
+  text-decoration: none;
+  color: #772e25;
+  font-size: 18px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.case-title {
+  font-size: 64px;
+  font-weight: 100;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.victorian-divider {
+  text-align: center;
+  font-size: 28px;
+  margin: 40px 0;
+  position: relative;
+}
+
+.victorian-divider::before,
+.victorian-divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  border-top: 2px solid #772e25;
+  opacity: 0.6;
+}
+
+.victorian-divider::before {
+  left: 0;
+}
+
+.victorian-divider::after {
+  right: 0;
+}
+
+.case-intro .lead {
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.case-section {
+  margin-bottom: 20px;
+}
+
+.case-subsection {
+  margin-bottom: 20px;
+}
+
+.case-section h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #772e25;
+  border-bottom: 2px solid #772e25;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.case-subsection h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #c44536;
+  border-bottom: 2px solid #c44536;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.case-section h2.case-process {
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: #8a5a6a;
+  border-bottom: 2px solid #8a5a6a;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.case-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+  border: 3px solid #772e25;
+  display: block;
+  gap: 10px; 
+}
+  
+.project-role {
+  display: flex; 
+  justify-content: center; 
+  text-align: center;
+  gap: 20px;
+}
+
+.role {
+ background-color: #DCC7B8;
+ width: 300px;
+ text-align: center; 
+}
+
+.tools {
+ background-color:#DCC7B8 ;
+ width: 300px;
+ text-align: center; 
+}
+
+.details {
+  background-color: #DCC7B8;
+  width: 300px;
+  text-align: center;
+}
+
+.project-role-h2 h2{
+  font-size: 16px; 
+  text-align: center;
+}
+
+ .project-role-p {
+  display: flex;
+  justify-content: center;
+ }
+
+ .project-role-p dl, 
+ .project-role-p dd, 
+ .project-role-p dt { 
+   margin: 0; 
+   padding: 0; 
+ } 
+
+.design-process { 
+  display: flex; 
+  justify-content: center; 
+  text-align: center; 
+  gap: 20px; 
+ } 
+ 
+ .research { 
+   background-color: #444457; 
+   width: 250px; 
+   display: flex;         
+   flex-direction: column;
+ } 
+ 
+ .analysis {
+   background-color:#4D4457; 
+   width: 250px; 
+   display: flex;         
+   flex-direction: column;
+ } 
+ 
+ .ideation { 
+   background-color: #534356; 
+   width: 250px; 
+   display: flex;         
+   flex-direction: column;
+ } 
+ 
+ .design { 
+   background-color: #8A5A6A; 
+   width: 250px;
+   display: flex;         
+   flex-direction: column;
+ } 
+ 
+ .feedback { 
+   background-color: #9A7483; 
+   width: 250px; 
+   display: flex;         
+   flex-direction: column;
+ } 
+ 
+ .handoff { 
+   background-color: #A28190; 
+   width: 250px; 
+   display: flex;         
+   flex-direction: column;   
+ } 
+ 
+ h2.design-process-h2{ 
+   font-family: "Garamond", serif; 
+   display: inline-block;
+   font-size: 16px;  
+   color: #FFFFFF;
+   border-bottom: 2px solid #FFFFFF;
+   width: 80%;
+ }
+ 
+ .design-process-p {
+  background: #edddd4;
+  flex-grow: 1;           
+  margin: 0;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+ }
+
+ .design-process-p dl, 
+ .design-process-p dd, 
+ .design-process-p dt {
+   margin: 0; 
+   padding: 0; 
+ }
+
+  .comparison-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 40px auto;
+  max-width: 1200px;
+  padding: 0 20px;  
+}
+
+.comparison-card {
+  background: #edddd4;
+  border: 2px solid #772e25;
+  padding: 25px;
+  width:  calc(50% - 20px);
+  box-sizing: border-box;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  position: relative;
+  height: 880px;
+  overflow: hidden;
+}
+
+ .comparison-card::after {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border: 1px solid #772e25;
+  pointer-events: none;
+} 
+
+.comp-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.comp-screenshot {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  margin: 15px 0;
+  border: 2px double #772e25;
+  display: block;
+}
+
+.section h4 {
+  margin-bottom: 6px;
+  font-size: 1.1rem;
+  border-bottom: 2px solid #772e25;
+  display: inline-block;
+}
+
+.section ul {
+  margin: 0 0 12px 18px;
+}
+
+.section p {
+  margin: 0 0 12px 0;
+} 
+
+.icon-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; 
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 150px;
+  width: 160px;
+}
+
+.icon-frame {
+  width: 80px;
+  height: 80px;
+  gap: 20px;
+  background: #edddd4;
+  border: 6px double #772e25;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow:
+    inset 0 0 10px rgba(0,0,0,0.15),
+    0 0 8px rgba(0,0,0,0.2);
+}
+
+.icon-frame svg {
+  width: 90%;
+  height: 90%;
+}
+
+.icon-label {
+  margin-top: 10px;
+  letter-spacing: 0.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; 
+}
+
+.case-footer {
+  text-align: center;
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 2px solid #772e25;
+}
+
+@media (max-width: 768px) { 
+  .comparison-card {
+    width: 100%; 
+ } 
+}
+</style>
+
+<div class="case-wrapper">
+
+  <a href="../index.html#case-studies" class="back-link">← Back to Case Studies</a>
+
+  <h1 class="case-title">Pantry Pal</h1>
+
+  <div class="victorian-divider">
+    ✦
+  </div>
+
+  <section class="case-intro">
+    <p class="lead">
+     Pantry Pal 
+    </p>
+  </section>
+
+  <section class="case-section">
+    <h2>Overview</h2>
+    <p> Large-scale garages create a "visual sameness" that triggers spatial anxiety. Users often forget their level, section, or even which side of the building they entered.</p>
+    <p>The goal was to design a zero-friction mobile app that requires only two taps: one to save, one to find</p>
+
+      <div class="project-role">
+         <div class='role'>
+           <h2 class="project-role-h2">Role</h2> 
+           <div class="project-role-p">
+             <dl>
+              <dd>UX researcher</dd>
+              <dd>UX designer</dd>
+              <dd>UX writer</dd>
+             </dl>
+         </div>
+      </div>
+         <div class='tools'>
+           <h2 class="project-role-h2">Tools</h2> 
+           <div class="project-role-p">
+             <dl>
+              <dd>Draw.io</dd>
+              <dd>Figma</dd>
+              <dd>MockFlow</dd>
+             </dl>
+           </div>
+      </div>
+      <div class='details'>
+         <h2 class="project-role-h2">Details</h2> 
+          <dl>
+            <dd>Duration: November - December 14, 2025</dd>
+            <dd>Company/Client: Myself</dd>
+          </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <h2>Process</h2>
+    
+    <p>The process for this project consists of the following:</p>
+   <div class="design-process"> 
+   <div class='research'> 
+     <h2 class="design-process-h2">Research</h2> 
+     <div class="design-process-p">
+       <dl>
+          <dd>Context study</dd>
+          <dd>Target Audience</dd>
+          <dd>Pain Points</dd>
+       </dl>
+     </div> 
+   </div> 
+   <div class="analysis"> 
+     <h2 class="design-process-h2">Analysis</h2> 
+     <div class="design-process-p">
+       <dl>
+          <dd>Project Goals</dd>
+          <dd>Use Cases</dd>
+       </dl>
+     </div> 
+   </div> 
+   <div class='ideation'> 
+     <h2 class="design-process-h2">Ideation</h2>
+     <div class="design-process-p">
+        <dl>
+          <dd>Journey Map</dd>
+          <dd>Information Architecture</dd>
+          <dd>Visual Design Direction</dd>
+       </dl>
+     </div> 
+   </div> 
+   <div class='design'> 
+     <h2 class="design-process-h2">Design</h2> 
+     <div class="design-process-p">
+        <dl>
+          <dd>Low-Fidelity Wireframes</dd>
+       </dl>
+     </div> 
+   </div> 
+    <div class='handoff'> 
+     <h2 class="design-process-h2">Hand-off</h2> 
+     <div class="design-process-p">
+        <dl>
+          <dd>High-fidelity wireframes</dd>
+          <dd>Case Study Summary</dd>
+          <dd>Reflection</dd>
+          <dd>Next Steps</dd>
+       </dl>
+     </div> 
+   </div> 
+  </div>
+
+    <h2 class="case-process"> Research</h2>
+    <section class="case-subsection">
+      <h2>Context Study</h2>
+        <p>Users often forget their parking spot due to rushing or being visually fatigued in confusing environments. Existing solutions like standard map apps are too complex, inaccurate in garages, or fail without a signal, making users frustrated.</p>
+         <p>I focused on three key areas:</p>
+          <ul>
+           <li>Offline capability through on-device sensors to track location without a signal</li>
+           <li>Zero-type interface and a high-contrast UI since users are usually walking while using the app, and parking garages usually have dim light</li>
+           <li>Reducing fatigue, stress, and sensory and cognitive overload that usually comes when trying to remember where the car is parked</li>
+        </ul>
+       The context study revealed that parking is rarely the primary task; it is a high-friction hurdle between the user and their actual destination (a flight, a meeting, or a movie).
+      </p>
+    </section>
+
+     <section class="case-subsection"> 
+      <h2>Target Audience</h2>
+      <p>
+       I identified three primary users:
+        <ul>
+          <li>Travelers at airports</li>
+          <li>Shoppers</li>
+          <li>Concert goers</li>
+        </ul>
+       Each group had different motivations, but all shared a desire for speed, accessibility, and clarity.
+      </p>
+    </section>
+
+     <section class="case-subsection"> 
+      <h2>Pain Points</h2>
+      <p>
+       Across research, users consistently struggled with:
+        <ul>
+          <li>GPS signal loss</li>
+          <li>Tiny buttons and exessive typing</li>
+          <li>Bright light from bright white UIs</li>
+        </ul>
+       These pain points became core design targets.
+      </p>
+    </section>
+     
+    <section class="case-subsection">
+     <h2>Project Goals</h2> 
+      <p>The mobile app needed to: </p>
+      <ul>
+          <li>Reduce friction in everyday pantry management</li>
+          <li>Prioritize accessibility and ease of use</li>
+          <li>Ensure clear visual clarity</li>
+          <li>Provide clear, at‑a‑glance awareness</li>
+        </ul>
+     </section>
+    </section>
+
+      <section class="case-subsection"> 
+      <h2>Use cases</h2>
+       <div class="icon-row">
+  <!-- Climb leaderboards -->
+  <div class="icon-item">
+    <div class="icon-frame">
+    <svg viewBox="0 0 100 100">
+     <rect x="40" y="55" width="20" height="30" rx="3"
+        stroke="#772e25" stroke-width="4" fill="none"/>
+     <path d="M30 50 Q50 30 70 50"
+        stroke="#772e25" stroke-width="4" fill="none"/>
+     <path d="M25 45 Q50 20 75 45"
+        stroke="#772e25" stroke-width="4" fill="none"/>
+     <line x1="25" y1="75" x2="75" y2="25"
+        stroke="#772e25" stroke-width="5" stroke-linecap="round"/>
+</svg>
+    </div>
+    <p class="icon-label">I want to track my car in an area with no signal</p>
+  </div>
+
+  <!-- Trade and collect rare cards -->
+  <div class="icon-item">
+    <div class="icon-frame">
+     <svg viewBox="0 0 100 100">
+      <circle
+       cx="45"
+       cy="45"
+       r="20"
+       stroke="#772e25"
+       stroke-width="4"
+       fill="none"
+      />
+     <line
+       x1="58"
+       y1="58"
+       x2="70"
+       y2="70"
+       stroke="#772e25"
+       stroke-width="4"
+       stroke-linecap="round"
+      />
+</svg>
+    </div>
+    <p class="icon-label">I want to find where my car is in the parking garage among hundreds of similar makes and models</p>
+  </div>
+      </section>
+
+  <section class="case-section"> 
+    <h2 class="case-process">Ideation</h2>
+        <section class="case-subsection">
+          <h2>User Flow Map</h2>
+           <p>The user flow map focuses on illustrating the step‑by‑step path users undergo when using the app, from browsing the pantry to restocking items.</p>
+             <img src="../Images/pantry_user.jpg" alt="Movie Sitemap" class="case-image">
+        </section>
+  
+
+        <section class="case-subsection">
+          <h2>Information Architecture</h2>
+           <p>I designed a clear, scalable sitemap to map out the structure and hierarchy of the mobile app, ensuring intuitive navigation and clear content organization and reducing cognitive overload.</p>
+              <img src="../Images/pantry_site.jpg" alt="Movie Sitemap" class="case-image">
+        </section>
+</section>
+  
+    <section class="case-section"> 
+      <h2 id="design" class="case-process">Design</h2> 
+      <section class="case-subsection">
+          <h2>Low-Level Wireframes</h2>
+            <p>I created low-level wireframes using MockFlow, which focused on clarity and accessibility. Through clear visual hierarchy, the user can easily gauge which goes where without confusion</p>
+              <img src="../Images/pantry_low.png" alt="Movie Sitemap" class="case-image">
+        </section>
+    </section>
+
+     <section class="case-subsection"> 
+      <h2>Visual Design Direction</h2>
+      <p>I created several stylesheets to establish the color palette, typography, imagery, and several of the UI elements. The idea was to create a minimalist aesthetic, which was designed for calmness, accessibility, and to give off a warm, trustworthy feeling.</p>
+       <img src="../Images/pantry_style.png" alt="Shop Stylesheets" class="case-image">
+    </section>
+
+
+  <section class="case-section"> 
+  <h2 class="case-process">Handoff</h2>
+   
+  <section class="case-subsection">
+    <h2>High-Fidelity Wireframes</h2>
+     <p>After some adjustments based on the low-fidelity wireframes, interactive high-fidelity wireframes were created on Figma.</p>
+      <ul>
+           <li> <a href="https://www.figma.com/proto/Nwt5vyGd9IMxMdVKwijPOb/Final-High-Fidelity-Wireframes--Copy---Copy-?node-id=1131215-802&p=f&t=6C0HPaqJudyEYg7J-1&scaling=min-zoom&content-scaling=fixed&page-id=1131215%3A801">Interactive, clickable wireframes</a></p></li>
+       </ul>
+
+     <img src="../Images/pantry_high.jpg" alt="Final Wireframe" class="case-image">
+  </section>
+
+    <section class="case-subsection">
+    <h2>Case Study Summary</h2>
+     <p>Pantry Pal examines how a simple, low‑friction design can help users stay organized without overwhelming them. By focusing on clarity, speed, and calm visual hierarchy, the project addresses common frustrations around food waste, duplicate purchases, and the cognitive load of managing a pantry. Through research, wireframing, and iterative design, the study demonstrates how stripping an experience down to its essentials can create a tool that genuinely supports everyday habits and empowers users to make smarter, more confident decisions.</p>
+  </section>
+  
+  <section class="case-section">
+    <h2>Reflection</h2>
+     <p>Key Takeaways:
+      <ul>
+        <li>This project reinforced the value of designing for real‑world friction. People don’t want to manage their pantry—they want it to manage itself. By stripping away unnecessary features and focusing on speed, clarity, and calmness, the app becomes something users actually return to.</li>
+        <li>How powerful simplicity can be when it’s grounded in real user needs.</li>
+      </ul>
+    </p>
+  </section>
+
+  <section class="case-section">
+    <h2>Next Steps</h2>
+    <p> This project laid the groundwork for a more functional site. The next phase will include:
+      <ul>
+        <li>Creating prototypes and then later a fully functioning website using GitHub and Visual Studio Code</li>
+        <li>Conducting more usability testing</li>
+        <li>Adding an optional calendar option for expiration dates</li>
+        <li>Implementing a dark mode</li>
+        <li>Exploring predictive text or common item presets so people don't have to type in items they know every time</li>
+      </ul>
+    </p>
+  </section>
+  </section>
+ </section>
+
+  <div class="victorian-divider">
+    ✦
+  </div>
+
+  <footer class="case-footer">
+    <p>© 2025 Arya • Crafted with care</p>
+  </footer>
+
+</div>
