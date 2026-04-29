@@ -409,7 +409,7 @@ body {
      <div class="design-process-p">
        <dl>
           <dd>Project Goals</dd>
-          <dd>Layout Exploration and Directions</dd>
+          <dd>Feature Prioritization</dd>
           <dd>Use Cases</dd>
        </dl>
      </div> 
@@ -419,6 +419,7 @@ body {
      <div class="design-process-p">
         <dl>
           <dd>Information Architecture</dd>
+          <dd>Layout Exploration and Directions</dd>
        </dl>
      </div> 
    </div> 
@@ -438,7 +439,7 @@ body {
     <h2 class="case-process"> Research</h2>
     <section class="case-subsection">
       <h2>Context Study</h2>
-        <p>In emergencies like natural disasters or medical crises, users need vital documents immediately. Standard cloud storage (Google Drive/Dropbox) is often too cluttered, requires high bandwidth, or has complex folder hierarchies that fail during high-stress moments</p>
+        <p>In emergencies like natural disasters or medical crises, users face extreme cognitive load: shaky hands, low visibility, poor signal, and heightened stress, and require vital documents immediately. Standard cloud storage like Google Drive or Dropbox fails during these moments because they are often too cluttered, require high bandwidth, have small touch targets, and have complex folder hierarchies. </p>
          <p>I focused on three key areas:</p>
           <ul>
            <li>Guarantee a safe sharing method so emergency responders can verify your identity without physical possession of your device</li>
@@ -493,16 +494,19 @@ body {
      </section>
 
     <section class="case-subsection">
-      <h2>Layout Exploration and Directions</h2>
-       <p>From the research, it became clear that Cista's layout must focus on minimalism and simplicity rather than layouts with multiple features and navigational pages, for it was a simple single-page emergency app. I explored multiple layout concepts, such as, and in the end I decided to go with a three-slot Bento Grid layout style.</p>
-       <p> Why I chose a three-slot Bento Grid for the layout:
+      <h2>Feature Prioritization</h2>
+       <p>From the research, cloud storage apps like Dropbox or Google Drive are often too slow, too cluttered, or too confusing during emergencies or times of urgency. Users don't need full file management - they need instant retrieval. This is why Cista intentionally removes features that are standard in storage apps.</p>
+       <p>Why Cista intentionally removed several features:
          <ul>
-         <li>It prevents "List Fatigue", as the user sees all three options simultaneously—no scrolling required</li>
-         <li></li>
-         <li></li>
+         <li>Folders were removed since hierarchy slows retrieval </li>
+         <li>The search bar was removed since typing is difficult under stress</li>
+         <li>Thumbnails were removed because visual scanning takes longer than reading three clear labels</li>
+         <li>Cloud syncing was removed because it produces loading delays and signal dependency </li>
         </ul>
+      Through stripping everything non-essential away, the app becomes faster, safer, and more reliable at the exact time and moments users need it most.
        </p>
-
+    </section>
+    
       <section class="case-subsection"> 
       <h2>Use cases</h2>
        <div class="icon-row">
@@ -592,11 +596,25 @@ body {
         </section>
      </section>
 
+    <section class="case-subsection">
+      <h2>Layout Exploration and Directions</h2>
+       <p>From the research, it became clear that Cista's layout must focus on minimalism and simplicity rather than layouts with multiple features and navigational pages, for it was a simple single-page emergency app. I explored multiple layout concepts, such as lists, carousels, tabbed navigation, and grids. But research made the direction clear: in emergencies, users perform best when all options are visible at once. In the end, I decided to go with a three-slot Bento Grid layout style.</p>
+       <p> Why I chose a three-slot Bento Grid for the layout:
+         <ul>
+         <li>It requires no scrolling, as scrolling requires fine motor control and increases the chance of mistakes</li>
+         <li>Users can process three choices without scanning</li>
+         <li>It features large centered targets because shaky hands need big touch areas</li>
+         <li>It has a symmetrical layout, which reduces visual confusion and helps the mind lock onto a target faster</li>
+        </ul>
+      This layout mirrors emergency cards - simple, flat, and instantly scannable.
+       </p>
+    </section>
+
     <section class="case-section"> 
       <h2 class="case-process">Design</h2> 
       <section class="case-subsection">
           <h2>Low-Level Wireframes</h2>
-            <p>I created low-level wireframes using MockFlow. These wireframes focused on.</p>
+            <p>I created low-level wireframes using MockFlow. These wireframes focused on large typography, which improves readability in chaotic or dim environments, minimal text that reduces cognitive load and speeds up decision-making, and single-purpose buttons that prevent mis-taps and confusion. Every element is designed to support impaired cognition and motor control.</p>
               <img src="../Images/vault_low.png" alt="Cista wireframes" class="case-image">
         </section>
     </section>
