@@ -422,6 +422,7 @@ body {
           <dd>Journey Map</dd>
           <dd>Information Architecture</dd>
           <dd>Visual Design Direction</dd>
+          <dd>Layout Exploration and Directions</dd>
        </dl>
      </div> 
    </div> 
@@ -587,8 +588,20 @@ body {
 
         <section class="case-subsection">
           <h2>Information Architecture</h2>
-           <p>I designed a clear, scalable sitemap to map out the structure and hierarchy of the mobile app, ensuring intuitive navigation and clear content organization and reducing cognitive overload.</p>
+           <p>I designed a clear, scalable sitemap to outline the mobile app's structure and hierarchy, ensuring intuitive navigation and well-organized content. The sitemap was intentionally minimal with only three pages: Pantry (main list), Add/Edit Item, and Stock/Restock. This simple structure came because users didn't want to "manage" their pantry - they wanted to glance, add, and update rather. This clear, easy-to-see sitemap easily has a clear visual hierarchy, which simplifies navigation,  reduces decision fatigue, and keeps the app lightweight while reducing cognitive overload.</p>
               <img src="../Images/pantry_site.jpg" alt="Pantry Sitemap" class="case-image">
+          
+         <section class="case-subsection">
+           <h2>Layout Exploration and Directions</h2>
+            <p>I explored multiple layout concepts, including category-based grids and multi-tab structures. However, through data gathered from user insights, the direction became clearer: the app needed to mirror how people think about their own pantry. Based on that concept, I decided to go with a vertical, single-column layout.</p>
+             <p> Why I chose a vertical, single-column layout:
+               <ul>
+                 <li>It matches how users naturally read grocery lists and scan shelves</li>
+                 <li>It reduces eye movement and reduces cognitive load, especially when multitasking</li>
+                 <li>It supports quick, one-handed scrolling while cooking, shopping, or restocking the pantry</li>
+               </ul>
+           This alignment with people's mental models made the interface feel familiar and intuitive to users.
+             </p>
         </section>
 </section>
   
@@ -596,14 +609,14 @@ body {
       <h2 id="design" class="case-process">Design</h2> 
       <section class="case-subsection">
           <h2>Low-Level Wireframes</h2>
-            <p>I created low-level wireframes using MockFlow, which focused on clarity and accessibility. Through clear visual hierarchy, the user can easily gauge which goes where without confusion</p>
+            <p>I created low-level wireframes using MockFlow, which focused on clarity and accessibility. These wireframes focused on large touch targets for one-hand use, a clean list view with clear hierarchy, and a frictionless "Add Item" flow, as users would likely interact with the app while holding groceries or cooking tools. Large buttons and a simple list reduce errors and speed up interactions.</p>
               <img src="../Images/pantry_low.png" alt="Pantry Wireframes" class="case-image">
         </section>
     </section>
 
      <section class="case-subsection"> 
       <h2>Visual Design Direction</h2>
-      <p>I created several stylesheets to establish the color palette, typography, imagery, and several of the UI elements. The idea was to create a minimalist aesthetic, which was designed for calmness, accessibility, and to give off a warm, trustworthy feeling.</p>
+      <p>I created several stylesheets to establish the color palette, typography, imagery, and several of the UI elements. The idea was to create a minimalist aesthetic, which was designed for calmness, accessibility, and to give off a warm, trustworthy feeling. The aesthetic also crucially reduces cognitive load through neutral, calm colors which reduce visual noise and introduces order, high-contrast text which improves readiblity in dim areas like kitchens, consisten spacing and simple icons which make scanning effortless, and card-based item which mimic the way food is grouped on shelves.</p>
        <img src="../Images/pantry_style.png" alt="Pantry Stylesheets" class="case-image">
     </section>
 
@@ -613,7 +626,15 @@ body {
    
   <section class="case-subsection">
     <h2>High-Fidelity Wireframes</h2>
-     <p>After some adjustments based on the low-fidelity wireframes, interactive high-fidelity wireframes were created on Figma.</p>
+     <p>After some adjustments based on the low-fidelity wireframes, interactive high-fidelity wireframes were created on Figma. The final screens include:</p>
+       <ul>
+         <li>A clean, scrollable pantry list</li>
+         <li>A fast, minimal add-item flow</li>
+         <li>High-contrast text for visiblility</li>
+         <li>Large touch targets for one-hand use</li>
+         <li>A calm, neutral visual aesthetic and system</li> 
+       </ul>
+    <p>Every element supports the goal of reducing cognitive load.</p>
       <ul>
            <li> <a href="https://www.figma.com/proto/So1bUEc0Dq9XEWMT43c7Qg/Final-High-Fidelity-Wireframes-pantry?node-id=1133169-431&p=f&t=UC39rFP9P6i2Xflq-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1">Interactive, clickable wireframes</a></p></li>
        </ul>
@@ -647,7 +668,6 @@ body {
         <li>Exploring predictive text or common item presets so people don't have to type in items they know every time</li>
       </ul>
     </p>
-  </section>
   </section>
  </section>
 
