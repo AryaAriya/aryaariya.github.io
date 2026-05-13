@@ -2,7 +2,7 @@
 	font-size: 22px; 
 }
 
-html { 
+html, body { 
 	scroll-behavior: smooth; 
 }
 
