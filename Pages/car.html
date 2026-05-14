@@ -191,6 +191,13 @@ body {
    display: flex;         
    flex-direction: column;   
  } 
+
+ .takeaway {
+  background-color: #A38386;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+}
  
  h2.design-process-h2{ 
    font-family: "Garamond", serif; 
@@ -457,17 +464,24 @@ body {
      </div> 
    </div> 
     <div class='handoff'> 
-     <h2 class="design-process-h2">Hand-off</h2> 
+     <h2 class="design-process-h2">Handoff</h2> 
      <div class="design-process-p">
         <dl>
-          <dd>High-fidelity wireframes</dd>
-          <dd>Case Study Summary</dd>
-          <dd>Reflection</dd>
-          <dd>Next Steps</dd>
+          <dd>High-fidelity Wireframes</dd>
        </dl>
      </div> 
    </div> 
+     <div class='takeaway'>
+     <h2 class="design-process-h2">Takeaway</h2>
+     <div class="design-process-p">
+       <dl>
+         <dd>Case Study Summary</dd>
+         <dd>Reflection</dd>
+         <dd>Next Steps</dd>
+       </dl>
+   </div>
   </div>
+ </div>
 
     <h2 class="case-process">Research</h2>
     <section class="case-subsection">
@@ -767,12 +781,14 @@ body {
      <img src="../Images/car_high.jpg" alt="Final Wireframe" class="case-image">
   </section>
 
+  <section class="case-section">
+   <h2 class="case-process">Takeaway</h2>
     <section class="case-subsection">
     <h2>Case Study Summary</h2>
      <p>Wayfinder is a high-utility mobile app designed to eliminate "parking amnesia" by reducing the complex task of vehicle retrieval to a zero-friction, two-tap experience. Developed for high-stress, low-connectivity environments like airport garages and urban decks, the app utilizes an offline-first app that bypasses traditional GPS limitations through on-device sensor tracking. By replacing cluttered map interfaces with high-contrast directional guidance and "one-tap" visual anchors, Wayfinder successfully minimizes cognitive load and spatial anxiety, transforming a frustrating daily hurdle into a seamless, reliable moment of digital relief.</p>
   </section>
   
-  <section class="case-section">
+  <section class="case-subsection">
     <h2>Reflection</h2>
      <p>Key Takeaways:
       <ul>
@@ -784,7 +800,7 @@ body {
     </p>
   </section>
 
-  <section class="case-section">
+  <section class="case-subsection">
     <h2>Next Steps</h2>
     <p> This project laid the groundwork for a more functional site. The next phase will include:
       <ul>
