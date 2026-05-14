@@ -191,6 +191,13 @@ body {
    display: flex;         
    flex-direction: column;   
  } 
+
+ .takeaway {
+  background-color: #A38386;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+}
  
  h2.design-process-h2{ 
    font-family: "Garamond", serif; 
@@ -456,16 +463,23 @@ body {
      </div> 
    </div> 
     <div class='handoff'> 
-     <h2 class="design-process-h2">Hand-off</h2> 
+     <h2 class="design-process-h2">Handoff</h2> 
      <div class="design-process-p">
         <dl>
-          <dd>High-fidelity wireframes</dd>
-          <dd>Case Study Summary</dd>
-          <dd>Reflection</dd>
-          <dd>Next Steps</dd>
+          <dd>High-fidelity Wireframes</dd>
        </dl>
      </div> 
    </div> 
+    <div class='takeaway'>
+     <h2 class="design-process-h2">Takeaway</h2>
+     <div class="design-process-p">
+       <dl>
+         <dd>Case Study Summary</dd>
+         <dd>Reflection</dd>
+         <dd>Next Steps</dd>
+       </dl>
+   </div>
+  </div>
   </div>
 
    <h2 class="case-process"> Research</h2>
@@ -744,12 +758,14 @@ body {
      <img src="../Images/pantry_high.jpg" alt="Pantry Final Wireframe" class="case-image">
   </section>
 
-    <section class="case-subsection">
+<section class="case-section">
+  <h2 class="case-process">Takeaway</h2>
+   <section class="case-subsection">
     <h2>Case Study Summary</h2>
      <p>Pantry Pal examines how a simple, low‑friction design can help users stay organized without overwhelming them. By focusing on clarity, speed, and calm visual hierarchy, the project addresses common frustrations around food waste, duplicate purchases, and the cognitive load of managing a pantry. Through research, wireframing, and iterative design, the study demonstrates how stripping an experience down to its essentials can create a tool that genuinely supports everyday habits and empowers users to make smarter, more confident decisions.</p>
   </section>
   
-  <section class="case-section">
+  <section class="case-subsection">
     <h2>Reflection</h2>
      <p>Key Takeaways:
       <ul>
@@ -759,7 +775,7 @@ body {
     </p>
   </section>
 
-  <section class="case-section">
+  <section class="case-subsection">
     <h2>Next Steps</h2>
     <p> This project laid the groundwork for a more functional site. The next phase will include:
       <ul>
