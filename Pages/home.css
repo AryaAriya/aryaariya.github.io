@@ -25,10 +25,11 @@ html, body {
   	text-transform: uppercase;
 	border-radius: 1rem;
 	font-family: 'Garamond';
-	-webkit-mask-image: url('https://transparenttextures.com');
-    -webkit-mask-size: 944px 604px;
+    -webkit-mask-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMToxMDoxNiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo2OEU2RUJGQjFDMUYxMUU3QTNEREU3NUE4OEU4QzBCRiIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo2OEU2RUJGQjFDMUUxMUU3QTNEREU3NUE4OEU4QzBCRiIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxNyAoTWFjaW50b3NoKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkNDOEUxRjM1MUMxRDExRTdBM0RERTc1QTg4RThDM0JGIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkNDOEUxRjM2MUMxRDExRTdBM0RERTc1QTg4RThDM0JGIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+v7mNtwAAADFJREFUeNpi/P//P8NAAkwMhAEKIDwYgKTIwIAVwKTIwIDVwRiyg4mRgcg0w8RAnAAEGAA9egX984FmYwAAAABJRU5ErkJggg==');
+	-webkit-mask-size: repeat;
+    
     mix-blend-mode: normal;
-	transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+	transition: background-color .2s ease, color .2s ease, border-color .2s ease, transform .2s ease;
 }
 
 .stamp:hover {
