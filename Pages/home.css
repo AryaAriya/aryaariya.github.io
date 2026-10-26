@@ -18,8 +18,8 @@ html, body {
 	position: relative; 
 	cursor: pointer;
     display: inline-block;
-	margin: 3rem auto 2rem translate(-40%, 30%);
-	transform: rotate(12deg);
+	margin: 3rem auto 2rem; 
+	transform: (-40%, 30%) rotate(12deg);
 	border: 0.25rem solid #c44536;
 	padding: 0.25rem 1rem;
   	text-transform: uppercase;
@@ -33,13 +33,13 @@ html, body {
 }
 
 .stamp:hover {
-	transform: rotate(12deg) translate(-40%, 30%) translateY(-4px);
+	transform: translate(-40%, 30%) rotate(12deg) translateY(-4px);
 	color: #9e3a2e;
 	border-color: #9e3a2e;
 }
 
 .stamp:active {
-	transform: rotate(12deg) translate(-40%, 30%) scale(0.95);
+	transform: translate(-40%, 30%) rotate(12deg) scale(0.95);
 }
 
 .divider-line {
